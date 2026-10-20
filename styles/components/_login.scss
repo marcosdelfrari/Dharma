@@ -1,0 +1,269 @@
+// Estética da hero Lotus — vídeo + gradientes + granulado (pattern.webp)
+.login {
+  position: relative;
+  isolate: isolate;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Lotus: from-black/75 via-black/45 to-black/20
+  &__shade--side {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.2)
+    );
+  }
+
+  // Lotus: bottom h-[42%] from-black via-black/50 to-transparent
+  &__shade--bottom {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 42%;
+    background: linear-gradient(
+      to top,
+      #000,
+      rgba(0, 0, 0, 0.5),
+      transparent
+    );
+  }
+
+  // Lotus: pattern.webp opacity-40 mix-blend-overlay 180×180
+  &__grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    background-image: url("/pattern.webp");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+  }
+
+  &__loader {
+    position: relative;
+    z-index: 10;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__header {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 1.5rem 1.5rem 0;
+
+    @media (min-width: 640px) {
+      padding-inline: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-inline: 3.5rem;
+    }
+  }
+
+  &__logo {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    object-fit: cover;
+    background: transparent;
+    flex-shrink: 0;
+  }
+
+  &__header-title {
+    font-size: 1.05rem;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.92);
+    // Mukta ExtraLight: métrica sobe visualmente — desce um pouco para o centro óptico
+    transform: translateY(0.06em);
+  }
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 6rem 1.5rem 2.5rem;
+
+    @media (min-width: 640px) {
+      padding-inline: 2.5rem;
+      padding-bottom: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-inline: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  &__headline {
+    margin: 0;
+    max-width: 28rem;
+    font-size: 1.7rem;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #fff;
+
+    @media (min-width: 640px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2.35rem;
+    }
+  }
+
+  &__headline-light {
+    display: block;
+    font-weight: 300;
+  }
+
+  &__headline-strong {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 200;
+  }
+
+  &__lede {
+    margin: 1rem 0 0;
+    max-width: 24rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+
+    @media (min-width: 640px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &__form {
+    margin-top: 1.5rem;
+    width: min(100%, 22rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: left;
+
+    label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    input {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 0;
+      padding: 0.75rem 0.9rem;
+      min-height: 48px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      outline: none;
+      backdrop-filter: blur(6px);
+      transition:
+        border-color 200ms ease,
+        background-color 200ms ease;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      &:focus {
+        border-color: rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.12);
+      }
+    }
+  }
+
+  &__error {
+    margin: 0;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+    background: rgba(239, 68, 68, 0.18);
+    color: #fecaca;
+    font-size: 0.85rem;
+  }
+
+  // Lotus CTA: border-white/35 bg-white/10 uppercase tracking
+  &__submit {
+    margin-top: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0;
+    padding: 0.85rem 1.25rem;
+    min-height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    transition: background-color 200ms ease;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+  }
+
+  &__links {
+    margin: 1.15rem 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 200ms ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
