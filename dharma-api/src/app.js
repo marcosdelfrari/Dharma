@@ -9,9 +9,11 @@ const routes = require('./routes');
 const { errorHandler } = require('./middleware/errorHandler');
 const { fail } = require('./utils/response');
 const { registerDocs } = require('./docs/registerDocs');
+const { vercelPathFix } = require('./middleware/vercelPath');
 
 function createApp() {
   const app = express();
+  app.use(vercelPathFix);
   // Produção (Railway): 1 hop. Fora disso o peer é o cliente — não confiar em X-Forwarded-For.
   app.set('trust proxy', env.nodeEnv === 'production' ? 1 : false);
   app.use(
@@ -28,9 +30,10 @@ function createApp() {
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
 
-  app.get('/health', (req, res) => {
+  const healthPayload = (_req, res) => {
     res.json({ data: { ok: true }, meta: null, errors: null });
-  });
+  };
+  app.get(['/health', '/api/health'], healthPayload);
 
   registerDocs(app);
 

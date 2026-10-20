@@ -2,9 +2,13 @@
 
 const spec = require('./openapi.json');
 
-/** Swagger UI via CDN — funciona em serverless (Vercel) sem assets locais. */
-function swaggerUiHtml(specUrl) {
-  const safeUrl = specUrl.replace(/"/g, '&quot;');
+function specForHtml() {
+  return JSON.stringify(spec).replace(/</g, '\\u003c');
+}
+
+/** Swagger UI via CDN; spec embutido (não depende de /docs/openapi.json). */
+function swaggerUiHtml() {
+  const embedded = specForHtml();
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -25,7 +29,7 @@ function swaggerUiHtml(specUrl) {
   <script>
     window.onload = function () {
       window.ui = SwaggerUIBundle({
-        url: "${safeUrl}",
+        spec: ${embedded},
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
@@ -44,21 +48,20 @@ function registerDocs(app) {
     res.type('application/json').json(spec);
   };
 
-  const sendUi = (req, res) => {
-    const proto = req.get('x-forwarded-proto') || req.protocol || 'https';
-    const host = req.get('x-forwarded-host') || req.get('host') || '';
-    const base = host ? `${proto}://${host}` : '';
-    const specUrl = `${base}/docs/openapi.json`;
-    res.type('text/html; charset=utf-8').send(swaggerUiHtml(specUrl));
+  const sendUi = (_req, res) => {
+    res.type('text/html; charset=utf-8').send(swaggerUiHtml());
   };
 
+  const docPaths = ['/docs', '/docs/', '/api/docs', '/api/docs/'];
+
   app.get('/docs/openapi.json', sendSpec);
-  app.get(['/docs', '/docs/'], sendUi);
+  app.get('/api/docs/openapi.json', sendSpec);
+  docPaths.forEach((p) => app.get(p, sendUi));
+
+  const goDocs = (_req, res) => res.redirect(302, '/docs');
 
   app.get('/', (req, res) => {
-    if (req.accepts('html')) {
-      return res.redirect(302, '/docs');
-    }
+    if (req.accepts('html')) return goDocs(req, res);
     res.json({
       data: {
         name: 'dharma-api',
@@ -66,6 +69,15 @@ function registerDocs(app) {
         health: '/health',
         api: '/api/v1',
       },
+      meta: null,
+      errors: null,
+    });
+  });
+
+  app.get('/api', (req, res) => {
+    if (req.accepts('html')) return goDocs(req, res);
+    res.json({
+      data: { name: 'dharma-api', docs: '/docs', api: '/api/v1' },
       meta: null,
       errors: null,
     });
