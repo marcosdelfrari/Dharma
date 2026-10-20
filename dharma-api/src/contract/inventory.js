@@ -162,6 +162,7 @@ const DOMAIN_ROUTES = [
   ['GET', '/services/exists'],
   ['GET', '/reception/form-schema'],
   ['POST', '/reception/public'],
+  ['POST', '/reception/landing-lead'],
   ['GET', '/reception/status-counts'],
   ['GET', '/reception/attendants'],
   ['POST', '/reception'],

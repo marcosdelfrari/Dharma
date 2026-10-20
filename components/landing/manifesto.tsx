@@ -1,7 +1,7 @@
 "use client";
 
+import { LandingContactButton } from "@/components/landing/landing-contact-flow";
 import {
-  MotionCtaLink,
   RevealBlock,
   RevealGroup,
   slideFromLeft,
@@ -27,12 +27,9 @@ export function LandingManifesto() {
             atendimentos, loja e etiquetas de envio em um único lugar — para a
             operação rodar com método.
           </p>
-          <MotionCtaLink
-            href="/contato"
-            className="mt-8 inline-flex text-sm font-medium text-foreground underline-offset-4 hover:underline"
-          >
+          <LandingContactButton className="mt-8 inline-flex text-sm font-medium text-foreground underline-offset-4 hover:underline">
             Entrar em contato
-          </MotionCtaLink>
+          </LandingContactButton>
         </RevealBlock>
       </RevealGroup>
     </section>

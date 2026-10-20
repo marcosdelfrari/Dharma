@@ -29,6 +29,20 @@ describe('domain/reception', { concurrency: false }, () => {
     assert.ok(Array.isArray(res.body.data.statuses));
   });
 
+  it('landing lead creates reception with minimal fields', async () => {
+    const created = await request(app)
+      .post('/api/v1/reception/landing-lead')
+      .send({
+        name: 'Maria Silva',
+        phone: '11988887777',
+      });
+    assert.equal(created.status, 201);
+    assert.equal(created.body.data.status, 'waiting');
+    assert.equal(created.body.data.full_name, 'Maria Silva');
+    assert.equal(created.body.data.phone, '11988887777');
+    assert.match(String(created.body.data.message || ''), /landing/i);
+  });
+
   it('public create + status + complete done', async () => {
     const created = await request(app)
       .post('/api/v1/reception/public')

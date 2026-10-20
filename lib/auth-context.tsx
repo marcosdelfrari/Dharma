@@ -40,6 +40,7 @@ const PUBLIC_PATHS = new Set([
   "/login",
   "/cadastro",
   "/contato",
+  "/obrigado",
   "/nova-senha",
   "/unauthorized",
   "/not-connected",

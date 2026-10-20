@@ -251,6 +251,8 @@ export const api = {
     request<ReceptionFormSchema>("GET", "/reception/form-schema"),
   createPublicReception: (body: Record<string, unknown>) =>
     request<Reception>("POST", "/reception/public", body),
+  createLandingLead: (body: { name: string; phone: string }) =>
+    request<Reception>("POST", "/reception/landing-lead", body),
 
   getPublicConfig: (system: string) =>
     request<{ system?: string; values?: Record<string, unknown>; errors?: unknown[] }>(

@@ -1,6 +1,7 @@
 "use client";
 
 import { LandingBenefits } from "@/components/landing/benefits";
+import { LandingContactProvider } from "@/components/landing/landing-contact-flow";
 import { LandingDashboardShowcase } from "@/components/landing/dashboard-showcase";
 import { LandingFinalCta } from "@/components/landing/final-cta";
 import { LandingFooter } from "@/components/landing/footer";
@@ -12,7 +13,7 @@ import { LandingOperation } from "@/components/landing/operation";
 
 export function LandingMain() {
   return (
-    <>
+    <LandingContactProvider>
       <LandingHero />
       <main>
         <ScrollSection>
@@ -37,6 +38,6 @@ export function LandingMain() {
       <ScrollSection>
         <LandingFooter />
       </ScrollSection>
-    </>
+    </LandingContactProvider>
   );
 }

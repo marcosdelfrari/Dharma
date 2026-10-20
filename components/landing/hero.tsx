@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { DHARMA_LOGO } from "@/lib/brand";
+import { useLandingContact } from "@/components/landing/landing-contact-flow";
 import { fadeDown, fadeUp, MotionCtaLink } from "@/components/landing/motion";
 
 const links = [
@@ -16,6 +17,7 @@ const links = [
 
 export function LandingHero() {
   const [open, setOpen] = useState(false);
+  const { openContact } = useLandingContact();
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -116,13 +118,26 @@ export function LandingHero() {
             >
               {links.map((link) => (
                 <motion.li key={link.href} variants={fadeUp}>
-                  <a
-                    href={link.href}
-                    className="text-sm tracking-wide text-white/90 hover:text-white"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
+                  {link.href === "#contato" ? (
+                    <button
+                      type="button"
+                      className="text-sm tracking-wide text-white/90 hover:text-white"
+                      onClick={() => {
+                        setOpen(false);
+                        openContact();
+                      }}
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-sm tracking-wide text-white/90 hover:text-white"
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </motion.li>
               ))}
             </motion.ul>

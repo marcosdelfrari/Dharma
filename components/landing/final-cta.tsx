@@ -1,5 +1,6 @@
 "use client";
 
+import { LandingContactButton } from "@/components/landing/landing-contact-flow";
 import {
   MotionCtaLink,
   Reveal,
@@ -29,7 +30,7 @@ export function LandingFinalCta() {
             <Reveal delay={0.12}>
               <p className="max-w-sm text-sm leading-7 text-white/60 sm:text-[15px]">
                 Acesso exclusivo para operadores e profissionais cadastrados, ou
-                envio direto de mensagem para a fila de atendimento da associação.
+                contato rápido com nome e WhatsApp — direto para a fila de acolhimento.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <MotionCtaLink
@@ -44,12 +45,9 @@ export function LandingFinalCta() {
                     →
                   </span>
                 </MotionCtaLink>
-                <MotionCtaLink
-                  href="/contato"
-                  className="inline-flex w-fit items-center rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm font-medium text-white transition hover:bg-white/20"
-                >
-                  Enviar mensagem
-                </MotionCtaLink>
+                <LandingContactButton className="inline-flex w-fit items-center rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm font-medium text-white transition hover:bg-white/20">
+                  Entrar em contato
+                </LandingContactButton>
               </div>
             </Reveal>
           </div>

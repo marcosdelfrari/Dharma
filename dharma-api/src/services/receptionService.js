@@ -410,6 +410,65 @@ async function createPublicReception(payload = {}) {
   return created;
 }
 
+async function createLandingLead(payload = {}) {
+  const cfg = await loadTriageConfig();
+  if (!cfg.publicFormEnabled) {
+    throw new AppError(403, 'FORM_DISABLED', 'Formulário público de triagem desabilitado');
+  }
+
+  const fullName = String(payload.name || '').trim();
+  const phoneRaw = String(payload.phone ?? payload.whatsapp ?? '').trim();
+  if (!fullName) {
+    throw new AppError(400, 'VALIDATION_ERROR', 'Informe seu nome');
+  }
+  if (!isValidPhone(phoneRaw)) {
+    throw new AppError(400, 'VALIDATION_ERROR', 'Informe um WhatsApp válido com DDD');
+  }
+
+  const parts = fullName.split(/\s+/).filter(Boolean);
+  const name = parts[0] || fullName;
+  const lastName = parts.slice(1).join(' ') || null;
+  const entryStatus = getEntryStatus(cfg.statuses);
+
+  const created = await itemsRepository.createItem('reception', {
+    name,
+    last_name: lastName,
+    full_name: fullName,
+    email: null,
+    phone: phoneRaw,
+    help_topic: 'Contato landing',
+    is_associate: false,
+    message: 'Contato iniciado pela landing page.',
+    patient_name: null,
+    code: uuidv4(),
+    status: entryStatus,
+    associate_code: null,
+    associate_name: null,
+    avatar_url: null,
+    tags: {
+      labels: ['landing'],
+      custom_fields: {},
+    },
+    date_created: new Date().toISOString(),
+  });
+
+  await activityService.recordSafe({
+    entity_type: 'reception',
+    entity_id: String(created.id),
+    entity_code: created.code || null,
+    action: 'reception.created',
+    actor_user_code: null,
+    actor_name: 'Landing',
+    summary: `Nova triagem criada: ${activityService.contactLabel(created)}`,
+    metadata: {
+      source: 'landing',
+      status: created.status,
+    },
+  });
+
+  return created;
+}
+
 async function createReception(payload, actor = null) {
   const cfg = await loadTriageConfig();
   const status = resolveReceptionStatus(payload.status, cfg.statuses);
@@ -1021,6 +1080,7 @@ async function completeOpenByAssociate({ email, associate_code, completion_reaso
 module.exports = {
   createReception,
   createPublicReception,
+  createLandingLead,
   getFormSchema,
   complete,
   assignAttendant,

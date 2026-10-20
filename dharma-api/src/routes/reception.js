@@ -28,6 +28,16 @@ router.post('/public', async (req, res, next) => {
   }
 });
 
+router.post('/landing-lead', async (req, res, next) => {
+  try {
+    assertAuthEnumRateLimit(req, 'reception-public');
+    const data = await receptionService.createLandingLead(req.body || {});
+    res.status(201).json(ok(data));
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.use(authenticate);
 
 router.get('/status-counts', authorize('reception', 'read'), async (req, res, next) => {
