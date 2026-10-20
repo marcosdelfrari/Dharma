@@ -128,11 +128,15 @@
   }
 
   &--accent {
-    background: var(--brand-teal);
-    color: #ffffff;
+    background: var(--primary);
+    color: var(--on-primary);
 
     &:hover:not(:disabled) {
-      background: #0c262b;
+      background: var(--primary-hover);
+    }
+
+    &:active:not(:disabled) {
+      background: var(--primary-pressed);
     }
   }
 
@@ -224,11 +228,15 @@
 }
 
 .button-brand-teal {
-  background: var(--brand-teal);
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--on-primary);
 
   &:hover:not(:disabled) {
-    background: #0c262b;
+    background: var(--primary-hover);
+  }
+
+  &:active:not(:disabled) {
+    background: var(--primary-pressed);
   }
 }
 

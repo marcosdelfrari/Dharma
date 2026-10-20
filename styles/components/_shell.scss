@@ -61,8 +61,16 @@
       }
 
       .shell__actions {
+        flex-direction: column;
         width: 100%;
+        align-items: center;
         justify-content: center;
+        gap: 0.35rem;
+      }
+
+      .shell__icon-btn {
+        flex-shrink: 0;
+        width: 2.25rem;
       }
 
       .shell__link[data-nav-label]:hover::after,

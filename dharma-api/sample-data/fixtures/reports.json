@@ -1,9 +1,9 @@
 [
   {
-    "date_created": "2026-08-04T13:04:26.183Z",
-    "date_updated": "2026-08-13T13:04:26.183Z",
+    "date_created": "2026-10-10T19:18:31.387Z",
+    "date_updated": "2026-10-19T19:18:31.387Z",
     "name": "Pedidos por status (demo)",
-    "report_code": "325ffe9a-5213-4ff2-8499-17b658a8afb2",
+    "report_code": "80d3ae19-6211-4e5b-93be-2f067461843b",
     "query_config": {
       "source": "orders",
       "group_by": "status"
@@ -40,10 +40,10 @@
     "is_sample": true
   },
   {
-    "date_created": "2026-08-05T13:04:26.183Z",
-    "date_updated": "2026-08-12T13:04:26.183Z",
+    "date_created": "2026-10-11T19:18:31.387Z",
+    "date_updated": "2026-10-18T19:18:31.387Z",
     "name": "Associados ativos (demo)",
-    "report_code": "86afc2e0-2982-4dfe-8671-8e3023b2b2e5",
+    "report_code": "b4cbf731-ee37-4847-8878-3fead47bce1a",
     "query_config": {
       "source": "users",
       "filter": {
@@ -81,10 +81,10 @@
     "is_sample": true
   },
   {
-    "date_created": "2026-08-06T13:04:26.183Z",
-    "date_updated": "2026-08-11T13:04:26.183Z",
+    "date_created": "2026-10-12T19:18:31.387Z",
+    "date_updated": "2026-10-17T19:18:31.387Z",
     "name": "Dashboard operacional (demo)",
-    "report_code": "6e7c284a-d639-4b3f-9ea6-2efcb13123ee",
+    "report_code": "aceabd37-cb11-46f8-a58c-a4f3045f9748",
     "query_config": {
       "widgets": [
         "orders",

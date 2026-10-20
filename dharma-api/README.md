@@ -29,6 +29,8 @@ A API continua usando SQL nativo (`pg`); o client Prisma fica em `src/db/prisma.
 Base URL local (npm): `http://localhost:8056/api/v1` 
 Base URL Docker: `http://localhost:4250/api/v1`
 
+Swagger UI (spec gerado das rotas): `http://localhost:8056/docs` — regenere após novas rotas com `npm run docs:openapi`.
+
 ## Docker (hot reload)
 
 Sobe a API na porta **4250** com volume do código local e reinício automático via nodemon:

@@ -1,16 +1,16 @@
 [
   {
     "sort": 1,
-    "date_created": "2026-06-25T13:04:26.180Z",
-    "date_updated": "2026-08-14T13:04:26.180Z",
+    "date_created": "2026-08-31T19:18:31.385Z",
+    "date_updated": "2026-10-20T19:18:31.385Z",
     "status": "Aguardando pagamento",
     "total": 575.3,
     "payment_method": "pix",
     "tracking_code": "PENDING-100000",
     "delivery_price": 15,
     "associate_name": "Ana Almeida",
-    "order_code": "1c272358-f4ea-4546-b8c2-3abf5f721932",
-    "user_code": "20f6efeb-4841-446a-a376-91e07b7daa4e",
+    "order_code": "0860f641-2f8b-417b-9f99-bd31935f89be",
+    "user_code": "e9d2b377-4618-4def-ad65-45918942477d",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -33,7 +33,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-06-25T13:04:26.180Z",
+    "created_date": "2026-08-31T19:18:31.385Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -59,32 +59,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0abbd573-d2a2-45d9-884d-4a73c83f713b",
-    "payment_date": "2026-06-25T13:04:26.180Z",
+    "prescriber_code": "b7a2ecb6-be28-40ca-aefd-a5ecb50567dd",
+    "payment_date": "2026-08-31T19:18:31.385Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 2,
-    "date_created": "2026-06-26T13:04:26.180Z",
-    "date_updated": "2026-08-13T13:04:26.180Z",
+    "date_created": "2026-09-01T19:18:31.385Z",
+    "date_updated": "2026-10-19T19:18:31.385Z",
     "status": "Pagamento concluído",
     "total": 797,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100001",
     "delivery_price": 18,
     "associate_name": "Bruno Dias",
-    "order_code": "78ac2e9f-0c31-4ba0-9462-5bc380e3a397",
-    "user_code": "aefb0bf2-89f1-4605-9f31-1ad3a8024784",
+    "order_code": "cd44f280-e0b8-4ffd-a0df-dd89cf67bbfb",
+    "user_code": "e30590fd-d740-47af-aec7-aa61bd59eb3a",
     "items": [
       {
         "sku": "KNK-THC",
@@ -97,7 +97,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-06-26T13:04:26.180Z",
+    "created_date": "2026-09-01T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -122,32 +122,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "3a316272-1cef-4c07-9cc9-25d6d296bce8",
-    "payment_date": "2026-07-06T13:04:26.180Z",
+    "prescriber_code": "f99ee333-6893-42da-9cf1-a07caf447ad8",
+    "payment_date": "2026-09-11T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 3,
-    "date_created": "2026-06-27T13:04:26.180Z",
-    "date_updated": "2026-08-12T13:04:26.180Z",
+    "date_created": "2026-09-02T19:18:31.385Z",
+    "date_updated": "2026-10-18T19:18:31.385Z",
     "status": "Em produção",
     "total": 862.9,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100002",
     "delivery_price": 21,
     "associate_name": "Carla Gomes",
-    "order_code": "9246fe2d-0124-4db3-9bda-3886890dd462",
-    "user_code": "0a0c94ad-cbca-4c28-9405-bfa1304e57b8",
+    "order_code": "e65abbb9-0e95-4859-8984-98fd0156d44e",
+    "user_code": "454ba738-b095-4259-9f01-b76bb775d3b2",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -170,7 +170,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-06-27T13:04:26.180Z",
+    "created_date": "2026-09-02T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -195,32 +195,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0249180f-9f82-4cd8-9c09-cf05dfa19365",
-    "payment_date": "2026-07-07T13:04:26.180Z",
+    "prescriber_code": "7e89217b-e62f-4979-be68-d7653f12ab48",
+    "payment_date": "2026-09-12T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 4,
-    "date_created": "2026-06-28T13:04:26.180Z",
-    "date_updated": "2026-08-11T13:04:26.180Z",
+    "date_created": "2026-09-03T19:18:31.385Z",
+    "date_updated": "2026-10-17T19:18:31.385Z",
     "status": "Produção Finalizada",
     "total": 336.4,
     "payment_method": "pix",
     "tracking_code": "PENDING-100003",
     "delivery_price": 24,
     "associate_name": "Diego Junqueira",
-    "order_code": "096f5423-38cb-49a5-a7fc-b97a31155f15",
-    "user_code": "1c913b39-7627-462a-86d1-1a1d38a5b19c",
+    "order_code": "2c0992ad-6650-4049-a01e-e2768033f196",
+    "user_code": "168067ca-fe05-4180-b321-589509c747ce",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -233,7 +233,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-06-28T13:04:26.180Z",
+    "created_date": "2026-09-03T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -259,32 +259,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7a1ae3a7-96ef-4f45-9663-74a430fdf43b",
-    "payment_date": "2026-07-08T13:04:26.180Z",
+    "prescriber_code": "942f1946-889f-4f1e-bbc5-6106e4e583b7",
+    "payment_date": "2026-09-13T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 5,
-    "date_created": "2026-06-29T13:04:26.180Z",
-    "date_updated": "2026-08-10T13:04:26.180Z",
+    "date_created": "2026-09-04T19:18:31.385Z",
+    "date_updated": "2026-10-16T19:18:31.385Z",
     "status": "Adicionado no sistema",
     "total": 556.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100004",
     "delivery_price": 27,
     "associate_name": "Elena Mendes",
-    "order_code": "1c72d3cb-2dfc-456d-816b-ff32a7793c77",
-    "user_code": "97b3a6f2-df37-4a53-a601-2587c18f6c71",
+    "order_code": "bdcb1939-a35f-4089-b4ce-ed271a720e6e",
+    "user_code": "6236393d-f884-4d29-b6d7-8b4a6e2a5d38",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -307,7 +307,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-06-29T13:04:26.180Z",
+    "created_date": "2026-09-04T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -332,32 +332,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "25ef0438-e5bb-497e-8431-61f8d979329d",
-    "payment_date": "2026-06-25T13:04:26.180Z",
+    "prescriber_code": "ddd11d57-d528-4f42-a140-cdf593f717b0",
+    "payment_date": "2026-08-31T19:18:31.385Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 6,
-    "date_created": "2026-06-30T13:04:26.180Z",
-    "date_updated": "2026-08-09T13:04:26.180Z",
+    "date_created": "2026-09-05T19:18:31.385Z",
+    "date_updated": "2026-10-15T19:18:31.385Z",
     "status": "Enviado",
     "total": 758.7,
     "payment_method": "boleto",
     "tracking_code": "BRDEMO100005",
     "delivery_price": 15,
     "associate_name": "Fábio Pereira",
-    "order_code": "0bf8c9e2-0844-4a03-a74b-e468e2d7159e",
-    "user_code": "a52326d0-176e-4b20-8fc7-5d7a2d0d6768",
+    "order_code": "10a8c0b1-204a-438d-a91c-757f23774b6d",
+    "user_code": "25b83bd3-dc11-4070-a310-dc2660aad547",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -370,7 +370,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-06-30T13:04:26.180Z",
+    "created_date": "2026-09-05T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -395,32 +395,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "2cec286d-81c7-47fe-97df-e823c16a44c9",
-    "payment_date": "2026-07-10T13:04:26.180Z",
+    "prescriber_code": "22c85f80-25ac-4ee1-972c-f623afb9b3b8",
+    "payment_date": "2026-09-15T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.180Z",
-    "last_tracking_date": "2026-08-10T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.385Z",
+    "last_tracking_date": "2026-10-16T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 7,
-    "date_created": "2026-07-01T13:04:26.180Z",
-    "date_updated": "2026-08-08T13:04:26.180Z",
+    "date_created": "2026-09-06T19:18:31.385Z",
+    "date_updated": "2026-10-14T19:18:31.385Z",
     "status": "Entregue",
     "total": 573.4,
     "payment_method": "pix",
     "tracking_code": "BRDEMO100006",
     "delivery_price": 18,
     "associate_name": "Gabriela Silva",
-    "order_code": "c7008eb1-d3a4-4378-87ae-6069d8d8fbdf",
-    "user_code": "1da6e734-ee6e-4ebf-a377-87e2e8c29fce",
+    "order_code": "0c22a72b-f370-47c5-9e8c-ee68483d9cb5",
+    "user_code": "a0ac7d35-5244-4f24-afd1-d87173351b3d",
     "items": [
       {
         "sku": "KNK-THC",
@@ -443,7 +443,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-01T13:04:26.180Z",
+    "created_date": "2026-09-06T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -469,32 +469,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7f367205-d33a-4155-8499-6b39f7eb9fff",
-    "payment_date": "2026-07-11T13:04:26.180Z",
+    "prescriber_code": "23fcfa7e-2ea3-48f4-8492-cbfeba61823a",
+    "payment_date": "2026-09-16T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.180Z",
-    "last_tracking_date": "2026-08-11T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.385Z",
+    "last_tracking_date": "2026-10-17T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 8,
-    "date_created": "2026-07-02T13:04:26.180Z",
-    "date_updated": "2026-08-07T13:04:26.180Z",
+    "date_created": "2026-09-07T19:18:31.385Z",
+    "date_updated": "2026-10-13T19:18:31.385Z",
     "status": "Cancelado",
     "total": 417,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100007",
     "delivery_price": 21,
     "associate_name": "Hugo Vieira",
-    "order_code": "8be042d8-7f26-4446-88c4-8cdeecbc4c9b",
-    "user_code": "23df0099-a6b0-4eb0-83db-536febd8c3bc",
+    "order_code": "b8aab16e-6aa9-49ce-bcd5-494637674051",
+    "user_code": "9450a4ab-20b7-4cca-85a3-be47e42d0e32",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -507,7 +507,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-02T13:04:26.180Z",
+    "created_date": "2026-09-07T19:18:31.385Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -532,32 +532,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "5db8d050-92ad-4db8-892f-8e107c57f85d",
-    "payment_date": "2026-06-25T13:04:26.180Z",
+    "prescriber_code": "e7992cf4-2c52-47a5-a6f1-5e2deefc543b",
+    "payment_date": "2026-08-31T19:18:31.385Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 9,
-    "date_created": "2026-07-03T13:04:26.180Z",
-    "date_updated": "2026-08-06T13:04:26.180Z",
+    "date_created": "2026-09-08T19:18:31.385Z",
+    "date_updated": "2026-10-12T19:18:31.385Z",
     "status": "Aguardando pagamento",
     "total": 1350.7,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100008",
     "delivery_price": 24,
     "associate_name": "Iris Yamamoto",
-    "order_code": "59cc879a-f73a-4716-ab45-8c204c5cc251",
-    "user_code": "414706cb-b7cb-47dc-8042-96b63ec46293",
+    "order_code": "938d8cec-0c26-44ea-87d6-3a70a16c6832",
+    "user_code": "dc447290-cc61-44a5-8f70-8eaad48c6c08",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -580,7 +580,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-03T13:04:26.180Z",
+    "created_date": "2026-09-08T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -605,32 +605,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "44216815-b2ed-49c4-a142-bf2ff83814ab",
-    "payment_date": "2026-06-25T13:04:26.180Z",
+    "prescriber_code": "a1e59c94-c797-4341-90fb-caa1cb3ed7e5",
+    "payment_date": "2026-08-31T19:18:31.385Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 10,
-    "date_created": "2026-07-04T13:04:26.180Z",
-    "date_updated": "2026-08-05T13:04:26.180Z",
+    "date_created": "2026-09-09T19:18:31.385Z",
+    "date_updated": "2026-10-11T19:18:31.385Z",
     "status": "Pagamento concluído",
     "total": 192.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100009",
     "delivery_price": 27,
     "associate_name": "João Barbosa",
-    "order_code": "1f105c4a-120c-4734-b072-ec64e2b08736",
-    "user_code": "c5d0ed32-0664-4abf-be52-766b3efa2389",
+    "order_code": "27de531b-22e1-4d0b-9198-cd50363aad4c",
+    "user_code": "8f980b91-7e0a-4306-8b61-4e6c283ba18c",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -643,7 +643,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-04T13:04:26.180Z",
+    "created_date": "2026-09-09T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -669,32 +669,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "16c03ea1-1220-4d11-b9fe-cf68f94bb95a",
-    "payment_date": "2026-07-14T13:04:26.180Z",
+    "prescriber_code": "daeac7f2-2d6b-43c1-a5b3-ecb1d125aa86",
+    "payment_date": "2026-09-19T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 11,
-    "date_created": "2026-07-05T13:04:26.180Z",
-    "date_updated": "2026-08-04T13:04:26.180Z",
+    "date_created": "2026-09-10T19:18:31.385Z",
+    "date_updated": "2026-10-10T19:18:31.385Z",
     "status": "Em produção",
     "total": 823.2,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100010",
     "delivery_price": 15,
     "associate_name": "Karen Esteves",
-    "order_code": "d8b08f13-d7de-49ce-9a8b-770552e33059",
-    "user_code": "fa7eda69-f926-438b-9314-8068899860ef",
+    "order_code": "928a36c6-991d-478d-9967-52a438d327df",
+    "user_code": "2450d5a2-6feb-4d6c-b9e9-8a5f4e957215",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -717,7 +717,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-05T13:04:26.180Z",
+    "created_date": "2026-09-10T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -742,32 +742,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0abbd573-d2a2-45d9-884d-4a73c83f713b",
-    "payment_date": "2026-07-15T13:04:26.180Z",
+    "prescriber_code": "b7a2ecb6-be28-40ca-aefd-a5ecb50567dd",
+    "payment_date": "2026-09-20T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 12,
-    "date_created": "2026-07-06T13:04:26.180Z",
-    "date_updated": "2026-08-03T13:04:26.180Z",
+    "date_created": "2026-09-11T19:18:31.385Z",
+    "date_updated": "2026-10-09T19:18:31.385Z",
     "status": "Produção Finalizada",
     "total": 1186.5,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100011",
     "delivery_price": 18,
     "associate_name": "Lucas Henrique",
-    "order_code": "47c4598b-1fad-40d2-975f-0cd1dea9cb99",
-    "user_code": "cc3a6973-0443-489a-94ef-0705fe80cbb0",
+    "order_code": "54e33833-bc5c-4f33-8a89-32cbf2d210fc",
+    "user_code": "205dd83a-bd35-4497-bcc5-b0804a048b2a",
     "items": [
       {
         "sku": "KNK-THC",
@@ -780,7 +780,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-06T13:04:26.180Z",
+    "created_date": "2026-09-11T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -805,32 +805,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "3a316272-1cef-4c07-9cc9-25d6d296bce8",
-    "payment_date": "2026-07-16T13:04:26.180Z",
+    "prescriber_code": "f99ee333-6893-42da-9cf1-a07caf447ad8",
+    "payment_date": "2026-09-21T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 13,
-    "date_created": "2026-07-07T13:04:26.180Z",
-    "date_updated": "2026-08-02T13:04:26.180Z",
+    "date_created": "2026-09-12T19:18:31.385Z",
+    "date_updated": "2026-10-08T19:18:31.385Z",
     "status": "Adicionado no sistema",
     "total": 466.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100012",
     "delivery_price": 21,
     "associate_name": "Marina Klein",
-    "order_code": "b163ec57-16c3-47ef-a12f-302f0cb36b78",
-    "user_code": "613a40e3-5a13-49d8-92c9-231eedc781bc",
+    "order_code": "18dee887-b51f-41fe-9476-f6446d1ddf61",
+    "user_code": "44bbf1a3-d8db-4434-9321-4c408021037e",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -853,7 +853,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-07T13:04:26.180Z",
+    "created_date": "2026-09-12T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -879,32 +879,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0249180f-9f82-4cd8-9c09-cf05dfa19365",
-    "payment_date": "2026-06-25T13:04:26.180Z",
+    "prescriber_code": "7e89217b-e62f-4979-be68-d7653f12ab48",
+    "payment_date": "2026-08-31T19:18:31.385Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.180Z",
-    "last_tracking_date": "2026-06-25T13:04:26.180Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.385Z",
+    "last_tracking_date": "2026-08-31T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 14,
-    "date_created": "2026-07-08T13:04:26.181Z",
-    "date_updated": "2026-08-01T13:04:26.181Z",
+    "date_created": "2026-09-13T19:18:31.385Z",
+    "date_updated": "2026-10-07T19:18:31.385Z",
     "status": "Enviado",
     "total": 648.8,
     "payment_method": "credit_card",
     "tracking_code": "BRDEMO100013",
     "delivery_price": 24,
     "associate_name": "Nuno Nogueira",
-    "order_code": "7df73764-ddcd-437f-8272-831972d5b5cb",
-    "user_code": "d521cb4b-6f7b-4b3f-9a72-59020ab76377",
+    "order_code": "1869f9ce-34b8-4823-bf52-3b906569ff87",
+    "user_code": "2ec15868-836b-4e76-a9c9-44a4d711dad4",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -917,7 +917,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-08T13:04:26.181Z",
+    "created_date": "2026-09-13T19:18:31.385Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -942,32 +942,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7a1ae3a7-96ef-4f45-9663-74a430fdf43b",
-    "payment_date": "2026-07-18T13:04:26.181Z",
+    "prescriber_code": "942f1946-889f-4f1e-bbc5-6106e4e583b7",
+    "payment_date": "2026-09-23T19:18:31.385Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.181Z",
-    "last_tracking_date": "2026-08-10T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.385Z",
+    "last_tracking_date": "2026-10-16T19:18:31.385Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 15,
-    "date_created": "2026-07-09T13:04:26.181Z",
-    "date_updated": "2026-07-31T13:04:26.181Z",
+    "date_created": "2026-09-14T19:18:31.385Z",
+    "date_updated": "2026-10-06T19:18:31.386Z",
     "status": "Entregue",
     "total": 722.7,
     "payment_method": "boleto",
     "tracking_code": "BRDEMO100014",
     "delivery_price": 27,
     "associate_name": "Olívia Queiroz",
-    "order_code": "7bfc58d3-9a41-4cc2-a5bf-9a154b4a2035",
-    "user_code": "c95a27ec-9f7a-4b64-a408-0d0822d22d37",
+    "order_code": "ce3672e2-58d1-41e2-8f1b-478e565e7ac0",
+    "user_code": "2ed08cc4-b91e-47b1-83fa-5c33cc953f95",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -990,7 +990,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-09T13:04:26.181Z",
+    "created_date": "2026-09-14T19:18:31.386Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1015,32 +1015,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "25ef0438-e5bb-497e-8431-61f8d979329d",
-    "payment_date": "2026-07-19T13:04:26.181Z",
+    "prescriber_code": "ddd11d57-d528-4f42-a140-cdf593f717b0",
+    "payment_date": "2026-09-24T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.181Z",
-    "last_tracking_date": "2026-08-11T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.386Z",
+    "last_tracking_date": "2026-10-17T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 16,
-    "date_created": "2026-07-10T13:04:26.181Z",
-    "date_updated": "2026-07-30T13:04:26.181Z",
+    "date_created": "2026-09-15T19:18:31.386Z",
+    "date_updated": "2026-10-05T19:18:31.386Z",
     "status": "Cancelado",
     "total": 262.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100015",
     "delivery_price": 15,
     "associate_name": "Paulo Teixeira",
-    "order_code": "d5fb4b0f-d9d7-4999-9555-ba9cf0b98390",
-    "user_code": "dad155a4-cc37-4c7d-89d1-fdf469bac935",
+    "order_code": "c03b4e16-7918-4a01-b525-5b61eee12795",
+    "user_code": "a6f44aec-d731-4ed7-a260-62f3a509e6e6",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -1053,7 +1053,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-10T13:04:26.181Z",
+    "created_date": "2026-09-15T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1079,32 +1079,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "2cec286d-81c7-47fe-97df-e823c16a44c9",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "22c85f80-25ac-4ee1-972c-f623afb9b3b8",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 17,
-    "date_created": "2026-07-11T13:04:26.181Z",
-    "date_updated": "2026-07-29T13:04:26.181Z",
+    "date_created": "2026-09-16T19:18:31.386Z",
+    "date_updated": "2026-10-04T19:18:31.386Z",
     "status": "Aguardando pagamento",
     "total": 962.9,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100016",
     "delivery_price": 18,
     "associate_name": "Queila Wagner",
-    "order_code": "897b5915-68b4-4825-91b7-47fef4cfe836",
-    "user_code": "2fc1481c-d510-4a8b-8ee5-940c315a40ea",
+    "order_code": "227a80f6-4579-48a4-8492-a41cda8df615",
+    "user_code": "0d75f1be-82d0-48f3-bd5a-f09c18a4d717",
     "items": [
       {
         "sku": "KNK-THC",
@@ -1127,7 +1127,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-11T13:04:26.181Z",
+    "created_date": "2026-09-16T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -1152,32 +1152,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7f367205-d33a-4155-8499-6b39f7eb9fff",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "23fcfa7e-2ea3-48f4-8492-cbfeba61823a",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 18,
-    "date_created": "2026-07-12T13:04:26.181Z",
-    "date_updated": "2026-07-28T13:04:26.181Z",
+    "date_created": "2026-09-17T19:18:31.386Z",
+    "date_updated": "2026-10-03T19:18:31.386Z",
     "status": "Pagamento concluído",
     "total": 615,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100017",
     "delivery_price": 21,
     "associate_name": "Rafael Zanetti",
-    "order_code": "67169078-0fe3-4bcb-a179-377df7afeb19",
-    "user_code": "bfc942bf-8a2b-4087-918d-ee1216727479",
+    "order_code": "470ff924-1bc4-4881-b7a0-2143fb7327e7",
+    "user_code": "11798f21-baae-4d68-864b-f1e11d812e17",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -1190,7 +1190,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-12T13:04:26.181Z",
+    "created_date": "2026-09-17T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1215,32 +1215,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "5db8d050-92ad-4db8-892f-8e107c57f85d",
-    "payment_date": "2026-07-22T13:04:26.181Z",
+    "prescriber_code": "e7992cf4-2c52-47a5-a6f1-5e2deefc543b",
+    "payment_date": "2026-09-27T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 19,
-    "date_created": "2026-07-13T13:04:26.181Z",
-    "date_updated": "2026-07-27T13:04:26.181Z",
+    "date_created": "2026-09-18T19:18:31.386Z",
+    "date_updated": "2026-10-02T19:18:31.386Z",
     "status": "Em produção",
     "total": 725.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100018",
     "delivery_price": 24,
     "associate_name": "Sofia Cardoso",
-    "order_code": "a39be589-2422-4caf-b9af-d062002b29dc",
-    "user_code": "8bdea22e-d5a5-464c-b32c-6216256c9a8d",
+    "order_code": "47beac50-fbcc-49ba-af63-60c720f0fe74",
+    "user_code": "3874e9af-e0b1-4416-a7cc-7c1100a16254",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -1263,7 +1263,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-13T13:04:26.181Z",
+    "created_date": "2026-09-18T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1289,32 +1289,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "44216815-b2ed-49c4-a142-bf2ff83814ab",
-    "payment_date": "2026-07-23T13:04:26.181Z",
+    "prescriber_code": "a1e59c94-c797-4341-90fb-caa1cb3ed7e5",
+    "payment_date": "2026-09-28T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 20,
-    "date_created": "2026-07-14T13:04:26.181Z",
-    "date_updated": "2026-07-26T13:04:26.181Z",
+    "date_created": "2026-09-19T19:18:31.386Z",
+    "date_updated": "2026-10-01T19:18:31.386Z",
     "status": "Produção Finalizada",
     "total": 358.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100019",
     "delivery_price": 27,
     "associate_name": "Tiago Freitas",
-    "order_code": "06ff52e0-7dc7-4582-b9b4-238860981d92",
-    "user_code": "d559e032-de82-492d-81d5-5733f660bce9",
+    "order_code": "79400480-a711-481c-9e97-f621f090601b",
+    "user_code": "11b720d2-76b0-43bd-9a0f-bedbae3355b1",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -1327,7 +1327,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-14T13:04:26.181Z",
+    "created_date": "2026-09-19T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1352,32 +1352,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "16c03ea1-1220-4d11-b9fe-cf68f94bb95a",
-    "payment_date": "2026-07-24T13:04:26.181Z",
+    "prescriber_code": "daeac7f2-2d6b-43c1-a5b3-ecb1d125aa86",
+    "payment_date": "2026-09-29T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 21,
-    "date_created": "2026-07-15T13:04:26.181Z",
-    "date_updated": "2026-08-14T13:04:26.181Z",
+    "date_created": "2026-09-20T19:18:31.386Z",
+    "date_updated": "2026-10-20T19:18:31.386Z",
     "status": "Adicionado no sistema",
     "total": 1071.1,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100020",
     "delivery_price": 15,
     "associate_name": "Úrsula Ibrahim",
-    "order_code": "55d0b89c-1855-4ebe-96e5-cbc2955d04a7",
-    "user_code": "815fae76-ece2-4faf-88c0-e7cb7c3da3bd",
+    "order_code": "bf9868aa-ee05-45d4-a7c8-d42b6583f8a2",
+    "user_code": "4e0557b8-2308-4b20-a3c0-20790281b2e7",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -1400,7 +1400,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-15T13:04:26.181Z",
+    "created_date": "2026-09-20T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -1425,32 +1425,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0abbd573-d2a2-45d9-884d-4a73c83f713b",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "b7a2ecb6-be28-40ca-aefd-a5ecb50567dd",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 22,
-    "date_created": "2026-07-16T13:04:26.181Z",
-    "date_updated": "2026-08-13T13:04:26.181Z",
+    "date_created": "2026-09-21T19:18:31.386Z",
+    "date_updated": "2026-10-19T19:18:31.386Z",
     "status": "Enviado",
     "total": 407.5,
     "payment_method": "pix",
     "tracking_code": "BRDEMO100021",
     "delivery_price": 18,
     "associate_name": "Vitor Lima",
-    "order_code": "50a2bd95-0578-437e-8965-bfab53431428",
-    "user_code": "78aaa2ac-6955-4bac-80fc-30a6350882d8",
+    "order_code": "ba381cac-4a1d-4463-af6d-430d637ca32b",
+    "user_code": "0adb4bb9-5ae4-44cc-83d4-1683d182abd2",
     "items": [
       {
         "sku": "KNK-THC",
@@ -1463,7 +1463,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-16T13:04:26.181Z",
+    "created_date": "2026-09-21T19:18:31.386Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1489,32 +1489,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "3a316272-1cef-4c07-9cc9-25d6d296bce8",
-    "payment_date": "2026-07-26T13:04:26.181Z",
+    "prescriber_code": "f99ee333-6893-42da-9cf1-a07caf447ad8",
+    "payment_date": "2026-10-01T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.181Z",
-    "last_tracking_date": "2026-08-10T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.386Z",
+    "last_tracking_date": "2026-10-16T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 23,
-    "date_created": "2026-07-17T13:04:26.181Z",
-    "date_updated": "2026-08-12T13:04:26.181Z",
+    "date_created": "2026-09-22T19:18:31.386Z",
+    "date_updated": "2026-10-18T19:18:31.386Z",
     "status": "Entregue",
     "total": 664.9,
     "payment_method": "credit_card",
     "tracking_code": "BRDEMO100022",
     "delivery_price": 21,
     "associate_name": "Wanda Oliveira",
-    "order_code": "547e583a-3b76-4c24-bb90-c6cc96723a70",
-    "user_code": "abc4087e-0b2a-4cac-a7c2-220d52c50c77",
+    "order_code": "b8c5fbd0-2ad7-496a-8189-b92804de0130",
+    "user_code": "0f4672b1-fdfe-479f-a1ea-2e1040057bcd",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -1537,7 +1537,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-17T13:04:26.181Z",
+    "created_date": "2026-09-22T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1562,32 +1562,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0249180f-9f82-4cd8-9c09-cf05dfa19365",
-    "payment_date": "2026-07-27T13:04:26.181Z",
+    "prescriber_code": "7e89217b-e62f-4979-be68-d7653f12ab48",
+    "payment_date": "2026-10-02T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.181Z",
-    "last_tracking_date": "2026-08-11T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.386Z",
+    "last_tracking_date": "2026-10-17T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 24,
-    "date_created": "2026-07-18T13:04:26.181Z",
-    "date_updated": "2026-08-11T13:04:26.181Z",
+    "date_created": "2026-09-23T19:18:31.386Z",
+    "date_updated": "2026-10-17T19:18:31.386Z",
     "status": "Cancelado",
     "total": 961.2,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100023",
     "delivery_price": 24,
     "associate_name": "Xavier Ramos",
-    "order_code": "8854dca0-9353-4f78-8e53-9287ba135f06",
-    "user_code": "308eb637-c93b-47a8-9c40-92f49bb75082",
+    "order_code": "8b44043a-b141-447f-b1a1-c6f1ad242301",
+    "user_code": "3f5d8d84-ad8c-4598-b08c-48ab50eb4c39",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -1600,7 +1600,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-18T13:04:26.181Z",
+    "created_date": "2026-09-23T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1625,32 +1625,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7a1ae3a7-96ef-4f45-9663-74a430fdf43b",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "942f1946-889f-4f1e-bbc5-6106e4e583b7",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 25,
-    "date_created": "2026-07-19T13:04:26.181Z",
-    "date_updated": "2026-08-10T13:04:26.181Z",
+    "date_created": "2026-09-24T19:18:31.386Z",
+    "date_updated": "2026-10-16T19:18:31.386Z",
     "status": "Aguardando pagamento",
     "total": 390.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100024",
     "delivery_price": 27,
     "associate_name": "Yasmin Uchoa",
-    "order_code": "58d8f2b5-47f8-45a2-b0be-667edea084e0",
-    "user_code": "95d68eb9-e1af-46d1-821e-47a215568760",
+    "order_code": "192ca453-bc97-442d-a9c9-1bef7e1a82b0",
+    "user_code": "46951378-bf59-40ce-9ff2-5b5385733a93",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -1673,7 +1673,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-19T13:04:26.181Z",
+    "created_date": "2026-09-24T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -1699,32 +1699,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "25ef0438-e5bb-497e-8431-61f8d979329d",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "ddd11d57-d528-4f42-a140-cdf593f717b0",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 26,
-    "date_created": "2026-07-20T13:04:26.181Z",
-    "date_updated": "2026-08-09T13:04:26.181Z",
+    "date_created": "2026-09-25T19:18:31.386Z",
+    "date_updated": "2026-10-15T19:18:31.386Z",
     "status": "Pagamento concluído",
     "total": 510.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100025",
     "delivery_price": 15,
     "associate_name": "Zeca Xavier",
-    "order_code": "9c5d8ffe-f007-4be8-8b8c-aa8ecc2c3e6f",
-    "user_code": "86bff82e-2965-46c3-b886-b402722f9886",
+    "order_code": "87fc27ff-fd4a-47a1-b015-54c53dffb512",
+    "user_code": "a84bd159-875b-432d-b6d5-e2947326c09e",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -1737,7 +1737,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-20T13:04:26.181Z",
+    "created_date": "2026-09-25T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1762,32 +1762,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "2cec286d-81c7-47fe-97df-e823c16a44c9",
-    "payment_date": "2026-07-30T13:04:26.181Z",
+    "prescriber_code": "22c85f80-25ac-4ee1-972c-f623afb9b3b8",
+    "payment_date": "2026-10-05T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 27,
-    "date_created": "2026-07-21T13:04:26.181Z",
-    "date_updated": "2026-08-08T13:04:26.181Z",
+    "date_created": "2026-09-26T19:18:31.386Z",
+    "date_updated": "2026-10-14T19:18:31.386Z",
     "status": "Em produção",
     "total": 1352.4,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100026",
     "delivery_price": 18,
     "associate_name": "Beatriz Almeida",
-    "order_code": "ff2a9d00-2458-415c-8af7-62ed73b865de",
-    "user_code": "1218ad60-6714-4a25-97f6-2b01514f572d",
+    "order_code": "1cf1341a-c544-45fe-8f25-315b26f7385f",
+    "user_code": "5498b6b7-641a-4765-9458-1d64f96d2007",
     "items": [
       {
         "sku": "KNK-THC",
@@ -1810,7 +1810,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-21T13:04:26.181Z",
+    "created_date": "2026-09-26T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1835,32 +1835,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7f367205-d33a-4155-8499-6b39f7eb9fff",
-    "payment_date": "2026-07-31T13:04:26.181Z",
+    "prescriber_code": "23fcfa7e-2ea3-48f4-8492-cbfeba61823a",
+    "payment_date": "2026-10-06T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 28,
-    "date_created": "2026-07-22T13:04:26.181Z",
-    "date_updated": "2026-08-07T13:04:26.181Z",
+    "date_created": "2026-09-27T19:18:31.386Z",
+    "date_updated": "2026-10-13T19:18:31.386Z",
     "status": "Produção Finalizada",
     "total": 219,
     "payment_method": "pix",
     "tracking_code": "PENDING-100027",
     "delivery_price": 21,
     "associate_name": "Caio Dias",
-    "order_code": "3fe2f8d0-8391-46f1-bcbf-60bd5a95e4a6",
-    "user_code": "268996d8-1fc4-4d6e-a75b-51c0e0d457af",
+    "order_code": "cdd7474a-c8a2-4168-9f9a-aec8998e7fec",
+    "user_code": "0825187c-8d85-40ec-a2a9-766af55f1cb7",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -1873,7 +1873,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-22T13:04:26.181Z",
+    "created_date": "2026-09-27T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -1899,32 +1899,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "5db8d050-92ad-4db8-892f-8e107c57f85d",
-    "payment_date": "2026-08-01T13:04:26.181Z",
+    "prescriber_code": "e7992cf4-2c52-47a5-a6f1-5e2deefc543b",
+    "payment_date": "2026-10-07T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 29,
-    "date_created": "2026-07-23T13:04:26.181Z",
-    "date_updated": "2026-08-06T13:04:26.181Z",
+    "date_created": "2026-09-28T19:18:31.386Z",
+    "date_updated": "2026-10-12T19:18:31.386Z",
     "status": "Adicionado no sistema",
     "total": 1038.3,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100028",
     "delivery_price": 24,
     "associate_name": "Débora Gomes",
-    "order_code": "bb90f347-0433-4c53-a2f7-eb11ce9d09c0",
-    "user_code": "82755553-5094-4ecf-a9d5-d16baa2668fb",
+    "order_code": "70eec8c9-07b2-44bd-9b00-d4597950b6ff",
+    "user_code": "1df5cf53-dacb-4f3c-bd3e-f9f029830274",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -1947,7 +1947,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-23T13:04:26.181Z",
+    "created_date": "2026-09-28T19:18:31.386Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -1972,32 +1972,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "44216815-b2ed-49c4-a142-bf2ff83814ab",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "a1e59c94-c797-4341-90fb-caa1cb3ed7e5",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 30,
-    "date_created": "2026-07-24T13:04:26.181Z",
-    "date_updated": "2026-08-05T13:04:26.181Z",
+    "date_created": "2026-09-29T19:18:31.386Z",
+    "date_updated": "2026-10-11T19:18:31.386Z",
     "status": "Enviado",
     "total": 524.7,
     "payment_method": "boleto",
     "tracking_code": "BRDEMO100029",
     "delivery_price": 27,
     "associate_name": "Eduardo Junqueira",
-    "order_code": "155e1f90-9357-43c2-8813-766da5528509",
-    "user_code": "9d373e2e-3547-4fb4-a5dc-dde8ad9c171a",
+    "order_code": "413a1045-24b2-4945-b132-ca20c35100fd",
+    "user_code": "9b5bdd52-5ad4-4043-a9bc-4ed345f7656f",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -2010,7 +2010,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-24T13:04:26.181Z",
+    "created_date": "2026-09-29T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2035,32 +2035,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "16c03ea1-1220-4d11-b9fe-cf68f94bb95a",
-    "payment_date": "2026-08-03T13:04:26.181Z",
+    "prescriber_code": "daeac7f2-2d6b-43c1-a5b3-ecb1d125aa86",
+    "payment_date": "2026-10-09T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.181Z",
-    "last_tracking_date": "2026-08-10T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.386Z",
+    "last_tracking_date": "2026-10-16T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 31,
-    "date_created": "2026-07-25T13:04:26.181Z",
-    "date_updated": "2026-08-04T13:04:26.181Z",
+    "date_created": "2026-09-30T19:18:31.386Z",
+    "date_updated": "2026-10-10T19:18:31.386Z",
     "status": "Entregue",
     "total": 575.3,
     "payment_method": "pix",
     "tracking_code": "BRDEMO100030",
     "delivery_price": 15,
     "associate_name": "Ana Mendes",
-    "order_code": "022cf334-ef9e-49ad-b29f-6d14a835d3d5",
-    "user_code": "3742e5c0-5380-4881-b2b4-362d1c6930e4",
+    "order_code": "348ecb32-8aef-475e-9df9-58e9a7a08560",
+    "user_code": "47f7f984-1527-4d78-8687-c22848f28d75",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -2083,7 +2083,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-25T13:04:26.181Z",
+    "created_date": "2026-09-30T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2109,32 +2109,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0abbd573-d2a2-45d9-884d-4a73c83f713b",
-    "payment_date": "2026-07-05T13:04:26.181Z",
+    "prescriber_code": "b7a2ecb6-be28-40ca-aefd-a5ecb50567dd",
+    "payment_date": "2026-09-10T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.181Z",
-    "last_tracking_date": "2026-08-11T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.386Z",
+    "last_tracking_date": "2026-10-17T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 32,
-    "date_created": "2026-07-26T13:04:26.181Z",
-    "date_updated": "2026-08-03T13:04:26.181Z",
+    "date_created": "2026-10-01T19:18:31.386Z",
+    "date_updated": "2026-10-09T19:18:31.386Z",
     "status": "Cancelado",
     "total": 797,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100031",
     "delivery_price": 18,
     "associate_name": "Bruno Pereira",
-    "order_code": "ae06e030-3b9b-4d8d-a206-8895906c5139",
-    "user_code": "b9040871-0a88-474a-8e46-875ab8a1d73a",
+    "order_code": "a4c2eddc-a480-4ee6-8e40-1480c3b9cbcc",
+    "user_code": "1d2660ec-1670-45b0-b5e5-8d7a89c271bb",
     "items": [
       {
         "sku": "KNK-THC",
@@ -2147,7 +2147,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-07-26T13:04:26.181Z",
+    "created_date": "2026-10-01T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2172,32 +2172,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "3a316272-1cef-4c07-9cc9-25d6d296bce8",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "f99ee333-6893-42da-9cf1-a07caf447ad8",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 33,
-    "date_created": "2026-07-27T13:04:26.181Z",
-    "date_updated": "2026-08-02T13:04:26.181Z",
+    "date_created": "2026-10-02T19:18:31.386Z",
+    "date_updated": "2026-10-08T19:18:31.386Z",
     "status": "Aguardando pagamento",
     "total": 862.9,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100032",
     "delivery_price": 21,
     "associate_name": "Carla Silva",
-    "order_code": "45d18bc6-65df-4931-9392-e560e8e4ade6",
-    "user_code": "bde7126c-db9c-404d-b948-84ceebe4e96d",
+    "order_code": "35ab732e-ce1c-484f-90ee-4ddd849bc1d0",
+    "user_code": "48a447d3-453f-464e-b4a6-6c7af647aa2b",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -2220,7 +2220,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-27T13:04:26.181Z",
+    "created_date": "2026-10-02T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -2245,32 +2245,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0249180f-9f82-4cd8-9c09-cf05dfa19365",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "7e89217b-e62f-4979-be68-d7653f12ab48",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 34,
-    "date_created": "2026-07-28T13:04:26.181Z",
-    "date_updated": "2026-08-01T13:04:26.181Z",
+    "date_created": "2026-10-03T19:18:31.386Z",
+    "date_updated": "2026-10-07T19:18:31.386Z",
     "status": "Pagamento concluído",
     "total": 336.4,
     "payment_method": "pix",
     "tracking_code": "PENDING-100033",
     "delivery_price": 24,
     "associate_name": "Diego Vieira",
-    "order_code": "4850fb92-5fe6-4a20-93fc-c57036f2e0ed",
-    "user_code": "39553e58-a06e-42b7-aa96-df05fcbcc132",
+    "order_code": "3b7ec4c4-230a-4626-8541-f80663a9cb7a",
+    "user_code": "15a721e4-1544-4443-bbee-6afdfb482453",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -2283,7 +2283,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-07-28T13:04:26.181Z",
+    "created_date": "2026-10-03T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2309,32 +2309,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7a1ae3a7-96ef-4f45-9663-74a430fdf43b",
-    "payment_date": "2026-07-08T13:04:26.181Z",
+    "prescriber_code": "942f1946-889f-4f1e-bbc5-6106e4e583b7",
+    "payment_date": "2026-09-13T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 35,
-    "date_created": "2026-07-29T13:04:26.181Z",
-    "date_updated": "2026-07-31T13:04:26.181Z",
+    "date_created": "2026-10-04T19:18:31.386Z",
+    "date_updated": "2026-10-06T19:18:31.386Z",
     "status": "Em produção",
     "total": 556.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100034",
     "delivery_price": 27,
     "associate_name": "Elena Yamamoto",
-    "order_code": "7b791b73-fbb2-4118-9d13-1ee4c889d84e",
-    "user_code": "cd339e48-e617-4c39-a1dd-7a26073b121f",
+    "order_code": "6dc5712e-84f3-4dc1-bf00-95fba68ff365",
+    "user_code": "b0c285fb-be8a-4d66-8459-d2d109329bd0",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -2357,7 +2357,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-07-29T13:04:26.181Z",
+    "created_date": "2026-10-04T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2382,32 +2382,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "25ef0438-e5bb-497e-8431-61f8d979329d",
-    "payment_date": "2026-07-09T13:04:26.181Z",
+    "prescriber_code": "ddd11d57-d528-4f42-a140-cdf593f717b0",
+    "payment_date": "2026-09-14T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 36,
-    "date_created": "2026-07-30T13:04:26.181Z",
-    "date_updated": "2026-07-30T13:04:26.181Z",
+    "date_created": "2026-10-05T19:18:31.386Z",
+    "date_updated": "2026-10-05T19:18:31.386Z",
     "status": "Produção Finalizada",
     "total": 758.7,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100035",
     "delivery_price": 15,
     "associate_name": "Fábio Barbosa",
-    "order_code": "dfd5df69-c67f-42f5-9259-3480b4ce32c8",
-    "user_code": "a81d5ee4-985b-442a-b773-30c5ce395e1d",
+    "order_code": "7ca189e9-10ec-42d8-88a0-d3094ca0e937",
+    "user_code": "b2e771f3-f2ec-4f7c-b607-41ce1ac41966",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -2420,7 +2420,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-07-30T13:04:26.181Z",
+    "created_date": "2026-10-05T19:18:31.386Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2445,32 +2445,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "2cec286d-81c7-47fe-97df-e823c16a44c9",
-    "payment_date": "2026-07-10T13:04:26.181Z",
+    "prescriber_code": "22c85f80-25ac-4ee1-972c-f623afb9b3b8",
+    "payment_date": "2026-09-15T19:18:31.386Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 37,
-    "date_created": "2026-07-31T13:04:26.181Z",
-    "date_updated": "2026-07-29T13:04:26.181Z",
+    "date_created": "2026-10-06T19:18:31.386Z",
+    "date_updated": "2026-10-04T19:18:31.386Z",
     "status": "Adicionado no sistema",
     "total": 573.4,
     "payment_method": "pix",
     "tracking_code": "PENDING-100036",
     "delivery_price": 18,
     "associate_name": "Gabriela Esteves",
-    "order_code": "bd7cfaa9-2e1c-4b50-b05d-d5061b5c5899",
-    "user_code": "9553670e-8e4a-4fa3-9cd4-e9a4a669cd40",
+    "order_code": "fd9b27ba-b749-4b2d-8079-0712bf65c23f",
+    "user_code": "9aab7aa4-dc32-45fc-bebf-84304253c21a",
     "items": [
       {
         "sku": "KNK-THC",
@@ -2493,7 +2493,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-07-31T13:04:26.181Z",
+    "created_date": "2026-10-06T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -2519,32 +2519,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7f367205-d33a-4155-8499-6b39f7eb9fff",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "23fcfa7e-2ea3-48f4-8492-cbfeba61823a",
+    "payment_date": "2026-08-31T19:18:31.386Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.386Z",
+    "last_tracking_date": "2026-08-31T19:18:31.386Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 38,
-    "date_created": "2026-08-01T13:04:26.181Z",
-    "date_updated": "2026-07-28T13:04:26.181Z",
+    "date_created": "2026-10-07T19:18:31.386Z",
+    "date_updated": "2026-10-03T19:18:31.386Z",
     "status": "Enviado",
     "total": 417,
     "payment_method": "credit_card",
     "tracking_code": "BRDEMO100037",
     "delivery_price": 21,
     "associate_name": "Hugo Henrique",
-    "order_code": "ef21b7eb-5868-4b70-95cf-3658e1c6e7b6",
-    "user_code": "1b8b4ef8-fc45-4d06-bccc-827b07fdaf62",
+    "order_code": "490e3a26-2a3a-45df-8e49-928d714bc64c",
+    "user_code": "ffc9ad08-1e9b-4bed-88a9-bfa695605552",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -2557,7 +2557,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-08-01T13:04:26.181Z",
+    "created_date": "2026-10-07T19:18:31.386Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2582,32 +2582,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "5db8d050-92ad-4db8-892f-8e107c57f85d",
-    "payment_date": "2026-07-12T13:04:26.181Z",
+    "prescriber_code": "e7992cf4-2c52-47a5-a6f1-5e2deefc543b",
+    "payment_date": "2026-09-17T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.181Z",
-    "last_tracking_date": "2026-08-10T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.387Z",
+    "last_tracking_date": "2026-10-16T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 39,
-    "date_created": "2026-08-02T13:04:26.181Z",
-    "date_updated": "2026-07-27T13:04:26.181Z",
+    "date_created": "2026-10-08T19:18:31.387Z",
+    "date_updated": "2026-10-02T19:18:31.387Z",
     "status": "Entregue",
     "total": 1350.7,
     "payment_method": "boleto",
     "tracking_code": "BRDEMO100038",
     "delivery_price": 24,
     "associate_name": "Iris Klein",
-    "order_code": "51510389-d5c5-42e3-879b-fe28f9c1ae21",
-    "user_code": "1f201df9-4574-44f6-9bd8-2c5f0b1a4ab4",
+    "order_code": "3efc3e74-b484-4cbd-bfe1-cc2c912ceeee",
+    "user_code": "0f8e214b-de25-47dd-86c5-2922a3f615a2",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -2630,7 +2630,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-08-02T13:04:26.181Z",
+    "created_date": "2026-10-08T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2655,32 +2655,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "44216815-b2ed-49c4-a142-bf2ff83814ab",
-    "payment_date": "2026-07-13T13:04:26.181Z",
+    "prescriber_code": "a1e59c94-c797-4341-90fb-caa1cb3ed7e5",
+    "payment_date": "2026-09-18T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.181Z",
-    "last_tracking_date": "2026-08-11T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.387Z",
+    "last_tracking_date": "2026-10-17T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 40,
-    "date_created": "2026-08-03T13:04:26.181Z",
-    "date_updated": "2026-07-26T13:04:26.181Z",
+    "date_created": "2026-10-09T19:18:31.387Z",
+    "date_updated": "2026-10-01T19:18:31.387Z",
     "status": "Cancelado",
     "total": 192.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100039",
     "delivery_price": 27,
     "associate_name": "João Nogueira",
-    "order_code": "2de72291-71a9-49a3-bfd7-8785ee0c3614",
-    "user_code": "444eabab-ea12-4e00-a123-05a13309bc7f",
+    "order_code": "027556a0-45cc-48a8-8ebd-5eb201ce75b5",
+    "user_code": "62c85c54-bca3-4d48-9bdb-873a6db887c0",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -2693,7 +2693,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-08-03T13:04:26.181Z",
+    "created_date": "2026-10-09T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2719,32 +2719,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "16c03ea1-1220-4d11-b9fe-cf68f94bb95a",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "daeac7f2-2d6b-43c1-a5b3-ecb1d125aa86",
+    "payment_date": "2026-08-31T19:18:31.387Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 41,
-    "date_created": "2026-08-04T13:04:26.181Z",
-    "date_updated": "2026-08-14T13:04:26.181Z",
+    "date_created": "2026-10-10T19:18:31.387Z",
+    "date_updated": "2026-10-20T19:18:31.387Z",
     "status": "Aguardando pagamento",
     "total": 823.2,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100040",
     "delivery_price": 15,
     "associate_name": "Karen Queiroz",
-    "order_code": "5f605ab1-a859-43df-ac03-c5586d52c5e5",
-    "user_code": "8217a43a-32c0-4503-ab76-9de4bbc0440c",
+    "order_code": "28dcf4f7-e28d-4bdc-a8e9-a9d8c4796d73",
+    "user_code": "863852c1-f4b5-4d16-857b-8267df93358d",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -2767,7 +2767,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-08-04T13:04:26.181Z",
+    "created_date": "2026-10-10T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -2792,32 +2792,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0abbd573-d2a2-45d9-884d-4a73c83f713b",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "b7a2ecb6-be28-40ca-aefd-a5ecb50567dd",
+    "payment_date": "2026-08-31T19:18:31.387Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 42,
-    "date_created": "2026-08-05T13:04:26.181Z",
-    "date_updated": "2026-08-13T13:04:26.181Z",
+    "date_created": "2026-10-11T19:18:31.387Z",
+    "date_updated": "2026-10-19T19:18:31.387Z",
     "status": "Pagamento concluído",
     "total": 1186.5,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100041",
     "delivery_price": 18,
     "associate_name": "Lucas Teixeira",
-    "order_code": "eb2d87c9-0736-49b5-9adb-9559d1d84ab5",
-    "user_code": "34347b3b-3c82-49a8-b556-a81f444f0217",
+    "order_code": "f624136a-b919-4a02-b6b5-db3091b3c0b8",
+    "user_code": "ac144d53-b360-49f8-ae43-da6cb05ba6db",
     "items": [
       {
         "sku": "KNK-THC",
@@ -2830,7 +2830,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-08-05T13:04:26.181Z",
+    "created_date": "2026-10-11T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2855,32 +2855,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "3a316272-1cef-4c07-9cc9-25d6d296bce8",
-    "payment_date": "2026-07-16T13:04:26.181Z",
+    "prescriber_code": "f99ee333-6893-42da-9cf1-a07caf447ad8",
+    "payment_date": "2026-09-21T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 43,
-    "date_created": "2026-08-06T13:04:26.181Z",
-    "date_updated": "2026-08-12T13:04:26.181Z",
+    "date_created": "2026-10-12T19:18:31.387Z",
+    "date_updated": "2026-10-18T19:18:31.387Z",
     "status": "Em produção",
     "total": 466.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100042",
     "delivery_price": 21,
     "associate_name": "Marina Wagner",
-    "order_code": "948d8da3-8a56-43c2-8048-458ab21c94c9",
-    "user_code": "339af5e0-129a-42ee-a48f-c0e3dc9bb9c1",
+    "order_code": "ec3a4103-31e4-4741-af5b-b08b43344e8b",
+    "user_code": "8f4c07e6-7c87-41be-a806-99b40550e34e",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -2903,7 +2903,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-08-06T13:04:26.181Z",
+    "created_date": "2026-10-12T19:18:31.387Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2929,32 +2929,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "0249180f-9f82-4cd8-9c09-cf05dfa19365",
-    "payment_date": "2026-07-17T13:04:26.181Z",
+    "prescriber_code": "7e89217b-e62f-4979-be68-d7653f12ab48",
+    "payment_date": "2026-09-22T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 44,
-    "date_created": "2026-08-07T13:04:26.181Z",
-    "date_updated": "2026-08-11T13:04:26.181Z",
+    "date_created": "2026-10-13T19:18:31.387Z",
+    "date_updated": "2026-10-17T19:18:31.387Z",
     "status": "Produção Finalizada",
     "total": 648.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100043",
     "delivery_price": 24,
     "associate_name": "Nuno Zanetti",
-    "order_code": "3fdb7d00-b48b-4b77-8f9d-d3881f67bac3",
-    "user_code": "807f37af-4687-4c0a-a5dd-0850bfc5417c",
+    "order_code": "3620e29d-51af-4fe4-ae19-21ac52933f50",
+    "user_code": "04fb310b-8163-4071-af73-11b7ac39926b",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -2967,7 +2967,7 @@
         "category": "cbc"
       }
     ],
-    "created_date": "2026-08-07T13:04:26.181Z",
+    "created_date": "2026-10-13T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -2992,32 +2992,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7a1ae3a7-96ef-4f45-9663-74a430fdf43b",
-    "payment_date": "2026-07-18T13:04:26.181Z",
+    "prescriber_code": "942f1946-889f-4f1e-bbc5-6106e4e583b7",
+    "payment_date": "2026-09-23T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "Pedro Produção",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 45,
-    "date_created": "2026-08-08T13:04:26.181Z",
-    "date_updated": "2026-08-10T13:04:26.181Z",
+    "date_created": "2026-10-14T19:18:31.387Z",
+    "date_updated": "2026-10-16T19:18:31.387Z",
     "status": "Adicionado no sistema",
     "total": 722.7,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100044",
     "delivery_price": 27,
     "associate_name": "Olívia Cardoso",
-    "order_code": "ae74f5c7-13ab-4747-a791-aaffe5d9b466",
-    "user_code": "40207e18-ed7a-4c4e-8e23-a534993ae3ce",
+    "order_code": "aaaeac3b-3d34-4340-8a93-dfc96b95b05b",
+    "user_code": "ff718348-bd90-4353-b094-1486c3fb9b63",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -3040,7 +3040,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-08-08T13:04:26.181Z",
+    "created_date": "2026-10-14T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -3065,32 +3065,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "25ef0438-e5bb-497e-8431-61f8d979329d",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "ddd11d57-d528-4f42-a140-cdf593f717b0",
+    "payment_date": "2026-08-31T19:18:31.387Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 46,
-    "date_created": "2026-06-25T13:04:26.181Z",
-    "date_updated": "2026-08-09T13:04:26.181Z",
+    "date_created": "2026-08-31T19:18:31.387Z",
+    "date_updated": "2026-10-15T19:18:31.387Z",
     "status": "Enviado",
     "total": 262.9,
     "payment_method": "pix",
     "tracking_code": "BRDEMO100045",
     "delivery_price": 15,
     "associate_name": "Paulo Freitas",
-    "order_code": "0ea68b3b-d438-47cc-a949-58f35591659a",
-    "user_code": "a14485e2-bd39-4d99-b764-557900130dcf",
+    "order_code": "08c379ab-0348-491c-867e-b0fa294196d8",
+    "user_code": "40f4eb26-c783-4374-84ac-5239cb0520f9",
     "items": [
       {
         "sku": "KNK-CBD",
@@ -3103,7 +3103,7 @@
         "category": "cbd"
       }
     ],
-    "created_date": "2026-06-25T13:04:26.181Z",
+    "created_date": "2026-08-31T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -3129,32 +3129,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "2cec286d-81c7-47fe-97df-e823c16a44c9",
-    "payment_date": "2026-07-20T13:04:26.181Z",
+    "prescriber_code": "22c85f80-25ac-4ee1-972c-f623afb9b3b8",
+    "payment_date": "2026-09-25T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-09T13:04:26.181Z",
-    "last_tracking_date": "2026-08-10T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-15T19:18:31.387Z",
+    "last_tracking_date": "2026-10-16T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 47,
-    "date_created": "2026-06-26T13:04:26.181Z",
-    "date_updated": "2026-08-08T13:04:26.181Z",
+    "date_created": "2026-09-01T19:18:31.387Z",
+    "date_updated": "2026-10-14T19:18:31.387Z",
     "status": "Entregue",
     "total": 962.9,
     "payment_method": "credit_card",
     "tracking_code": "BRDEMO100046",
     "delivery_price": 18,
     "associate_name": "Queila Ibrahim",
-    "order_code": "0612bc60-c194-4504-aee2-f0a9d8a9ec75",
-    "user_code": "cfee69c0-00be-44e2-8057-30c2997af5c7",
+    "order_code": "87235db0-65e8-4870-a2a7-3b5d24ac1709",
+    "user_code": "84d47639-e10d-4b15-bac5-b3bf0f08ea94",
     "items": [
       {
         "sku": "KNK-THC",
@@ -3177,7 +3177,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-06-26T13:04:26.181Z",
+    "created_date": "2026-09-01T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -3202,32 +3202,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "7f367205-d33a-4155-8499-6b39f7eb9fff",
-    "payment_date": "2026-07-21T13:04:26.181Z",
+    "prescriber_code": "23fcfa7e-2ea3-48f4-8492-cbfeba61823a",
+    "payment_date": "2026-09-26T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-08-10T13:04:26.181Z",
-    "last_tracking_date": "2026-08-11T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-10-16T19:18:31.387Z",
+    "last_tracking_date": "2026-10-17T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 48,
-    "date_created": "2026-06-27T13:04:26.181Z",
-    "date_updated": "2026-08-07T13:04:26.181Z",
+    "date_created": "2026-09-02T19:18:31.387Z",
+    "date_updated": "2026-10-13T19:18:31.387Z",
     "status": "Cancelado",
     "total": 615,
     "payment_method": "boleto",
     "tracking_code": "PENDING-100047",
     "delivery_price": 21,
     "associate_name": "Rafael Lima",
-    "order_code": "ca18ef56-abd3-48f9-a73c-646208e605f6",
-    "user_code": "d5b12619-46f4-475c-965e-783518a18600",
+    "order_code": "de8663cc-8d5f-4fc1-b98d-c6a7b42ba2fa",
+    "user_code": "8691e95e-97a2-4b30-860f-bf4554211f23",
     "items": [
       {
         "sku": "KNK-CBG",
@@ -3240,7 +3240,7 @@
         "category": "cbg"
       }
     ],
-    "created_date": "2026-06-27T13:04:26.181Z",
+    "created_date": "2026-09-02T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -3265,32 +3265,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "5db8d050-92ad-4db8-892f-8e107c57f85d",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "e7992cf4-2c52-47a5-a6f1-5e2deefc543b",
+    "payment_date": "2026-08-31T19:18:31.387Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 49,
-    "date_created": "2026-06-28T13:04:26.181Z",
-    "date_updated": "2026-08-06T13:04:26.181Z",
+    "date_created": "2026-09-03T19:18:31.387Z",
+    "date_updated": "2026-10-12T19:18:31.387Z",
     "status": "Aguardando pagamento",
     "total": 725.9,
     "payment_method": "pix",
     "tracking_code": "PENDING-100048",
     "delivery_price": 24,
     "associate_name": "Sofia Oliveira",
-    "order_code": "261b805b-5752-4df6-8580-d4b20856f33d",
-    "user_code": "c680e643-e33a-4609-b8f9-d0e09f39af0a",
+    "order_code": "93918ea3-7007-4cee-944d-32464ebf51bb",
+    "user_code": "554630eb-0e78-4056-b05d-f4f46f99d060",
     "items": [
       {
         "sku": "KNK-CBC",
@@ -3313,7 +3313,7 @@
         "category": "thc"
       }
     ],
-    "created_date": "2026-06-28T13:04:26.181Z",
+    "created_date": "2026-09-03T19:18:31.387Z",
     "discount": 0,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 20,
@@ -3339,32 +3339,32 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "44216815-b2ed-49c4-a142-bf2ff83814ab",
-    "payment_date": "2026-06-25T13:04:26.181Z",
+    "prescriber_code": "a1e59c94-c797-4341-90fb-caa1cb3ed7e5",
+    "payment_date": "2026-08-31T19:18:31.387Z",
     "custom_payment": {
       "method": "pending",
       "installments": 0,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
   },
   {
     "sort": 50,
-    "date_created": "2026-06-29T13:04:26.181Z",
-    "date_updated": "2026-08-05T13:04:26.181Z",
+    "date_created": "2026-09-04T19:18:31.387Z",
+    "date_updated": "2026-10-11T19:18:31.387Z",
     "status": "Pagamento concluído",
     "total": 358.8,
     "payment_method": "credit_card",
     "tracking_code": "PENDING-100049",
     "delivery_price": 27,
     "associate_name": "Tiago Ramos",
-    "order_code": "0b487f63-65d0-4ebb-9a7b-f0107bbd4d41",
-    "user_code": "36bf67ff-18ad-4a58-bdc5-17e7f67c794d",
+    "order_code": "4904b0c3-e497-4c1f-b404-30d812a8347f",
+    "user_code": "f35cba73-0978-4efa-8e30-aeeb3c769765",
     "items": [
       {
         "sku": "KNK-CBN",
@@ -3377,7 +3377,7 @@
         "category": "cbn"
       }
     ],
-    "created_date": "2026-06-29T13:04:26.181Z",
+    "created_date": "2026-09-04T19:18:31.387Z",
     "discount": 10,
     "details": "Pedido demo sample-data com todos os campos preenchidos.",
     "donation": 0,
@@ -3402,16 +3402,16 @@
       "country": "BR"
     },
     "whatsapp_message": "Mensagem WhatsApp fictícia do pedido demo.",
-    "prescriber_code": "16c03ea1-1220-4d11-b9fe-cf68f94bb95a",
-    "payment_date": "2026-07-24T13:04:26.181Z",
+    "prescriber_code": "daeac7f2-2d6b-43c1-a5b3-ecb1d125aa86",
+    "payment_date": "2026-09-29T19:18:31.387Z",
     "custom_payment": {
       "method": "pix",
       "installments": 1,
       "gateway": "demo-gateway"
     },
-    "production_owner": "não atribuído",
-    "tracking_code_date": "2026-06-25T13:04:26.181Z",
-    "last_tracking_date": "2026-06-25T13:04:26.181Z",
+    "production_owner": null,
+    "tracking_code_date": "2026-08-31T19:18:31.387Z",
+    "last_tracking_date": "2026-08-31T19:18:31.387Z",
     "address_validation": null,
     "created_by_user_code": "KNK-ADMIN",
     "is_sample": true
