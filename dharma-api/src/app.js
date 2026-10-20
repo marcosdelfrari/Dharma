@@ -8,6 +8,7 @@ const { env } = require('./config/env');
 const routes = require('./routes');
 const { errorHandler } = require('./middleware/errorHandler');
 const { fail } = require('./utils/response');
+const { registerDocs } = require('./docs/registerDocs');
 
 function createApp() {
   const app = express();
@@ -30,6 +31,8 @@ function createApp() {
   app.get('/health', (req, res) => {
     res.json({ data: { ok: true }, meta: null, errors: null });
   });
+
+  registerDocs(app);
 
   app.use('/api/v1', routes);
 

@@ -1,0 +1,106 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Dharma API",
+    "description": "REST API do painel Dharma. Autenticação por cookie de sessão (operadores) ou token conforme rota.",
+    "version": "0.1.0"
+  },
+  "servers": [
+    { "url": "/api/v1", "description": "Base da API" }
+  ],
+  "tags": [
+    { "name": "Sistema", "description": "Health e config pública" },
+    { "name": "Auth", "description": "Login, logout, sessão" },
+    { "name": "Operação", "description": "Associados, pedidos, atendimentos, etc." }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["Sistema"],
+        "summary": "Health com checagem de banco",
+        "responses": {
+          "200": { "description": "API e banco ok" },
+          "503": { "description": "Banco indisponível" }
+        }
+      }
+    },
+    "/config/public/{system}": {
+      "get": {
+        "tags": ["Sistema"],
+        "summary": "Config pública (dharma, registration, …)",
+        "parameters": [
+          {
+            "name": "system",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "example": "dharma" }
+          }
+        ],
+        "responses": { "200": { "description": "Envelope { data, meta, errors }" } }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Login operador (e-mail + senha)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Sessão criada (Set-Cookie)" } }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Encerrar sessão",
+        "responses": { "200": { "description": "Ok" } }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": ["Auth"],
+        "summary": "Usuário logado e permissões",
+        "responses": { "200": { "description": "Operador atual" } }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": ["Operação"],
+        "summary": "Listar associados",
+        "responses": { "200": { "description": "Lista paginada" } }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": ["Operação"],
+        "summary": "Listar pedidos",
+        "responses": { "200": { "description": "Lista paginada" } }
+      }
+    },
+    "/services": {
+      "get": {
+        "tags": ["Operação"],
+        "summary": "Listar atendimentos",
+        "responses": { "200": { "description": "Lista paginada" } }
+      }
+    },
+    "/reception/form-schema": {
+      "get": {
+        "tags": ["Operação"],
+        "summary": "Schema do formulário de contato/triagem",
+        "responses": { "200": { "description": "Campos do formulário" } }
+      }
+    }
+  }
+}
