@@ -206,11 +206,6 @@ function AssociatesPageInner() {
             onRowClick={openEdit}
             columns={[
               {
-                key: "code",
-                header: "Código",
-                render: (row) => row.user_code || "—",
-              },
-              {
                 key: "name",
                 header: "Nome",
                 render: (row) => fullAssociateName(row),
