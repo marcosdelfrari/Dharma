@@ -73,14 +73,14 @@ export default function HistoryPage() {
                 key: "entity",
                 header: "Entidade",
                 render: (row) =>
-                  [row.entity_type, row.entity_code || row.entity_id]
+                  [row.entity_type, row.entity_id != null ? `#${row.entity_id}` : null]
                     .filter(Boolean)
                     .join(" · ") || "—",
               },
               {
                 key: "actor",
                 header: "Autor",
-                render: (row) => row.actor_name || row.actor_user_code || "Sistema",
+                render: (row) => row.actor_name || "Sistema",
               },
               {
                 key: "summary",

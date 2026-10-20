@@ -407,7 +407,7 @@ export function AssociateDrawerBody({
             <ul className="file-list">
               {patients.map((p) => (
                 <li key={p.id}>
-                  {fullAssociateName(p)} · {p.user_code || p.id}
+                  {fullAssociateName(p)}
                   <button
                     type="button"
                     className="link-btn"

@@ -185,7 +185,7 @@ export default function ServicesPage() {
               {
                 key: "associate",
                 header: "Associado",
-                render: (row) => row.associate_name || row.associate_user_code || "—",
+                render: (row) => row.associate_name || "—",
               },
               {
                 key: "pro",

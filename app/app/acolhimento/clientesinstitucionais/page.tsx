@@ -186,11 +186,6 @@ export default function InstitutionalClientsPage() {
             onRowClick={(row) => setSelected(row)}
             columns={[
               {
-                key: "code",
-                header: "Código",
-                render: (row) => row.client_code || "—",
-              },
-              {
                 key: "company",
                 header: "Empresa",
                 render: (row) =>

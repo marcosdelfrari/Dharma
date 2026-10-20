@@ -487,7 +487,7 @@ function NewOrderPageInner() {
                 <div>
                   <strong>{institutionalDisplayName(institutionalClient)}</strong>
                   <div style={{ color: "var(--dharma-muted)", fontSize: "0.88rem" }}>
-                    Cliente institucional · {institutionalClient.client_code || "—"}
+                    Cliente institucional · {institutionalDisplayName(institutionalClient)}
                     {isInstitutionalCompany(institutionalClient)
                       ? ` · ${institutionalReceiverName(institutionalClient)}`
                       : ""}
@@ -519,7 +519,7 @@ function NewOrderPageInner() {
                 <div>
                   <strong>{fullAssociateName(selected)}</strong>
                   <div style={{ color: "var(--dharma-muted)", fontSize: "0.88rem" }}>
-                    {selected.user_code} · {selected.email_account || "sem e-mail"}
+                    {selected.email_account || "sem e-mail"}
                   </div>
                 </div>
                 <Button
@@ -551,8 +551,8 @@ function NewOrderPageInner() {
                         <tbody>
                           {institutionalResults.map((row) => (
                             <tr key={`ic-${row.id}`}>
-                              <td>{row.client_code || "—"}</td>
                               <td>{institutionalDisplayName(row)}</td>
+                              <td>{row.company_cnpj || "—"}</td>
                               <td>
                                 <Button
                                   type="button"
@@ -584,8 +584,8 @@ function NewOrderPageInner() {
                         <tbody>
                           {associateResults.slice(0, 8).map((row) => (
                             <tr key={row.id}>
-                              <td>{row.user_code}</td>
                               <td>{fullAssociateName(row)}</td>
+                              <td>{row.email_account || row.mobile_number || "—"}</td>
                               <td>
                                 <Button
                                   type="button"

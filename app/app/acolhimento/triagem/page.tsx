@@ -281,7 +281,7 @@ function TriagePageInner() {
               {
                 key: "associate",
                 header: "Associado",
-                render: (row) => row.associate_code || "—",
+                render: (row) => row.associate_name || "—",
               },
               {
                 key: "attendant",

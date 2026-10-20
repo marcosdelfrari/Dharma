@@ -193,11 +193,6 @@ export default function ProfessionalsPage() {
             empty="Nenhum profissional cadastrado."
             columns={[
               {
-                key: "code",
-                header: "Código",
-                render: (row) => row.professional_code || "—",
-              },
-              {
                 key: "name",
                 header: "Nome",
                 render: (row) =>

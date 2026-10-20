@@ -333,7 +333,7 @@ function OrdersPageInner() {
                 key: "associate",
                 header: "Associado",
                 render: (row) =>
-                  row.associate_name || row.receiver_name || row.user_code || "—",
+                  row.associate_name || row.receiver_name || "—",
               },
               {
                 key: "total",
