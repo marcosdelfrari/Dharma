@@ -233,7 +233,7 @@ async function enqueueTestDelivery(endpointId) {
     action: 'test',
     record_id: null,
     occurred_at: new Date().toISOString(),
-    data: { ok: true, message: 'Kunk webhook test' },
+    data: { ok: true, message: 'Dharma webhook test' },
   };
   const rows = await enqueueDeliveries([
     {

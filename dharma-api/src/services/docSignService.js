@@ -136,7 +136,7 @@ function isPlaceholderLogo(href) {
 }
 
 /**
- * Logo institucional (Admin → Dados da associação), espelhada em kunk + registration.
+ * Logo institucional (Admin → Dados da associação), espelhada em dharma + registration.
  * @returns {Promise<string|null>} file id
  */
 async function resolveBrandingLogoFileId() {
@@ -146,7 +146,7 @@ async function resolveBrandingLogoFileId() {
        WHERE value IS NOT NULL
          AND TRIM(value) <> ''
          AND (
-           (system = 'kunk' AND key = 'VITE_KUNK_LOGO')
+           (system = 'dharma' AND key = 'VITE_DHARMA_LOGO')
            OR (
              system = 'registration'
              AND key IN (
@@ -172,7 +172,7 @@ async function resolveBrandingLogoFileId() {
       const raw = byKey['registration.VITE_ASSOCIATION_LOGO_PLACEMENTS'];
       if (raw) {
         const parsed = typeof raw === 'string' ? JSON.parse(raw) : raw;
-        const slot = parsed?.docsign?.login || parsed?.kunk?.login;
+        const slot = parsed?.docsign?.login || parsed?.dharma?.login;
         if (slot?.format) preferredFormat = String(slot.format).trim().toLowerCase();
       }
     } catch {
@@ -184,14 +184,14 @@ async function resolveBrandingLogoFileId() {
       ? [
           rectangular,
           square,
-          byKey['kunk.VITE_KUNK_LOGO'],
+          byKey['dharma.VITE_DHARMA_LOGO'],
           byKey['registration.VITE_ASSOCIATION_LOGO'],
           byKey['registration.VITE_ASSOCIATION_LOGO_MENU'],
         ]
       : [
           square,
           rectangular,
-          byKey['kunk.VITE_KUNK_LOGO'],
+          byKey['dharma.VITE_DHARMA_LOGO'],
           byKey['registration.VITE_ASSOCIATION_LOGO'],
           byKey['registration.VITE_ASSOCIATION_LOGO_MENU'],
         ];
@@ -213,7 +213,7 @@ async function resolveTemplateLogoFileId(templateLogoFileId) {
 
 async function getAssociationProfile() {
   const defaults = {
-    name: process.env.VITE_ASSOCIATION_NAME || 'Kunk',
+    name: process.env.VITE_ASSOCIATION_NAME || 'Dharma',
     fullName: process.env.VITE_ASSOCIATION_FULL_NAME || '',
     email: process.env.VITE_ASSOCIATION_EMAIL || '',
     phone: process.env.VITE_ASSOCIATION_PHONE || '',
@@ -254,13 +254,13 @@ async function getAssociationProfile() {
 
 async function getAssociationName() {
   const profile = await getAssociationProfile();
-  return profile.name || 'Kunk';
+  return profile.name || 'Dharma';
 }
 
 /** Nome usado no título padrão do termo (preferência: nome completo). */
 async function getAssociationTitleName() {
   const profile = await getAssociationProfile();
-  return (profile.fullName || profile.name || 'Kunk').trim() || 'Kunk';
+  return (profile.fullName || profile.name || 'Dharma').trim() || 'Dharma';
 }
 
 async function loadLogoDataUrl(fileId) {

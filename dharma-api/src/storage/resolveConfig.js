@@ -74,8 +74,8 @@ async function resolveStorageConfig() {
     }
   }
 
-  const keyPrefixPick = pick(rows.key_prefix, 'FILES_KEY_PREFIX', env.filesKeyPrefix || 'kunk/');
-  let keyPrefix = String(keyPrefixPick.value || 'kunk/');
+  const keyPrefixPick = pick(rows.key_prefix, 'FILES_KEY_PREFIX', env.filesKeyPrefix || 'dharma/');
+  let keyPrefix = String(keyPrefixPick.value || 'dharma/');
   if (!keyPrefix.endsWith('/')) keyPrefix += '/';
 
   const s3Bucket = pick(rows['s3.bucket'], 'S3_BUCKET', env.s3.bucket || '');

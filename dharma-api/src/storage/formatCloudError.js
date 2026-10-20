@@ -83,16 +83,16 @@ function formatS3Error(err, ctx = {}) {
       return `Sem permissão para acessar o bucket ${bucketLabel} (HeadBucket). Confira a policy IAM: s3:HeadBucket / s3:ListBucket no ARN do bucket.`;
     }
     if (op === 'put' || op === 'test-put') {
-      return `Sem permissão para gravar no bucket ${bucketLabel}. Inclua s3:PutObject em kunk/*, backups/* e _kunk_probe/* na policy IAM.`;
+      return `Sem permissão para gravar no bucket ${bucketLabel}. Inclua s3:PutObject em dharma/*, backups/* e _dharma_probe/* na policy IAM.`;
     }
     if (op === 'get' || op === 'test-get') {
       return `Sem permissão para ler objetos no bucket ${bucketLabel}. Inclua s3:GetObject nos prefixos da policy IAM.`;
     }
     if (op === 'delete' || op === 'test-delete') {
-      return `Sem permissão para apagar objetos no bucket ${bucketLabel}. Inclua s3:DeleteObject (necessário também para o teste limpar _kunk_probe/*).`;
+      return `Sem permissão para apagar objetos no bucket ${bucketLabel}. Inclua s3:DeleteObject (necessário também para o teste limpar _dharma_probe/*).`;
     }
     if (op === 'list') {
-      return `Sem permissão para listar o bucket ${bucketLabel}. Inclua s3:ListBucket no ARN do bucket (com prefixos kunk/*, backups/*, _kunk_probe/*).`;
+      return `Sem permissão para listar o bucket ${bucketLabel}. Inclua s3:ListBucket no ARN do bucket (com prefixos dharma/*, backups/*, _dharma_probe/*).`;
     }
     return `Acesso negado ao bucket S3 ${bucketLabel}. Revise a policy IAM do usuário da API (objetos + ListBucket/HeadBucket).`;
   }
@@ -126,7 +126,7 @@ function formatS3Error(err, ctx = {}) {
       return `Bucket S3 ${bucketLabel} redirecionou a requisição${regionHint}. Provavelmente a região está errada.`;
     }
     if (status === 403) {
-      return `Acesso negado ao bucket S3 ${bucketLabel} (HTTP 403). Confira chave IAM e permissões HeadBucket/PutObject/_kunk_probe.`;
+      return `Acesso negado ao bucket S3 ${bucketLabel} (HTTP 403). Confira chave IAM e permissões HeadBucket/PutObject/_dharma_probe.`;
     }
     if (status === 404) {
       return `Bucket S3 ${bucketLabel} não encontrado (HTTP 404)${regionHint}.`;

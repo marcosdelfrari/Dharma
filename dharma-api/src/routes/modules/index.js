@@ -130,7 +130,7 @@ router.get('/google_calendar/oauth/callback', async (req, res, next) => {
   }
 });
 
-/** Public CIAP-2 status (no auth) — used by Kunk and cadastramento. */
+/** Public CIAP-2 status (no auth) — used by Dharma and cadastramento. */
 const ciap2Router = require('./ciap2');
 router.use('/ciap2', ciap2Router);
 

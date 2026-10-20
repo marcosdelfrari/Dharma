@@ -70,8 +70,8 @@ function formatCurrentDate(date = new Date()) {
 
 function associationDefaults(association = {}) {
   return {
-    association_name: association.name || 'Kunk',
-    association_full_name: association.fullName || association.name || 'Kunk',
+    association_name: association.name || 'Dharma',
+    association_full_name: association.fullName || association.name || 'Dharma',
     association_city: association.city || null,
     association_state: association.state || null,
     association_cnpj: association.cnpj || null,
@@ -93,8 +93,8 @@ function sampleVariables(kind = 'self', overrides = {}, { now = new Date(), asso
   const withPatient = kind === 'with_patient';
   const assoc = associationDefaults(
     association || {
-      name: 'Kunk',
-      fullName: 'ASSOCIAÇÃO EXEMPLO KUNK',
+      name: 'Dharma',
+      fullName: 'ASSOCIAÇÃO EXEMPLO DHARMA',
       city: 'Belo Horizonte',
       state: 'MG',
       cnpj: '00.000.000/0001-00',

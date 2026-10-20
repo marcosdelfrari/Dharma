@@ -1,5 +1,5 @@
 /**
- * Espelha dharma-api / apps/kunk role_pages helpers.
+ * Espelha dharma-api / apps/dharma role_pages helpers.
  */
 
 export type RolePagesMap = Record<string, string[]>;

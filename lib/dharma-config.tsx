@@ -65,39 +65,39 @@ function pick(values: Record<string, unknown> | undefined, key: string, fallback
   return String(v);
 }
 
-function mergeKunkValues(values?: Record<string, unknown>): DharmaAppearance {
+function mergeDharmaValues(values?: Record<string, unknown>): DharmaAppearance {
   if (!values) return { ...DEFAULTS };
   return {
-    title: pick(values, "VITE_KUNK_TITLE", DEFAULTS.title),
-    logo: pick(values, "VITE_KUNK_LOGO", DEFAULTS.logo),
+    title: pick(values, "VITE_DHARMA_TITLE", DEFAULTS.title),
+    logo: pick(values, "VITE_DHARMA_LOGO", DEFAULTS.logo),
     associationName: DEFAULTS.associationName,
-    menuBg: pick(values, "VITE_KUNK_MENU_BG", DEFAULTS.menuBg),
-    menuText: pick(values, "VITE_KUNK_MENU_TEXT", DEFAULTS.menuText),
-    menuHoverBg: pick(values, "VITE_KUNK_MENU_HOVER_BG", DEFAULTS.menuHoverBg),
+    menuBg: pick(values, "VITE_DHARMA_MENU_BG", DEFAULTS.menuBg),
+    menuText: pick(values, "VITE_DHARMA_MENU_TEXT", DEFAULTS.menuText),
+    menuHoverBg: pick(values, "VITE_DHARMA_MENU_HOVER_BG", DEFAULTS.menuHoverBg),
     menuHoverText: pick(
       values,
-      "VITE_KUNK_MENU_HOVER_TEXT",
+      "VITE_DHARMA_MENU_HOVER_TEXT",
       DEFAULTS.menuHoverText,
     ),
-    darkBg: pick(values, "VITE_KUNK_DARK_BG", DEFAULTS.darkBg),
-    darkPrimary: pick(values, "VITE_KUNK_DARK_PRIMARY", DEFAULTS.darkPrimary),
-    darkAccent: pick(values, "VITE_KUNK_DARK_ACCENT", DEFAULTS.darkAccent),
+    darkBg: pick(values, "VITE_DHARMA_DARK_BG", DEFAULTS.darkBg),
+    darkPrimary: pick(values, "VITE_DHARMA_DARK_PRIMARY", DEFAULTS.darkPrimary),
+    darkAccent: pick(values, "VITE_DHARMA_DARK_ACCENT", DEFAULTS.darkAccent),
     darkAccentHover: pick(
       values,
-      "VITE_KUNK_DARK_ACCENT_HOVER",
+      "VITE_DHARMA_DARK_ACCENT_HOVER",
       DEFAULTS.darkAccentHover,
     ),
-    lightBg: pick(values, "VITE_KUNK_LIGHT_BG", DEFAULTS.lightBg),
-    lightPrimary: pick(values, "VITE_KUNK_LIGHT_PRIMARY", DEFAULTS.lightPrimary),
-    lightAccent: pick(values, "VITE_KUNK_LIGHT_ACCENT", DEFAULTS.lightAccent),
+    lightBg: pick(values, "VITE_DHARMA_LIGHT_BG", DEFAULTS.lightBg),
+    lightPrimary: pick(values, "VITE_DHARMA_LIGHT_PRIMARY", DEFAULTS.lightPrimary),
+    lightAccent: pick(values, "VITE_DHARMA_LIGHT_ACCENT", DEFAULTS.lightAccent),
     lightAccentHover: pick(
       values,
-      "VITE_KUNK_LIGHT_ACCENT_HOVER",
+      "VITE_DHARMA_LIGHT_ACCENT_HOVER",
       DEFAULTS.lightAccentHover,
     ),
-    bgMode: pick(values, "VITE_KUNK_BG_MODE", DEFAULTS.bgMode),
-    bgImage: pick(values, "VITE_KUNK_BG_IMAGE", ""),
-    defaultTheme: pick(values, "VITE_KUNK_DEFAULT_THEME", DEFAULTS.defaultTheme),
+    bgMode: pick(values, "VITE_DHARMA_BG_MODE", DEFAULTS.bgMode),
+    bgImage: pick(values, "VITE_DHARMA_BG_IMAGE", ""),
+    defaultTheme: pick(values, "VITE_DHARMA_DEFAULT_THEME", DEFAULTS.defaultTheme),
   };
 }
 
@@ -196,8 +196,8 @@ export function DharmaConfigProvider({ children }: { children: ReactNode }) {
     let cancelled = false;
     void (async () => {
       try {
-        const [kunkRes, regRes] = await Promise.allSettled([
-          api.getPublicConfig("kunk"),
+        const [dharmaRes, regRes] = await Promise.allSettled([
+          api.getPublicConfig("dharma"),
           api.getPublicConfig("registration"),
         ]);
         if (cancelled) return;
@@ -205,12 +205,12 @@ export function DharmaConfigProvider({ children }: { children: ReactNode }) {
         let merged = { ...DEFAULTS };
         let errors: unknown[] = [];
 
-        if (kunkRes.status === "fulfilled") {
-          const data = kunkRes.value.data as {
+        if (dharmaRes.status === "fulfilled") {
+          const data = dharmaRes.value.data as {
             values?: Record<string, unknown>;
             errors?: unknown[];
           };
-          merged = mergeKunkValues(data?.values);
+          merged = mergeDharmaValues(data?.values);
           errors = Array.isArray(data?.errors) ? data.errors : [];
         }
 

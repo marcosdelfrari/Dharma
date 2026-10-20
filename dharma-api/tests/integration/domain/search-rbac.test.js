@@ -25,7 +25,7 @@ describe('domain/search-rbac', () => {
       name: 'Search',
       last_name: 'Acol',
       internal_code: `ACOL-SEARCH-${stamp}`,
-      app: 'kunk',
+      app: 'dharma',
     });
     acolCookie = acol.cookie;
 
@@ -36,7 +36,7 @@ describe('domain/search-rbac', () => {
       name: 'Search',
       last_name: 'Pro',
       internal_code: uuidv4(),
-      app: 'kunk',
+      app: 'dharma',
     });
     portalCookie = portal.cookie;
   });
@@ -46,7 +46,7 @@ describe('domain/search-rbac', () => {
       .get('/api/v1/search')
       .query({ q: 'a', entity: 'users' })
       .set('Cookie', acolCookie)
-      .set('X-Kunk-App', 'kunk');
+      .set('X-Dharma-App', 'dharma');
     assert.equal(users.status, 200, JSON.stringify(users.body));
     assert.ok(Array.isArray(users.body.data));
 
@@ -54,7 +54,7 @@ describe('domain/search-rbac', () => {
       .get('/api/v1/search')
       .query({ q: 'a', entity: 'reception' })
       .set('Cookie', acolCookie)
-      .set('X-Kunk-App', 'kunk');
+      .set('X-Dharma-App', 'dharma');
     assert.equal(reception.status, 200, JSON.stringify(reception.body));
   });
 
@@ -64,7 +64,7 @@ describe('domain/search-rbac', () => {
         .get('/api/v1/search')
         .query({ q: 'a', entity })
         .set('Cookie', portalCookie)
-        .set('X-Kunk-App', 'kunk');
+        .set('X-Dharma-App', 'dharma');
       assert.equal(res.status, 403, `${entity}: ${JSON.stringify(res.body)}`);
       assert.equal(res.body.errors[0].code, 'FORBIDDEN');
     }
@@ -75,7 +75,7 @@ describe('domain/search-rbac', () => {
       .get('/api/v1/search')
       .query({ q: 'a', entity: 'services' })
       .set('Cookie', portalCookie)
-      .set('X-Kunk-App', 'kunk');
+      .set('X-Dharma-App', 'dharma');
     assert.equal(res.status, 200, JSON.stringify(res.body));
     assert.ok(Array.isArray(res.body.data));
   });
@@ -85,7 +85,7 @@ describe('domain/search-rbac', () => {
       .get('/api/v1/search')
       .query({ q: 'a', entity: 'users' })
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(res.status, 200, JSON.stringify(res.body));
   });
 });

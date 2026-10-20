@@ -782,7 +782,7 @@ function attendantCode(row) {
 /** Operators who can take triage contacts (no secrets). */
 async function listAttendants() {
   const { getOrSet, cacheTtl, keys } = require('../cache');
-  return getOrSet(keys.ATTENDANTS, cacheTtl.KUNK_USERS_MS, async () => {
+  return getOrSet(keys.ATTENDANTS, cacheTtl.DHARMA_USERS_MS, async () => {
     const result = await query(
       `SELECT id, name, last_name, email, user_code, internal_code, avatar_url, permissions, status, utalk_id
        FROM system_users

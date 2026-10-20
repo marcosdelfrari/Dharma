@@ -33,7 +33,7 @@ describe('orders/checkout-total', () => {
     const res = await request(app)
       .post('/api/v1/orders')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({
         ...orderBase,
         status: 'Aguardando pagamento',
@@ -51,7 +51,7 @@ describe('orders/checkout-total', () => {
     const res = await request(app)
       .post('/api/v1/orders')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({
         ...orderBase,
         user_code: uuidv4(),

@@ -30,7 +30,7 @@ describe('domain/auth operator password reset', () => {
 
     const forgot = await request(app)
       .post('/api/v1/auth/forgot-password')
-      .send({ email, app: 'kunk' });
+      .send({ email, app: 'dharma' });
     assert.equal(forgot.status, 200, JSON.stringify(forgot.body));
     assert.ok(forgot.body.data.reset_token);
 
@@ -41,7 +41,7 @@ describe('domain/auth operator password reset', () => {
 
     const login = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ email, password: 'NewPass123!' });
     assert.equal(login.status, 200, JSON.stringify(login.body));
 

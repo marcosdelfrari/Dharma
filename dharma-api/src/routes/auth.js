@@ -114,7 +114,7 @@ router.get('/me', authenticate, async (req, res, next) => {
     let rolePages = null;
     try {
       const result = await query(
-        `SELECT value FROM system_configs WHERE system = 'kunk' AND key = 'role_pages' LIMIT 1`
+        `SELECT value FROM system_configs WHERE system = 'dharma' AND key = 'role_pages' LIMIT 1`
       );
       const raw = result.rows[0]?.value;
       if (raw) rolePages = typeof raw === 'string' ? JSON.parse(raw) : raw;

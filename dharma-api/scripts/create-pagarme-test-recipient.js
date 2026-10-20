@@ -57,13 +57,13 @@ function buildFictionalRecipientPayload() {
   ];
 
   return {
-    code: `kunk-test-recipient-${stamp}`,
+    code: `dharma-test-recipient-${stamp}`,
     register_information: {
       type: 'corporation',
       email: `recebedor-teste-${stamp}@example.com`,
       document,
-      company_name: 'Associacao Teste Kunk LTDA',
-      trading_name: 'Assoc Teste Kunk',
+      company_name: 'Associacao Teste Dharma LTDA',
+      trading_name: 'Assoc Teste Dharma',
       site_url: 'https://example.com',
       annual_revenue: 120000,
       corporation_type: 'LTDA',
@@ -87,7 +87,7 @@ function buildFictionalRecipientPayload() {
       ],
     },
     default_bank_account: {
-      holder_name: 'Associacao Teste Kunk LTDA',
+      holder_name: 'Associacao Teste Dharma LTDA',
       holder_type: 'company',
       holder_document: document,
       bank: '341',

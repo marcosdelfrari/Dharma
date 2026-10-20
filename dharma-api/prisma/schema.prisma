@@ -1,0 +1,683 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["partialIndexes"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model files {
+  id                                                      String                   @id @db.Uuid
+  filename                                                String?                  @db.VarChar(512)
+  mime_type                                               String?                  @db.VarChar(128)
+  storage_path                                            String?
+  storage_driver                                          String                   @default("local") @db.VarChar(16)
+  storage_key                                             String?
+  created_at                                              DateTime?                @default(now()) @db.Timestamptz(6)
+  is_sample                                               Boolean                  @default(false)
+  orders_files                                            orders_files[]
+  services_files                                          services_files[]
+  term_contracts_term_contracts_audit_pdf_file_idTofiles  term_contracts[]         @relation("term_contracts_audit_pdf_file_idTofiles")
+  term_contracts_term_contracts_filled_pdf_file_idTofiles term_contracts[]         @relation("term_contracts_filled_pdf_file_idTofiles")
+  term_contracts_term_contracts_signed_pdf_file_idTofiles term_contracts[]         @relation("term_contracts_signed_pdf_file_idTofiles")
+  term_signatures                                         term_signatures[]
+  term_template_versions                                  term_template_versions[]
+  term_templates                                          term_templates[]
+  users_files                                             users_files[]
+}
+
+model institutional_clients {
+  id                       Int       @id @default(autoincrement())
+  client_code              String    @unique @db.Uuid
+  status                   String    @default("active") @db.VarChar(255)
+  sort                     Int?
+  date_created             DateTime? @db.Timestamptz(6)
+  date_updated             DateTime? @db.Timestamptz(6)
+  annotations              Json?
+  is_company               Boolean   @default(false)
+  company_name             String?   @db.VarChar(255)
+  company_trade_name       String?   @db.VarChar(255)
+  company_cnpj             String?   @db.VarChar(255)
+  company_email            String?   @db.VarChar(255)
+  company_phone            String?   @db.VarChar(255)
+  representative_name      String    @db.VarChar(255)
+  representative_last_name String?   @db.VarChar(255)
+  representative_cpf       String    @db.VarChar(255)
+  representative_email     String?   @db.VarChar(255)
+  representative_mobile    String?   @db.VarChar(255)
+  street                   String?   @db.VarChar(255)
+  street_number            String?   @db.VarChar(255)
+  complement               String?   @db.VarChar(255)
+  neighborhood             String?   @db.VarChar(255)
+  city                     String?   @db.VarChar(255)
+  state                    String?   @db.VarChar(255)
+  cep                      String?   @db.VarChar(255)
+  delivery_address         Json?
+  is_sample                Boolean   @default(false)
+  orders                   orders[]
+}
+
+model operator_sessions {
+  id              Int          @id @default(autoincrement())
+  user_id         Int
+  app             String       @db.VarChar(32)
+  session_token   String       @unique @db.VarChar(255)
+  session_expires DateTime     @db.Timestamp(6)
+  last_activity   DateTime?    @db.Timestamp(6)
+  is_active       Boolean      @default(true)
+  system_users    system_users @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([user_id, app])
+  @@index([session_token], map: "idx_operator_sessions_token", where: raw("(is_active = true)"))
+}
+
+model orders {
+  id                        Int                       @id @default(autoincrement())
+  sort                      Int?
+  date_created              DateTime?                 @db.Timestamptz(6)
+  date_updated              DateTime?                 @db.Timestamptz(6)
+  status                    String?                   @db.VarChar(255)
+  total                     Float?                    @db.Real
+  payment_method            String?                   @db.VarChar(255)
+  tracking_code             String?                   @db.VarChar(255)
+  delivery_price            Float?                    @db.Real
+  associate_name            String?                   @db.VarChar(255)
+  receiver_name             String?                   @db.VarChar(255)
+  order_code                String?                   @db.Uuid
+  user_code                 String?                   @db.VarChar(255)
+  items                     Json?
+  created_date              DateTime?                 @db.Timestamp(6)
+  discount                  Float?                    @db.Real
+  details                   String?
+  donation                  Float?                    @db.Real
+  prescriber                String?                   @db.VarChar(255)
+  payment_link              String?
+  user                      Int?
+  institutional_client_id   Int?
+  institutional_client_code String?                   @db.VarChar(255)
+  carrier_order_code        String?                   @db.VarChar(255)
+  payment_code              String?
+  order_notes               String?
+  tags                      Json?
+  delivery_notes            String?
+  address                   Json?
+  whatsapp_message          String?                   @db.VarChar(255)
+  prescriber_code           String?                   @db.VarChar(255)
+  payment_date              DateTime?                 @db.Timestamp(6)
+  custom_payment            Json?
+  production_owner          String?                   @db.VarChar(255)
+  tracking_code_date        DateTime?                 @db.Timestamp(6)
+  last_tracking_date        DateTime?                 @db.Timestamp(6)
+  address_validation        String?                   @db.VarChar(255)
+  created_by_user_code      String?                   @db.VarChar(255)
+  freight_carrier           String?                   @db.VarChar(32)
+  freight_option            Json?
+  dce                       Json?
+  stock_debited_at          DateTime?                 @db.Timestamptz(6)
+  soucannabis_order_id      String?                   @db.VarChar(64)
+  soucannabis_synced_at     DateTime?                 @db.Timestamptz(6)
+  soucannabis_sync_error    String?
+  external_payment_info     Json?
+  external_delivery_type    String?                   @db.VarChar(32)
+  is_sample                 Boolean                   @default(false)
+  institutional_clients     institutional_clients?    @relation(fields: [institutional_client_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_orders_institutional_client")
+  users                     users?                    @relation(fields: [user], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_orders_user")
+  orders_files              orders_files[]
+  product_stock_movements   product_stock_movements[]
+}
+
+model orders_files {
+  id        Int     @id @default(autoincrement())
+  order_id  Int?
+  file_id   String? @db.Uuid
+  is_sample Boolean @default(false)
+  files     files?  @relation(fields: [file_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_orders_files_file_id")
+  orders    orders? @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_orders_files_order_id")
+}
+
+model product_stock_movements {
+  id           Int      @id @default(autoincrement())
+  product_id   Int
+  order_id     Int?
+  quantity     Int
+  kind         String   @db.VarChar(32)
+  note         String?
+  date_created DateTime @default(now()) @db.Timestamptz(6)
+  orders       orders?  @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products     products @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([order_id], map: "idx_psm_order")
+  @@index([product_id], map: "idx_psm_product")
+}
+
+model products {
+  id                      Int                       @id @default(autoincrement())
+  status                  String                    @db.VarChar(255)
+  sort                    Int?
+  user_created            String?                   @db.Uuid
+  date_created            DateTime?                 @db.Timestamptz(6)
+  user_updated            String?                   @db.Uuid
+  date_updated            DateTime?                 @db.Timestamptz(6)
+  name                    String?                   @db.VarChar(255)
+  sku                     String?                   @db.VarChar(255)
+  type                    String?                   @db.VarChar(255)
+  unit                    String?                   @db.VarChar(255)
+  concentration           Int?
+  price                   Float?                    @db.Real
+  amount                  Int?
+  category                String?                   @db.VarChar(255)
+  photo                   String?                   @db.Uuid
+  batch                   String?                   @db.VarChar(255)
+  is_sample               Boolean                   @default(false)
+  product_stock_movements product_stock_movements[]
+}
+
+model professionals {
+  id                   Int        @id @default(autoincrement())
+  sort                 Int?
+  date_created         DateTime?  @db.Timestamptz(6)
+  name                 String?    @db.VarChar(255)
+  last_name            String?    @db.VarChar(255)
+  type                 String?    @db.VarChar(255)
+  services_description String?    @db.VarChar(255)
+  phone                String?    @db.VarChar(255)
+  state                String?    @db.VarChar(255)
+  city                 String?    @db.VarChar(255)
+  cpf                  String?    @db.VarChar(255)
+  email                String?    @db.VarChar(255)
+  specialty            String?    @db.VarChar(255)
+  active               Int?
+  is_prescriber        String?    @db.VarChar(255)
+  is_collaborator      String?    @db.VarChar(255)
+  professional_code    String?    @unique @db.Uuid
+  fingerprint          String?    @db.VarChar(255)
+  contest_reports      Json?
+  met_us               String?    @db.VarChar(255)
+  recipient_id         String?    @db.VarChar(255)
+  donation_balance     Int?
+  calendar_id          String?    @db.VarChar(255)
+  consultation_price   Decimal?   @default(0) @db.Decimal(12, 2)
+  is_sample            Boolean    @default(false)
+  services             services[]
+}
+
+model reception {
+  id                Int       @id @default(autoincrement())
+  date_created      DateTime? @db.Timestamptz(6)
+  name              String?   @db.VarChar(255)
+  last_name         String?   @db.VarChar(255)
+  email             String?   @db.VarChar(255)
+  phone             String?   @db.VarChar(255)
+  help_topic        String?   @db.VarChar(255)
+  is_associate      String?   @db.VarChar(255)
+  message           String?
+  code              String?   @db.Uuid
+  chat_id           String?   @db.VarChar(255)
+  status            String?   @db.VarChar(255)
+  associate_name    String?   @db.VarChar(255)
+  associate_code    String?   @db.VarChar(255)
+  date_updated      DateTime? @db.Timestamp(6)
+  avatar_url        String?   @db.VarChar(255)
+  patient_name      String?   @db.VarChar(255)
+  attendant         String?   @db.VarChar(255)
+  tags              Json?
+  completion_reason String?   @db.VarChar(255)
+  is_prescriber     String?   @db.VarChar(255)
+  full_name         String?   @db.VarChar(255)
+  is_sample         Boolean   @default(false)
+}
+
+model reports {
+  id                    Int       @id @default(autoincrement())
+  date_created          DateTime? @db.Timestamptz(6)
+  date_updated          DateTime? @db.Timestamptz(6)
+  name                  String?   @db.VarChar(255)
+  report_code           String?   @db.Uuid
+  query_config          Json?
+  sql_query             String?
+  type                  String?   @db.VarChar(255)
+  dashboard_queries     Json?
+  layout_positions      Json?
+  chart_config          Json?
+  created_by            String?   @db.VarChar(255)
+  tags                  Json?
+  column_maps           Json?
+  embedded_report_codes Json?
+  favorites             Json?
+  is_sample             Boolean   @default(false)
+}
+
+model services {
+  id                                        Int              @id @default(autoincrement())
+  sort                                      Int?
+  type                                      String?          @db.VarChar(255)
+  date_created                              DateTime?        @db.Timestamptz(6)
+  name                                      String?          @db.VarChar(255)
+  professional_id                           String?          @db.Uuid
+  status                                    String?          @db.VarChar(255)
+  price                                     Int?
+  associate_name                            String?          @db.VarChar(255)
+  associate_user_code                       String?          @db.Uuid
+  associate_email                           String?          @db.VarChar(255)
+  professional_name                         String?          @db.VarChar(255)
+  event_link                                String?          @db.VarChar(255)
+  consultation_date                         DateTime?        @db.Timestamp(6)
+  payment_link                              String?          @db.VarChar(255)
+  event_id                                  String?          @db.VarChar(255)
+  price_paid                                Float?           @db.Real
+  donation                                  Float?           @db.Real
+  booking_group_code                        String?          @db.VarChar(255)
+  patient_name                              String?          @db.VarChar(255)
+  patient_user_code                         String?          @db.Uuid
+  professional_email                        String?          @db.VarChar(255)
+  service_code                              String?          @db.Uuid
+  observations                              String?
+  payment_type                              String?          @db.VarChar(255)
+  tags                                      Json?
+  created_by_user_code                      String?          @db.VarChar(255)
+  payment_code                              String?
+  payment_info                              Json?
+  commission_validation                     String?          @db.VarChar(32)
+  is_sample                                 Boolean          @default(false)
+  users_services_associate_user_codeTousers users?           @relation("services_associate_user_codeTousers", fields: [associate_user_code], references: [user_code], onUpdate: NoAction, map: "fk_services_associate_user_code")
+  users_services_patient_user_codeTousers   users?           @relation("services_patient_user_codeTousers", fields: [patient_user_code], references: [user_code], onUpdate: NoAction, map: "fk_services_patient_user_code")
+  professionals                             professionals?   @relation(fields: [professional_id], references: [professional_code], onUpdate: NoAction, map: "fk_services_professional_id")
+  services_files                            services_files[]
+}
+
+model services_files {
+  id         Int       @id @default(autoincrement())
+  service_id Int?
+  file_id    String?   @db.Uuid
+  is_sample  Boolean   @default(false)
+  files      files?    @relation(fields: [file_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_services_files_file_id")
+  services   services? @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_services_files_service_id")
+}
+
+model system_activity {
+  id                Int      @id @default(autoincrement())
+  date_created      DateTime @default(now()) @db.Timestamptz(6)
+  entity_type       String
+  entity_id         String
+  entity_code       String?
+  action            String
+  actor_user_code   String?
+  actor_name        String?
+  related_user_code String?
+  related_user_name String?
+  summary           String
+  metadata          Json?
+  read_by           Json     @default("[]")
+
+  @@index([actor_user_code, date_created(sort: Desc)], map: "idx_system_activity_actor")
+  @@index([date_created(sort: Desc)], map: "idx_system_activity_date_created")
+  @@index([entity_type, entity_id], map: "idx_system_activity_entity")
+  @@index([related_user_code, date_created(sort: Desc)], map: "idx_system_activity_related")
+}
+
+model system_api_credentials {
+  id              Int       @id @default(autoincrement())
+  service         String    @db.VarChar(64)
+  field_key       String    @db.VarChar(128)
+  encrypted_value String?
+  env_fallback    String?   @db.VarChar(128)
+  is_secret       Boolean   @default(true)
+  description     String?
+  last_tested_at  DateTime? @db.Timestamptz(6)
+  last_test_ok    Boolean?
+  date_created    DateTime  @default(now()) @db.Timestamptz(6)
+  date_updated    DateTime? @db.Timestamptz(6)
+
+  @@unique([service, field_key])
+  @@index([service], map: "idx_system_api_credentials_service")
+}
+
+model system_backups {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  status       String   @default("running") @db.VarChar(32)
+  prefix       String?
+  sql_key      String?
+  json_key     String?
+  size_bytes   BigInt?
+  error        String?
+  triggered_by String   @default("manual") @db.VarChar(32)
+
+  @@index([created_at(sort: Desc)])
+}
+
+model system_configs {
+  id                Int       @id @default(autoincrement())
+  system            String    @db.VarChar(64)
+  key               String    @db.VarChar(128)
+  value             String?
+  value_type        String    @default("string") @db.VarChar(32)
+  is_sensitive      Boolean   @default(false)
+  is_required       Boolean   @default(false)
+  allow_hardcoded   Boolean   @default(true)
+  hardcoded_default String?
+  description       String?
+  date_created      DateTime? @default(now()) @db.Timestamp(6)
+  date_updated      DateTime? @db.Timestamp(6)
+
+  @@unique([system, key])
+}
+
+model system_error_resolutions {
+  error_hash  String    @id @db.Char(64)
+  status      String    @default("open")
+  resolved_at DateTime? @db.Timestamptz(6)
+  resolved_by String?
+  note        String?
+}
+
+model system_errors {
+  id           BigInt   @id @default(autoincrement())
+  date_created DateTime @default(now()) @db.Timestamptz(6)
+  error_hash   String   @db.Char(64)
+  source       String
+  app          String?
+  severity     String   @default("error")
+  message      String
+  code         String?
+  file_name    String?
+  lineno       Int?
+  colno        Int?
+  stack_trace  String?
+  url          String?
+  method       String?
+  status_code  Int?
+  user_code    String?
+  user_agent   String?
+  request_id   String?
+  environment  String?
+  metadata     Json?
+
+  @@index([date_created(sort: Desc)], map: "idx_system_errors_created")
+  @@index([error_hash, date_created(sort: Desc)], map: "idx_system_errors_hash_created")
+  @@index([source, date_created(sort: Desc)], map: "idx_system_errors_source")
+}
+
+model system_users {
+  id                     Int                 @id @default(autoincrement())
+  date_created           DateTime?           @db.Timestamptz(6)
+  date_updated           DateTime?           @db.Timestamptz(6)
+  name                   String?             @db.VarChar(255)
+  last_name              String?             @db.VarChar(255)
+  status                 String?             @db.VarChar(255)
+  user_code              String?             @db.Uuid
+  permissions            String?             @db.VarChar(255)
+  email                  String?             @db.VarChar(255)
+  password               String?             @db.VarChar(255)
+  cpf                    String?             @db.VarChar(255)
+  rg                     String?             @db.VarChar(255)
+  birth_date             String?             @db.VarChar(255)
+  gender                 String?             @db.VarChar(255)
+  nationality            String?             @db.VarChar(255)
+  marital_status         String?             @db.VarChar(255)
+  mobile_number          String?             @db.VarChar(255)
+  street                 String?             @db.VarChar(255)
+  neighborhood           String?             @db.VarChar(255)
+  city                   String?             @db.VarChar(255)
+  state                  String?             @db.VarChar(255)
+  cep                    String?             @db.VarChar(255)
+  pix_key                String?             @db.VarChar(255)
+  commission_value       String?             @db.VarChar(255)
+  transactions           String?             @db.VarChar(255)
+  commission_total       String?             @db.VarChar(255)
+  avatar_url             String?             @db.VarChar(255)
+  utalk_id               String?             @db.VarChar(255)
+  utalk_token            String?
+  session_token          String?             @db.VarChar(255)
+  session_expires        DateTime?           @db.Timestamp(6)
+  last_activity          DateTime?           @db.Timestamp(6)
+  is_session_active      Boolean?
+  internal_code          String?             @db.VarChar(255)
+  password_reset_token   String?             @db.VarChar(255)
+  password_reset_expires DateTime?           @db.Timestamp(6)
+  is_sample              Boolean             @default(false)
+  operator_sessions      operator_sessions[]
+}
+
+model tags {
+  id        Int     @id @default(autoincrement())
+  tag       String? @db.VarChar(255)
+  contexts  String? @db.VarChar(255)
+  color     String? @db.VarChar(255)
+  is_sample Boolean @default(false)
+}
+
+model term_contracts {
+  id                                             String                 @id @db.Uuid
+  user_code                                      String                 @db.Uuid
+  signer_email                                   String
+  template_version_id                            String                 @db.Uuid
+  kind                                           String
+  status                                         String                 @default("pending")
+  variables                                      Json                   @default("{}")
+  filled_pdf_file_id                             String?                @db.Uuid
+  signed_pdf_file_id                             String?                @db.Uuid
+  audit_pdf_file_id                              String?                @db.Uuid
+  filled_pdf_sha256                              String?
+  signed_pdf_sha256                              String?
+  signing_token_hash                             String
+  signing_token_expires                          DateTime?              @db.Timestamptz(6)
+  created_at                                     DateTime               @default(now()) @db.Timestamptz(6)
+  completed_at                                   DateTime?              @db.Timestamptz(6)
+  files_term_contracts_audit_pdf_file_idTofiles  files?                 @relation("term_contracts_audit_pdf_file_idTofiles", fields: [audit_pdf_file_id], references: [id], onUpdate: NoAction)
+  files_term_contracts_filled_pdf_file_idTofiles files?                 @relation("term_contracts_filled_pdf_file_idTofiles", fields: [filled_pdf_file_id], references: [id], onUpdate: NoAction)
+  files_term_contracts_signed_pdf_file_idTofiles files?                 @relation("term_contracts_signed_pdf_file_idTofiles", fields: [signed_pdf_file_id], references: [id], onUpdate: NoAction)
+  term_template_versions                         term_template_versions @relation(fields: [template_version_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  users                                          users                  @relation(fields: [user_code], references: [user_code], onDelete: Cascade, onUpdate: NoAction)
+  term_events                                    term_events[]
+  term_signatures                                term_signatures[]
+}
+
+model term_events {
+  id             String         @id @db.Uuid
+  contract_id    String         @db.Uuid
+  event_type     String
+  occurred_at    DateTime       @default(now()) @db.Timestamptz(6)
+  actor_email    String?
+  actor_name     String?
+  ip             String?
+  user_agent     String?
+  timezone       String?
+  meta           Json?
+  term_contracts term_contracts @relation(fields: [contract_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model term_signatures {
+  id                  String         @id @db.Uuid
+  contract_id         String         @db.Uuid
+  method              String
+  typed_name          String?
+  image_file_id       String?        @db.Uuid
+  consent_accepted_at DateTime       @default(now()) @db.Timestamptz(6)
+  created_at          DateTime       @default(now()) @db.Timestamptz(6)
+  term_contracts      term_contracts @relation(fields: [contract_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  files               files?         @relation(fields: [image_file_id], references: [id], onUpdate: NoAction)
+}
+
+model term_template_versions {
+  id             String           @id @db.Uuid
+  template_id    String           @db.Uuid
+  version_number Int
+  content_json   Json
+  content_sha256 String
+  pdf_file_id    String?          @db.Uuid
+  pdf_sha256     String?
+  created_by     String?          @db.Uuid
+  created_at     DateTime         @default(now()) @db.Timestamptz(6)
+  notes          String?
+  term_contracts term_contracts[]
+  files          files?           @relation(fields: [pdf_file_id], references: [id], onUpdate: NoAction)
+  term_templates term_templates   @relation(fields: [template_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([template_id, version_number])
+}
+
+model term_templates {
+  id                     String                   @id @db.Uuid
+  kind                   String                   @unique
+  title                  String
+  display_name           String                   @default("")
+  requires_patient       Boolean                  @default(false)
+  draft_content_json     Json?
+  logo_file_id           String?                  @db.Uuid
+  current_version_id     String?                  @db.Uuid
+  created_at             DateTime                 @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime                 @default(now()) @db.Timestamptz(6)
+  term_template_versions term_template_versions[]
+  files                  files?                   @relation(fields: [logo_file_id], references: [id], onUpdate: NoAction)
+}
+
+/// This model contains an expression index which requires additional setup for migrations. Visit https://pris.ly/d/expression-indexes for more info.
+model users {
+  id                                           Int              @id @default(autoincrement())
+  status                                       String?          @db.VarChar(255)
+  sort                                         Int?
+  date_created                                 DateTime?        @db.Timestamptz(6)
+  date_updated                                 DateTime?        @db.Timestamptz(6)
+  associate_name                               String?          @db.VarChar(255)
+  associate_last_name                          String?          @db.VarChar(255)
+  gender                                       String?          @db.VarChar(255)
+  nationality                                  String?          @db.VarChar(255)
+  associate_rg_issuer                          String?          @db.VarChar(255)
+  marital_status                               String?          @db.VarChar(255)
+  street                                       String?          @db.VarChar(255)
+  street_number                                String?          @db.VarChar(255)
+  complement                                   String?          @db.VarChar(255)
+  neighborhood                                 String?          @db.VarChar(255)
+  proof_of_address                             String?          @db.VarChar(255)
+  reason_treatment_text                        String?
+  responsible_type                             String?          @db.VarChar(255)
+  city                                         String?          @db.VarChar(255)
+  state                                        String?          @db.VarChar(255)
+  cep                                          String?          @db.VarChar(255)
+  email_account                                String?          @db.VarChar(255)
+  account_password                             String?          @db.VarChar(255)
+  user_code                                    String?          @unique @db.Uuid
+  rg_proof                                     String?          @db.VarChar(255)
+  associate_cpf                                String?          @db.VarChar(255)
+  associate_rg                                 String?          @db.VarChar(255)
+  mobile_number                                String?          @db.VarChar(255)
+  associate_status                             String?          @db.VarChar(64)
+  prescription                                 String?          @db.VarChar(255)
+  responsible_code                             String?          @db.Uuid
+  documents_folder_id                          String?          @db.VarChar(255)
+  rg_patient_proof                             String?          @db.VarChar(255)
+  patient_user_code                            String?          @db.VarChar(255)
+  adhesion_term                                String?          @db.Uuid
+  invalid_fields                               String?
+  ciap_codes                                   String?
+  associate_birth_date                         String?          @db.VarChar(255)
+  preferred_products                           String?          @db.VarChar(255)
+  date_prescription                            DateTime?        @db.Date
+  annotations                                  String?
+  handbook                                     String?
+  created_date                                 DateTime?        @db.Timestamp(6)
+  avatar_url                                   String?          @db.VarChar(255)
+  prescriber                                   String?          @db.VarChar(255)
+  delivery_address                             Json?
+  prescriber_code                              String?          @db.VarChar(255)
+  session_token                                String?          @db.VarChar(255)
+  session_expires                              DateTime?        @db.Timestamp(6)
+  last_activity                                DateTime?        @db.Timestamp(6)
+  is_session_active                            Boolean?
+  fullname                                     String?          @db.VarChar(255)
+  password_reset_token                         String?          @db.VarChar(255)
+  password_reset_expires                       DateTime?        @db.Timestamp(6)
+  is_sample                                    Boolean          @default(false)
+  orders                                       orders[]
+  services_services_associate_user_codeTousers services[]       @relation("services_associate_user_codeTousers")
+  services_services_patient_user_codeTousers   services[]       @relation("services_patient_user_codeTousers")
+  term_contracts                               term_contracts[]
+  users                                        users?           @relation("usersTousers", fields: [responsible_code], references: [user_code], onUpdate: NoAction, map: "fk_users_responsible_code")
+  other_users                                  users[]          @relation("usersTousers")
+  users_files                                  users_files[]
+}
+
+model users_api {
+  id           Int     @id @default(autoincrement())
+  email        String? @db.VarChar(255)
+  token        String? @db.VarChar(255)
+  token_prefix String? @unique(map: "users_api_token_prefix_uidx") @db.VarChar(32)
+  scopes       Json    @default("[\"*\"]")
+  is_sample    Boolean @default(false)
+}
+
+model users_files {
+  id        Int     @id @default(autoincrement())
+  user_id   Int?
+  file_id   String? @db.Uuid
+  doc_type  String? @db.VarChar(32)
+  side      String? @db.VarChar(16)
+  subject   String? @db.VarChar(32)
+  doc_kind  String? @db.VarChar(32)
+  is_sample Boolean @default(false)
+  files     files?  @relation(fields: [file_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_users_files_file_id")
+  users     users?  @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_users_files_user_id")
+}
+
+model web_vitals {
+  id              BigInt   @id @default(autoincrement())
+  date_created    DateTime @default(now()) @db.Timestamptz(6)
+  name            String
+  value           Float
+  rating          String?
+  delta           Float?
+  navigation_type String?
+  app             String?
+  url             String?
+  path            String?
+  user_code       String?
+  user_agent      String?
+  connection_type String?
+  device_memory   Float?
+  metadata        Json?
+
+  @@index([app, date_created(sort: Desc)], map: "idx_web_vitals_app")
+  @@index([date_created(sort: Desc)], map: "idx_web_vitals_created")
+  @@index([name, date_created(sort: Desc)], map: "idx_web_vitals_name_created")
+  @@index([path, name, date_created(sort: Desc)], map: "idx_web_vitals_path_name")
+}
+
+model webhook_deliveries {
+  id                BigInt            @id @default(autoincrement())
+  endpoint_id       Int
+  event_id          String            @db.Uuid
+  table_name        String
+  action            String
+  record_id         String?
+  payload           Json
+  status            String            @default("pending")
+  attempts          Int               @default(0)
+  max_attempts      Int               @default(8)
+  next_attempt_at   DateTime          @default(now()) @db.Timestamptz(6)
+  last_http_status  Int?
+  last_error        String?
+  date_created      DateTime          @default(now()) @db.Timestamptz(6)
+  date_delivered    DateTime?         @db.Timestamptz(6)
+  webhook_endpoints webhook_endpoints @relation(fields: [endpoint_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([status, next_attempt_at], map: "idx_webhook_deliveries_claim")
+  @@index([endpoint_id, date_created(sort: Desc)], map: "idx_webhook_deliveries_endpoint_created")
+}
+
+model webhook_endpoints {
+  id                 Int                  @id @default(autoincrement())
+  name               String
+  url                String
+  secret_encrypted   String
+  secret_prefix      String               @db.VarChar(16)
+  tables             String[]             @default([])
+  actions            String[]             @default([])
+  enabled            Boolean              @default(true)
+  date_created       DateTime             @default(now()) @db.Timestamptz(6)
+  date_updated       DateTime?            @db.Timestamptz(6)
+  webhook_deliveries webhook_deliveries[]
+
+  @@index([enabled], map: "idx_webhook_endpoints_enabled", where: raw("(enabled = true)"))
+}

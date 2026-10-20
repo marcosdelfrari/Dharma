@@ -297,7 +297,7 @@ async function runBackup({ triggered_by = 'manual' } = {}) {
     const jsonPrefix = `${prefix}tables/`;
     const manifestKey = `${prefix}manifest.json`;
 
-    const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'kunk-backup-'));
+    const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'dharma-backup-'));
     const sqlPath = path.join(tmpDir, 'database.sql');
 
     try {
@@ -409,7 +409,7 @@ async function restoreBackup(id, { confirm = false } = {}) {
 
     const driver = buildDriver(cfg.driver, cfg);
     const sqlBuffer = await driver.getBuffer({ key: row.sql_key });
-    const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'kunk-restore-'));
+    const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'dharma-restore-'));
     const sqlPath = path.join(tmpDir, 'database.sql');
     try {
       await fsp.writeFile(sqlPath, sqlBuffer);

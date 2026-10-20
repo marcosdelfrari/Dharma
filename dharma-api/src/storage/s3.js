@@ -180,7 +180,7 @@ function createS3Driver(cfg) {
           throw new AppError(
             400,
             'STORAGE_MISCONFIGURED',
-            `Probe S3: upload ok, mas a leitura do objeto em _kunk_probe/ voltou vazia no bucket "${bucket}"`
+            `Probe S3: upload ok, mas a leitura do objeto em _dharma_probe/ voltou vazia no bucket "${bucket}"`
           );
         }
         const stream =

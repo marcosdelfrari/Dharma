@@ -26,13 +26,13 @@ function buildHeaders({ eventId, deliveryId, table, action, secret, body, timest
   const ts = String(timestamp || Math.floor(Date.now() / 1000));
   return {
     'Content-Type': 'application/json',
-    'User-Agent': 'Kunk-Webhooks/1.0',
-    'X-Kunk-Event': String(eventId),
-    'X-Kunk-Delivery': String(deliveryId),
-    'X-Kunk-Table': String(table),
-    'X-Kunk-Action': String(action),
-    'X-Kunk-Timestamp': ts,
-    'X-Kunk-Signature': signPayload(secret, body, ts),
+    'User-Agent': 'Dharma-Webhooks/1.0',
+    'X-Dharma-Event': String(eventId),
+    'X-Dharma-Delivery': String(deliveryId),
+    'X-Dharma-Table': String(table),
+    'X-Dharma-Action': String(action),
+    'X-Dharma-Timestamp': ts,
+    'X-Dharma-Signature': signPayload(secret, body, ts),
   };
 }
 

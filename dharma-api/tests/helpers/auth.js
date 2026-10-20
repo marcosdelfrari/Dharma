@@ -35,7 +35,7 @@ async function loginAsAdmin(appName = 'admin') {
   const creds = await ensureAdminUser();
   const res = await request(app)
     .post('/api/v1/auth/login')
-    .set('X-Kunk-App', appName)
+    .set('X-Dharma-App', appName)
     .send(creds);
   if (res.status !== 200) {
     throw new Error(`login failed: ${res.status} ${JSON.stringify(res.body)}`);
@@ -48,16 +48,16 @@ async function loginAsAdmin(appName = 'admin') {
 async function loginAsOperator(overrides = {}) {
   const { ensureOperatorUser } = require('./db');
   const app = getApp();
-  const appName = overrides.app || 'kunk';
+  const appName = overrides.app || 'dharma';
   const creds = await ensureOperatorUser(overrides);
   const res = await request(app)
     .post('/api/v1/auth/login')
-    .set('X-Kunk-App', appName)
+    .set('X-Dharma-App', appName)
     .send({ email: creds.email, password: creds.password });
   if (res.status !== 200) {
     throw new Error(`operator login failed: ${res.status} ${JSON.stringify(res.body)}`);
   }
-  const cookieName = OPERATOR_COOKIE_BY_APP[appName] || OPERATOR_COOKIE_BY_APP.kunk;
+  const cookieName = OPERATOR_COOKIE_BY_APP[appName] || OPERATOR_COOKIE_BY_APP.dharma;
   const cookie = extractCookie(res.headers['set-cookie'], cookieName);
   return { app, cookie, user: res.body.data.user, creds, appName };
 }
@@ -68,7 +68,7 @@ async function createBearerToken(cookie, scopes = ['*']) {
   const res = await request(app)
     .post('/api/v1/auth/tokens')
     .set('Cookie', cookie)
-    .set('X-Kunk-App', 'admin')
+    .set('X-Dharma-App', 'admin')
     .send({ email: 'integration-token', scopes });
   if (res.status !== 201) {
     throw new Error(`token create failed: ${res.status} ${JSON.stringify(res.body)}`);

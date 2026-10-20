@@ -26,13 +26,13 @@ describe('formatCloudError', () => {
         { bucket: 'demo', op: 'test-put' }
       );
       assert.match(msg, /Sem permissão para gravar/i);
-      assert.match(msg, /_kunk_probe/);
+      assert.match(msg, /_dharma_probe/);
     });
 
     it('traduz UnknownError com HTTP 403', () => {
       const msg = formatS3Error(
         { name: 'UnknownError', message: 'UnknownError', $metadata: { httpStatusCode: 403 } },
-        { bucket: 'kunk-teste', region: 'sa-east-1', op: 'test-head' }
+        { bucket: 'dharma-teste', region: 'sa-east-1', op: 'test-head' }
       );
       assert.equal(msg.includes('UnknownError'), false);
       assert.match(msg, /permissão|HeadBucket|IAM/i);

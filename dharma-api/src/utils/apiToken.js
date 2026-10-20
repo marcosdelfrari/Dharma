@@ -1,6 +1,6 @@
 'use strict';
 
-const LIVE_PREFIX = 'kunk_live_';
+const LIVE_PREFIX = 'dharma_live_';
 const PREFIX_TAIL = 12;
 
 function apiTokenLookupPrefix(token) {

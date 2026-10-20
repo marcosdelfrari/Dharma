@@ -12,10 +12,10 @@ const { v4: uuidv4 } = require('uuid');
 
 function adminReq(app, cookie) {
   return {
-    get: (path) => request(app).get(path).set('Cookie', cookie).set('X-Kunk-App', 'admin'),
-    post: (path) => request(app).post(path).set('Cookie', cookie).set('X-Kunk-App', 'admin'),
-    patch: (path) => request(app).patch(path).set('Cookie', cookie).set('X-Kunk-App', 'admin'),
-    delete: (path) => request(app).delete(path).set('Cookie', cookie).set('X-Kunk-App', 'admin'),
+    get: (path) => request(app).get(path).set('Cookie', cookie).set('X-Dharma-App', 'admin'),
+    post: (path) => request(app).post(path).set('Cookie', cookie).set('X-Dharma-App', 'admin'),
+    patch: (path) => request(app).patch(path).set('Cookie', cookie).set('X-Dharma-App', 'admin'),
+    delete: (path) => request(app).delete(path).set('Cookie', cookie).set('X-Dharma-App', 'admin'),
   };
 }
 

@@ -6,7 +6,7 @@ const SALT_ROUNDS = process.env.NODE_ENV === 'test' ? 4 : 10;
 const BCRYPT_HASH_RE = /^\$2[aby]\$\d{2}\$[./A-Za-z0-9]{53}$/;
 
 /** Dummy hash so leftover/plaintext rows pay bcrypt cost instead of a fast reject. */
-const DUMMY_HASH = bcrypt.hashSync('kunk-dummy-not-a-real-password', SALT_ROUNDS);
+const DUMMY_HASH = bcrypt.hashSync('dharma-dummy-not-a-real-password', SALT_ROUNDS);
 
 function isBcryptHash(value) {
   return typeof value === 'string' && value.length >= 60 && BCRYPT_HASH_RE.test(value);

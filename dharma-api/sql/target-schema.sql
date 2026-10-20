@@ -1,4 +1,4 @@
--- Schema alvo Kunk open source (PostgreSQL)
+-- Schema alvo Dharma open source (PostgreSQL)
 -- Gerado/ajustado para importação: ordem de FKs corrigida; coluna "user" entre aspas.
 -- Não executar em produção sem revisão.
 
@@ -80,7 +80,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS users_email_account_login_uidx
     AND btrim(email_account) <> ''
     AND (status IS NULL OR status <> 'patient');
 
--- system_users (operadores do painel; ex-Kunk_Users / kunk_users)
+-- system_users (operadores do painel; ex-system_users)
 CREATE TABLE IF NOT EXISTS system_users (
   id SERIAL PRIMARY KEY,
   date_created TIMESTAMPTZ,
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS system_users (
   is_sample BOOLEAN NOT NULL DEFAULT false
 );
 
--- Sessões de operador por app (admin | kunk | doc-sign)
+-- Sessões de operador por app (admin | dharma | doc-sign)
 CREATE TABLE IF NOT EXISTS operator_sessions (
   id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL REFERENCES system_users(id) ON DELETE CASCADE,

@@ -71,7 +71,7 @@ describe('soucannabis_orders mapOrderPayload', () => {
     const { bodyToLocalOutboundPatch } = require('../../src/services/soucannabis_orders/outbound');
     const patch = bodyToLocalOutboundPatch(
       {
-        name_associate: 'KUNK TESTE999',
+        name_associate: 'DHARMA TESTE999',
         address: { street: 'Rua Nova', number: '10', city: 'SP', state: 'SP', cep: '01000-000' },
         status: 'Pagamento concluído',
       },
@@ -82,8 +82,8 @@ describe('soucannabis_orders mapOrderPayload', () => {
         associate_name: 'Velho',
       }
     );
-    assert.equal(patch.associate_name, 'KUNK TESTE999');
-    assert.equal(patch.receiver_name, 'KUNK TESTE999');
+    assert.equal(patch.associate_name, 'DHARMA TESTE999');
+    assert.equal(patch.receiver_name, 'DHARMA TESTE999');
     assert.equal(patch.address.street, 'Rua Nova');
     assert.equal(patch.status, 'Pagamento concluído');
 

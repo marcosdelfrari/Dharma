@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * Pré-carregado pelo roadmap (`node -r …`) quando KUNK_TEST_CAPTURE_IO=1.
+ * Pré-carregado pelo roadmap (`node -r …`) quando DHARMA_TEST_CAPTURE_IO=1.
  * Intercepta SuperAgent Request.end (Supertest estende Request) e emite
- * linhas `__KUNK_IO__{json}` no stdout para o relatório.
+ * linhas `__DHARMA_IO__{json}` no stdout para o relatório.
  */
 
-if (process.env.KUNK_TEST_CAPTURE_IO !== '1') {
+if (process.env.DHARMA_TEST_CAPTURE_IO !== '1') {
   module.exports = {};
 } else {
   const SENSITIVE_KEY = /password|secret|token|authorization|cookie|session|api[_-]?key|private/i;
@@ -70,11 +70,11 @@ if (process.env.KUNK_TEST_CAPTURE_IO !== '1') {
 
   function emit(entry) {
     try {
-      process.stdout.write(`__KUNK_IO__${JSON.stringify(entry)}\n`);
+      process.stdout.write(`__DHARMA_IO__${JSON.stringify(entry)}\n`);
     } catch (e) {
       try {
         process.stdout.write(
-          `__KUNK_IO__${JSON.stringify({
+          `__DHARMA_IO__${JSON.stringify({
             method: entry.method,
             route: String(entry.route),
             status: entry.status,
@@ -89,8 +89,8 @@ if (process.env.KUNK_TEST_CAPTURE_IO !== '1') {
 
   function captureFromRequest(req, err, res) {
     try {
-      if (req.__kunkIoCaptured) return;
-      req.__kunkIoCaptured = true;
+      if (req.__dharmaIoCaptured) return;
+      req.__dharmaIoCaptured = true;
 
       let payload = null;
       if (Object.prototype.hasOwnProperty.call(req, '_data') && req._data !== undefined) {
@@ -131,9 +131,9 @@ if (process.env.KUNK_TEST_CAPTURE_IO !== '1') {
   try {
     const superagent = require('superagent');
     const Proto = superagent.Request && superagent.Request.prototype;
-    if (Proto && !Proto.__kunkIoPatched) {
+    if (Proto && !Proto.__dharmaIoPatched) {
       const origEnd = Proto.end;
-      Proto.end = function kunkIoEnd(cb) {
+      Proto.end = function dharmaIoEnd(cb) {
         const req = this;
         return origEnd.call(this, function onEnd(err, res) {
           captureFromRequest(req, err, res);
@@ -141,7 +141,7 @@ if (process.env.KUNK_TEST_CAPTURE_IO !== '1') {
           return undefined;
         });
       };
-      Proto.__kunkIoPatched = true;
+      Proto.__dharmaIoPatched = true;
     }
     module.exports = { patched: true };
   } catch (e) {

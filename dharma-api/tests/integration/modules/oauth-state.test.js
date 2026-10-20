@@ -37,7 +37,7 @@ describe('modules/oauth-state', () => {
   });
 
   function asAdmin(path) {
-    return request(app).get(path).set('Cookie', cookie).set('X-Kunk-App', 'admin');
+    return request(app).get(path).set('Cookie', cookie).set('X-Dharma-App', 'admin');
   }
 
   it('public Google callback without state is rejected', async () => {
@@ -108,7 +108,7 @@ describe('modules/oauth-state', () => {
     const res = await request(app)
       .get('/api/v1/modules/google_calendar/oauth/authorize?redirect=0')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .set('X-Forwarded-Host', 'evil.example')
       .set('X-Original-Host', 'evil.example');
     assert.equal(res.status, 200, JSON.stringify(res.body));
@@ -128,7 +128,7 @@ describe('modules/oauth-state', () => {
     const res = await request(app)
       .get('/api/v1/modules/melhorenvio/oauth/authorize')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .set('X-Forwarded-Host', 'evil.example')
       .set('X-Original-Host', 'evil.example');
     assert.equal(res.status, 200, JSON.stringify(res.body));

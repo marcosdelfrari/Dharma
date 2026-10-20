@@ -260,7 +260,7 @@ async function createCheckout(body = {}) {
         billing_address: billing,
         customer_editable: true,
         accepted_payment_methods: accepted.length ? accepted : ['credit_card'],
-        success_url: cfg.success_url || env.publicUrls.kunk,
+        success_url: cfg.success_url || env.publicUrls.dharma,
         boleto: {
           due_at: new Date(Date.now() + 7 * 86400000).toISOString().slice(0, 10),
         },

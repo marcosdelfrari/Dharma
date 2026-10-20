@@ -57,7 +57,7 @@ describe('admin/system-errors', { concurrency: false }, () => {
     const res = await request(app)
       .post('/api/v1/system-errors')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({
         source: 'frontend',
         app: 'admin',

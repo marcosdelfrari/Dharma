@@ -22,7 +22,7 @@ const BACKUP_ACTIVATE_DEFAULTS = {
 
 /** Branding assets that should live in the active cloud bucket. */
 const BRANDING_ASSET_KEYS = [
-  { system: 'kunk', key: 'VITE_KUNK_LOGO', label: 'Logo ativa (Kunk / apps)', kind: 'logo' },
+  { system: 'dharma', key: 'VITE_DHARMA_LOGO', label: 'Logo ativa (Dharma / apps)', kind: 'logo' },
   { system: 'registration', key: 'VITE_ASSOCIATION_LOGO', label: 'Logo ativa da associação', kind: 'logo' },
   {
     system: 'registration',
@@ -42,7 +42,7 @@ const BRANDING_ASSET_KEYS = [
     label: 'Logo retangular',
     kind: 'logo',
   },
-  { system: 'kunk', key: 'VITE_KUNK_BG_IMAGE', label: 'Imagem de fundo', kind: 'background' },
+  { system: 'dharma', key: 'VITE_DHARMA_BG_IMAGE', label: 'Imagem de fundo', kind: 'background' },
 ];
 
 function extractFileIdFromDownloadUrl(href) {

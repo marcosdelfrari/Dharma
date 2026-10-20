@@ -44,7 +44,7 @@ async function ensureCredentialRows() {
     `INSERT INTO system_api_credentials (
        service, field_key, encrypted_value, env_fallback, is_secret, description
      ) VALUES
-       ('soucannabis_orders', 'base_url', NULL, 'SOUCANNABIS_ORDERS_BASE_URL', false, 'Base URL Kunk SouCannabis'),
+       ('soucannabis_orders', 'base_url', NULL, 'SOUCANNABIS_ORDERS_BASE_URL', false, 'Base URL Dharma SouCannabis'),
        ('soucannabis_orders', 'client_id', NULL, 'SOUCANNABIS_ORDERS_CLIENT_ID', true, 'OAuth client_id'),
        ('soucannabis_orders', 'client_secret', NULL, 'SOUCANNABIS_ORDERS_CLIENT_SECRET', true, 'OAuth client_secret'),
        ('soucannabis_orders', 'token_url', NULL, 'SOUCANNABIS_ORDERS_TOKEN_URL', false, 'Token URL'),

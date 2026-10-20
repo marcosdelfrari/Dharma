@@ -14,10 +14,10 @@
  * Flags:
  *   --yes            Executa a limpeza (sem isso só lista o plano)
  *   --force          Permite rodar com NODE_ENV=production
- *   --no-role-pages  Não recria kunk.role_pages após o TRUNCATE
+ *   --no-role-pages  Não recria dharma.role_pages após o TRUNCATE
  *
- * Por padrão, após limpar, recria `kunk.role_pages` mínimo (todas as páginas
- * para roles staff; Profissional → relatório de serviços) para o menu do Kunk
+ * Por padrão, após limpar, recria `dharma.role_pages` mínimo (todas as páginas
+ * para roles staff; Profissional → relatório de serviços) para o menu do Dharma
  * continuar funcionando.
  */
 
@@ -64,8 +64,8 @@ async function ensureRolePages(client) {
        system, key, value, value_type, is_sensitive, is_required,
        allow_hardcoded, hardcoded_default, description, date_created
      ) VALUES (
-       'kunk', 'role_pages', $1, 'json', false, false,
-       true, $1, 'Páginas por role no app Kunk (* = todas)', NOW()
+       'dharma', 'role_pages', $1, 'json', false, false,
+       true, $1, 'Páginas por role no app Dharma (* = todas)', NOW()
      )`,
     [value]
   );
@@ -122,7 +122,7 @@ async function main() {
       console.log(
         args.noRolePages
           ? 'Após limpar: tabela vazia (sem role_pages).'
-          : 'Após limpar: recria kunk.role_pages (mínimo).'
+          : 'Após limpar: recria dharma.role_pages (mínimo).'
       );
 
       if (!args.yes) {

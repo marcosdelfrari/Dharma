@@ -37,12 +37,12 @@ describe('webhooks unit', () => {
       body,
       timestamp: 123,
     });
-    assert.equal(headers['X-Kunk-Event'], 'evt');
-    assert.equal(headers['X-Kunk-Delivery'], '9');
-    assert.equal(headers['X-Kunk-Table'], 'orders');
-    assert.equal(headers['X-Kunk-Action'], 'update');
-    assert.equal(headers['X-Kunk-Timestamp'], '123');
-    assert.ok(headers['X-Kunk-Signature'].startsWith('sha256='));
+    assert.equal(headers['X-Dharma-Event'], 'evt');
+    assert.equal(headers['X-Dharma-Delivery'], '9');
+    assert.equal(headers['X-Dharma-Table'], 'orders');
+    assert.equal(headers['X-Dharma-Action'], 'update');
+    assert.equal(headers['X-Dharma-Timestamp'], '123');
+    assert.ok(headers['X-Dharma-Signature'].startsWith('sha256='));
   });
 
   it('sanitize strips sensitive user fields', () => {

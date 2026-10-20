@@ -131,7 +131,7 @@ function groupFilesByDriver(files) {
 async function ensureRolePages(client) {
   const value = JSON.stringify(DEFAULT_ROLE_PAGES);
   const existing = await client.query(
-    `SELECT id FROM system_configs WHERE system = 'kunk' AND key = 'role_pages' LIMIT 1`
+    `SELECT id FROM system_configs WHERE system = 'dharma' AND key = 'role_pages' LIMIT 1`
   );
 
   if (existing.rows[0]) {
@@ -149,8 +149,8 @@ async function ensureRolePages(client) {
        system, key, value, value_type, is_sensitive, is_required,
        allow_hardcoded, hardcoded_default, description, date_created
      ) VALUES (
-       'kunk', 'role_pages', $1, 'json', false, false,
-       true, $1, 'Páginas por role no app Kunk (* = todas)', NOW()
+       'dharma', 'role_pages', $1, 'json', false, false,
+       true, $1, 'Páginas por role no app Dharma (* = todas)', NOW()
      )`,
     [value]
   );
@@ -278,7 +278,7 @@ async function purgeActiveCloudPrefix(config) {
     return { driver: config.driver, listed: 0, deleted: 0, skipped: true, error: err.message };
   }
 
-  const prefix = config.keyPrefix || 'kunk/';
+  const prefix = config.keyPrefix || 'dharma/';
   let keys = [];
   if (config.driver === 's3') {
     keys = await listS3Keys(config.s3, prefix);

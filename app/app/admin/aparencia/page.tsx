@@ -5,10 +5,10 @@ import { api, ApiError, type ConfigItem } from "@/lib/api";
 import { Alert, Button, Loader, PageTitle, Panel } from "@/components/ui";
 
 const KEYS = [
-  { key: "VITE_KUNK_TITLE", label: "Título do painel", defaultValue: "Dharma" },
-  { key: "VITE_KUNK_DARK_BG", label: "Fundo (hex)", defaultValue: "#0d0d0d" },
-  { key: "VITE_KUNK_MENU_BG", label: "Menu (hex)", defaultValue: "#171717" },
-  { key: "VITE_KUNK_ACCENT", label: "Accent (hex)", defaultValue: "#c3d800" },
+  { key: "VITE_DHARMA_TITLE", label: "Título do painel", defaultValue: "Dharma" },
+  { key: "VITE_DHARMA_DARK_BG", label: "Fundo (hex)", defaultValue: "#0d0d0d" },
+  { key: "VITE_DHARMA_MENU_BG", label: "Menu (hex)", defaultValue: "#171717" },
+  { key: "VITE_DHARMA_ACCENT", label: "Accent (hex)", defaultValue: "#c3d800" },
 ] as const;
 
 export default function AdminAppearancePage() {
@@ -23,7 +23,7 @@ export default function AdminAppearancePage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await api.listConfig("kunk");
+      const res = await api.listConfig("dharma");
       const list = res.data.items || [];
       setItems(list);
       const next: Record<string, string> = {};
@@ -58,7 +58,7 @@ export default function AdminAppearancePage() {
           await api.updateConfig(existing.id, { value });
         } else {
           await api.createConfig({
-            system: "kunk",
+            system: "dharma",
             key: field.key,
             value,
             description: field.label,

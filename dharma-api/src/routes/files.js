@@ -33,11 +33,11 @@ function runMiddleware(mw, req, res) {
 /**
  * Sessão de associado no cookie (cadastramento).
  * Em localhost o jar é compartilhado entre portas, com cookies distintos por app
- * (kunk_oss_session_admin | _kunk | _doc_sign + associate_session).
+ * (dharma_oss_session_admin | _dharma | _doc_sign + associate_session).
  *
  * Upload no cadastro precisa do cookie de associado mesmo com sessão de operador
- * no jar (o request do cadastro não manda X-Kunk-App).
- * GET/download/DELETE no Kunk/Admin/Doc-sign: se houver cookie de operador,
+ * no jar (o request do cadastro não manda X-Dharma-App).
+ * GET/download/DELETE no Dharma/Admin/Doc-sign: se houver cookie de operador,
  * a sessão de staff ganha — senão o PDF do termo/audit (fora de users_files)
  * cai no ownership do associado e devolve 403.
  */

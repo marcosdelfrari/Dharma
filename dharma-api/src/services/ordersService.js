@@ -76,7 +76,8 @@ async function validateAndNormalizeCheckout(payload) {
     associate_code,
     name_associate,
     info,
-    kunk_user,
+    dharma_user,
+    kunk_user, // legado
     ...rest
   } = payload;
 

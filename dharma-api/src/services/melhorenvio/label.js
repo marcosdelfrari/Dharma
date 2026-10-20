@@ -313,7 +313,7 @@ async function cancelLabel({ orderId, order: orderArg } = {}) {
         {
           id: String(shipmentId),
           reason_id: 2,
-          description: 'Cancelamento via Kunk',
+          description: 'Cancelamento via Dharma',
         },
       ],
       'POST'

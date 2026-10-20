@@ -50,7 +50,7 @@ function verifyToken(token) {
 }
 
 function publicAppBase() {
-  return emailService.publicAppUrl('kunk');
+  return emailService.publicAppUrl('dharma');
 }
 
 function normalizePermissionsList(value) {

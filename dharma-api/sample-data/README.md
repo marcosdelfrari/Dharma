@@ -1,4 +1,4 @@
-# Sample data — Kunk OSS
+# Sample data — Dharma
 
 Dados **fictícios** para popular o schema alvo em demos e instalação com sample data.
 

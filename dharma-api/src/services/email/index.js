@@ -242,7 +242,7 @@ async function sendTestEmail({ to }, credsOverride = null) {
   if (!dest || !dest.includes('@')) {
     throw new AppError(400, 'VALIDATION_ERROR', 'Informe um e-mail válido para o teste');
   }
-  const tpl = templates.smtpTest({ associationName: process.env.ASSOCIATION_NAME || 'Kunk' });
+  const tpl = templates.smtpTest({ associationName: process.env.ASSOCIATION_NAME || 'Dharma' });
   if (credsOverride) {
     const cfg = normalizeConfig(credsOverride);
     assertMinimal(cfg);
@@ -297,7 +297,7 @@ async function sendTestEmail({ to }, credsOverride = null) {
 function publicAppUrl(app) {
   const key = String(app || '').toLowerCase();
   const map = {
-    kunk: process.env.KUNK_PUBLIC_URL || process.env.PUBLIC_APP_URL || 'http://localhost:4257',
+    dharma: process.env.DHARMA_PUBLIC_URL || process.env.PUBLIC_APP_URL || 'http://localhost:4257',
     admin: process.env.ADMIN_PUBLIC_URL || 'http://localhost:4256',
     'doc-sign': process.env.DOC_SIGN_PUBLIC_URL || process.env.VITE_DOC_SIGN_URL || 'http://localhost:4258',
     registration:
@@ -305,7 +305,7 @@ function publicAppUrl(app) {
       process.env.CADASTRO_PUBLIC_URL ||
       'http://localhost:4255',
   };
-  return String(map[key] || map.kunk).replace(/\/$/, '');
+  return String(map[key] || map.dharma).replace(/\/$/, '');
 }
 
 /** Garante metadados de credenciais mesmo sem o SQL de seed aplicado. */

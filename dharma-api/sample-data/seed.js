@@ -44,7 +44,7 @@ const SERVICE_STATUSES = ['Aguardando Pagamento', 'Pagamento Concluído'];
 /** Alinhado a triage.statuses OSS (`waiting` / `done`). */
 const RECEPTION_STATUSES = ['waiting', 'waiting', 'waiting', 'done', 'waiting'];
 const CIAP = ['A98', 'P76', 'L18', 'N01', 'R74', 'T90', 'K86'];
-/** Alinhado a GENDER_OPTIONS em @kunk/forms (GenderSelect do cadastramento). */
+/** Alinhado a GENDER_OPTIONS em @dharma/forms (GenderSelect do cadastramento). */
 const GENDER_OPTIONS = [
   'homem-cis',
   'mulher-cis',
@@ -160,12 +160,12 @@ async function buildDataset(countsOverride = null) {
       name: first,
       last_name: last,
       type: i % 3 === 0 ? 'medic' : 'therapist',
-      services_description: 'Atendimento clínico demo Kunk OSS',
+      services_description: 'Atendimento clínico demo Dharma',
       phone: fakePhone(300 + i),
       state,
       city,
       cpf: fakeCpf(300 + i),
-      email: `pro${String(i + 1).padStart(2, '0')}@demo.kunk.local`,
+      email: `pro${String(i + 1).padStart(2, '0')}@demo.dharma.local`,
       specialty: pick(['clínica geral', 'psiquiatria', 'dor', 'neurologia', 'integrativa'], i),
       active: 1,
       is_prescriber: i % 2 === 0 ? 'true' : 'false',
@@ -244,7 +244,7 @@ async function buildDataset(countsOverride = null) {
       city,
       state,
       cep: fakeCep(i + 1),
-      email_account: `associate${String(i + 1).padStart(3, '0')}@demo.kunk.local`,
+      email_account: `associate${String(i + 1).padStart(3, '0')}@demo.dharma.local`,
       account_password: null,
       user_code: userCode,
       rg_proof: `rg-proof-${i + 1}.pdf`,
@@ -262,7 +262,7 @@ async function buildDataset(countsOverride = null) {
       preferred_products: product.sku,
       date_prescription: dateOnlyDaysAgo(20 + (i % 40)),
       created_date: daysAgo(100 - (i % 90)),
-      avatar_url: `https://cdn.demo.kunk.local/avatars/user-${i + 1}.png`,
+      avatar_url: `https://cdn.demo.dharma.local/avatars/user-${i + 1}.png`,
       prescriber: `${pro.name} ${pro.last_name}`,
       delivery_address: {
         street: `Rua Demo ${100 + i}`,
@@ -354,7 +354,7 @@ async function buildDataset(countsOverride = null) {
       details: 'Pedido demo sample-data com todos os campos preenchidos.',
       donation: i % 4 === 0 ? 20 : 0,
       prescriber: `${pro.name} ${pro.last_name}`,
-      payment_link: `https://pay.demo.kunk.local/o/${i + 1}`,
+      payment_link: `https://pay.demo.dharma.local/o/${i + 1}`,
       _user_index: i % users.length,
       carrier_order_code: shipped ? `CARRIER-${7000 + i}` : `CARRIER-PENDING-${7000 + i}`,
       payment_code: paid ? `PAY-${8000 + i}` : `PAY-PENDING-${8000 + i}`,
@@ -397,7 +397,7 @@ async function buildDataset(countsOverride = null) {
       professional_name: `${pro.name} ${pro.last_name}`,
       event_link: null,
       consultation_date: daysAgo(20 - (i % 15)),
-      payment_link: `https://pay.demo.kunk.local/s/${i + 1}`,
+      payment_link: `https://pay.demo.dharma.local/s/${i + 1}`,
       event_id: null,
       price_paid: status === 'Pagamento Concluído' ? price : 0,
       donation: i % 5 === 0 ? 30 : 0,
@@ -427,7 +427,7 @@ async function buildDataset(countsOverride = null) {
       date_created: daysAgo(20 - i),
       name: first,
       last_name: last,
-      email: `reception${String(i + 1).padStart(2, '0')}@demo.kunk.local`,
+      email: `reception${String(i + 1).padStart(2, '0')}@demo.dharma.local`,
       phone: fakePhone(400 + i),
       help_topic: pick(['informação', 'cadastro', 'agendamento'], i),
       is_associate: i % 3 === 0 ? 'true' : 'false',
@@ -439,7 +439,7 @@ async function buildDataset(countsOverride = null) {
       // associate_code só quando vinculado a um users.user_code real (nunca LEAD-*)
       associate_code: i % 3 === 0 ? String(user.user_code) : null,
       date_updated: daysAgo(10 - (i % 8)),
-      avatar_url: `https://cdn.demo.kunk.local/avatars/reception-${i + 1}.png`,
+      avatar_url: `https://cdn.demo.dharma.local/avatars/reception-${i + 1}.png`,
       patient_name: i % 2 === 0 ? `${first} ${last}` : user.fullname,
       attendant: i % 2 === 0 ? 'Lia Acolhimento' : 'Admin Demo',
       tags: [{ tag: 'demo' }, { tag: 'novo-contato' }],

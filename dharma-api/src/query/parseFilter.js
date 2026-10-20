@@ -23,7 +23,7 @@ function parseFilterQuery(raw) {
 }
 
 /**
- * Converte filter da API Kunk em SQL parametrizado.
+ * Converte filter da API Dharma em SQL parametrizado.
  * @returns {{ sql: string, params: any[] }}
  */
 function buildFilterSql(collectionName, filter, startIndex = 1) {

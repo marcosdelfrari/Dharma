@@ -37,7 +37,7 @@ function NewPasswordForm() {
     setError(null);
     setOk(null);
     try {
-      await api.forgotOperatorPassword(email.trim(), "kunk");
+      await api.forgotOperatorPassword(email.trim(), "dharma");
       setOk("Se o e-mail existir, enviaremos instruções de redefinição.");
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Falha ao solicitar");

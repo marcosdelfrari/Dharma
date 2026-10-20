@@ -12,7 +12,7 @@ const STORAGE_CONFIG_DEFAULTS = [
   {
     key: 'key_prefix',
     value_type: 'string',
-    hardcoded_default: 'kunk/',
+    hardcoded_default: 'dharma/',
     description: 'Prefixo das object keys no bucket (ENV: FILES_KEY_PREFIX)',
   },
   {

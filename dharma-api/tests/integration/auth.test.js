@@ -29,7 +29,7 @@ describe('auth', { concurrency: false }, () => {
     const creds = await ensureAdminUser();
     const res = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     assert.equal(res.status, 200);
     assert.ok(res.body.data.user.email);
@@ -44,7 +44,7 @@ describe('auth', { concurrency: false }, () => {
     const creds = await ensureAdminUser();
     const res = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     assert.equal(res.status, 200);
     cookie = extractCookie(res.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
@@ -60,7 +60,7 @@ describe('auth', { concurrency: false }, () => {
     const me = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(me.status, 200);
     assert.ok(me.body.data.user.id);
   });
@@ -69,7 +69,7 @@ describe('auth', { concurrency: false }, () => {
     const creds = await ensureAdminUser();
     const res = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     assert.equal(res.status, 200);
     cookie = extractCookie(res.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
@@ -83,7 +83,7 @@ describe('auth', { concurrency: false }, () => {
     const me = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(me.status, 200);
 
     const stored = await query(
@@ -102,7 +102,7 @@ describe('auth', { concurrency: false }, () => {
   });
 
   it('login validation error', async () => {
-    const res = await request(app).post('/api/v1/auth/login').set('X-Kunk-App', 'admin').send({});
+    const res = await request(app).post('/api/v1/auth/login').set('X-Dharma-App', 'admin').send({});
     assert.equal(res.status, 400);
     assert.equal(res.body.errors[0].code, 'VALIDATION_ERROR');
   });
@@ -110,7 +110,7 @@ describe('auth', { concurrency: false }, () => {
   it('login invalid credentials', async () => {
     const res = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ email: 'admin@dharma-api.test', password: 'wrong' });
     assert.equal(res.status, 401);
     assert.equal(res.body.errors[0].code, 'INVALID_CREDENTIALS');
@@ -121,7 +121,7 @@ describe('auth', { concurrency: false }, () => {
     const res = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(res.status, 200);
     assert.ok(res.body.data.user.id);
   });
@@ -138,7 +138,7 @@ describe('auth', { concurrency: false }, () => {
     const created = await request(app)
       .post('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ email: 'tok', scopes: ['*'] });
     assert.equal(created.status, 403);
     assert.equal(created.body.errors[0].code, 'API_DISABLED');
@@ -146,7 +146,7 @@ describe('auth', { concurrency: false }, () => {
     const list = await request(app)
       .get('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(list.status, 403);
     assert.equal(list.body.errors[0].code, 'API_DISABLED');
   });
@@ -158,16 +158,16 @@ describe('auth', { concurrency: false }, () => {
     const created = await request(app)
       .post('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ email: 'tok', scopes: ['*'] });
     assert.equal(created.status, 201);
-    assert.ok(created.body.data.token.startsWith('kunk_live_'));
+    assert.ok(created.body.data.token.startsWith('dharma_live_'));
     assert.ok(created.body.data.label || created.body.data.email);
 
     const list = await request(app)
       .get('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(list.status, 200);
     assert.ok(Array.isArray(list.body.data));
     assert.ok(!JSON.stringify(list.body.data).includes(created.body.data.token));
@@ -175,7 +175,7 @@ describe('auth', { concurrency: false }, () => {
     const patched = await request(app)
       .patch(`/api/v1/auth/tokens/${created.body.data.id}`)
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ label: 'tok-updated', scopes: ['items:orders:read'] });
     assert.equal(patched.status, 200);
     assert.equal(patched.body.data.label, 'tok-updated');
@@ -184,7 +184,7 @@ describe('auth', { concurrency: false }, () => {
     const del = await request(app)
       .delete(`/api/v1/auth/tokens/${created.body.data.id}`)
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(del.status, 200);
   });
 
@@ -194,7 +194,7 @@ describe('auth', { concurrency: false }, () => {
     const res = await request(app)
       .post('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ label: 'bad', scopes: ['items:users_api:read'] });
     assert.equal(res.status, 400);
     assert.equal(res.body.errors[0].code, 'VALIDATION_ERROR');
@@ -214,17 +214,17 @@ describe('auth', { concurrency: false }, () => {
     const created = await request(app)
       .post('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({ label: 'full-matrix', scopes });
     assert.equal(created.status, 201, JSON.stringify(created.body));
-    assert.ok(created.body.data.token.startsWith('kunk_live_'));
+    assert.ok(created.body.data.token.startsWith('dharma_live_'));
     assert.equal(created.body.data.label, 'full-matrix');
     assert.deepEqual(created.body.data.scopes, scopes);
 
     const list = await request(app)
       .get('/api/v1/auth/tokens')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(list.status, 200);
     const row = list.body.data.find((t) => t.id === created.body.data.id);
     assert.ok(row);
@@ -234,7 +234,7 @@ describe('auth', { concurrency: false }, () => {
     await request(app)
       .delete(`/api/v1/auth/tokens/${created.body.data.id}`)
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
   });
 
   it('bearer auth works when API enabled', async () => {
@@ -315,7 +315,7 @@ describe('auth', { concurrency: false }, () => {
     const { apiTokenLookupPrefix } = require('../../src/utils/apiToken');
     const { ensureUsersApiTokenPrefix } = require('../../src/db/ensureUsersApiTokenPrefix');
     await ensureUsersApiTokenPrefix();
-    const plain = `kunk_live_plain${'a'.repeat(40)}`;
+    const plain = `dharma_live_plain${'a'.repeat(40)}`;
     const prefix = apiTokenLookupPrefix(plain);
     const inserted = await query(
       `INSERT INTO users_api (email, token, token_prefix, scopes) VALUES ($1, $2, $3, $4::jsonb) RETURNING id`,
@@ -353,7 +353,7 @@ describe('auth', { concurrency: false }, () => {
     const res = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .set('Authorization', `Bearer ${token}`);
     assert.equal(res.status, 401);
     assert.equal(res.body.errors[0].code, 'AUTH_CONFLICT');
@@ -364,7 +364,7 @@ describe('auth', { concurrency: false }, () => {
     const res = await request(app)
       .post('/api/v1/auth/logout')
       .set('Cookie', session.cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(res.status, 200);
     assert.equal(res.body.data.ok, true);
   });
@@ -375,29 +375,29 @@ describe('auth', { concurrency: false }, () => {
 
     const adminLogin = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     assert.equal(adminLogin.status, 200);
     const adminCookie = extractCookie(adminLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
 
-    const kunkLogin = await request(app)
+    const dharmaLogin = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'kunk')
+      .set('X-Dharma-App', 'dharma')
       .send(creds);
-    assert.equal(kunkLogin.status, 200);
-    const kunkCookie = extractCookie(kunkLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.kunk);
+    assert.equal(dharmaLogin.status, 200);
+    const dharmaCookie = extractCookie(dharmaLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.dharma);
 
     const adminMe = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(adminMe.status, 200, JSON.stringify(adminMe.body));
 
-    const kunkMe = await request(app)
+    const dharmaMe = await request(app)
       .get('/api/v1/auth/me')
-      .set('Cookie', kunkCookie)
-      .set('X-Kunk-App', 'kunk');
-    assert.equal(kunkMe.status, 200);
+      .set('Cookie', dharmaCookie)
+      .set('X-Dharma-App', 'dharma');
+    assert.equal(dharmaMe.status, 200);
   });
 
   it('logout of one app keeps the other session', async () => {
@@ -406,33 +406,33 @@ describe('auth', { concurrency: false }, () => {
 
     const adminLogin = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     const adminCookie = extractCookie(adminLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
 
-    const kunkLogin = await request(app)
+    const dharmaLogin = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'kunk')
+      .set('X-Dharma-App', 'dharma')
       .send(creds);
-    const kunkCookie = extractCookie(kunkLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.kunk);
+    const dharmaCookie = extractCookie(dharmaLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.dharma);
 
     const logout = await request(app)
       .post('/api/v1/auth/logout')
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(logout.status, 200);
 
     const adminMe = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(adminMe.status, 401);
 
-    const kunkMe = await request(app)
+    const dharmaMe = await request(app)
       .get('/api/v1/auth/me')
-      .set('Cookie', kunkCookie)
-      .set('X-Kunk-App', 'kunk');
-    assert.equal(kunkMe.status, 200);
+      .set('Cookie', dharmaCookie)
+      .set('X-Dharma-App', 'dharma');
+    assert.equal(dharmaMe.status, 200);
   });
 
   it('relogin on same app invalidates previous session of that app only', async () => {
@@ -441,39 +441,39 @@ describe('auth', { concurrency: false }, () => {
 
     const first = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     const firstCookie = extractCookie(first.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
 
-    const kunkLogin = await request(app)
+    const dharmaLogin = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'kunk')
+      .set('X-Dharma-App', 'dharma')
       .send(creds);
-    const kunkCookie = extractCookie(kunkLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.kunk);
+    const dharmaCookie = extractCookie(dharmaLogin.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.dharma);
 
     const second = await request(app)
       .post('/api/v1/auth/login')
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send(creds);
     const secondCookie = extractCookie(second.headers['set-cookie'], OPERATOR_COOKIE_BY_APP.admin);
 
     const oldMe = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', firstCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(oldMe.status, 401);
 
     const newMe = await request(app)
       .get('/api/v1/auth/me')
       .set('Cookie', secondCookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(newMe.status, 200);
 
-    const kunkMe = await request(app)
+    const dharmaMe = await request(app)
       .get('/api/v1/auth/me')
-      .set('Cookie', kunkCookie)
-      .set('X-Kunk-App', 'kunk');
-    assert.equal(kunkMe.status, 200);
+      .set('Cookie', dharmaCookie)
+      .set('X-Dharma-App', 'dharma');
+    assert.equal(dharmaMe.status, 200);
   });
 
   it('rejects leftover plaintext operator password; forgot+reset recovers', async () => {
@@ -499,7 +499,7 @@ describe('auth', { concurrency: false }, () => {
     try {
       const denied = await request(localApp)
         .post('/api/v1/auth/login')
-        .set('X-Kunk-App', 'admin')
+        .set('X-Dharma-App', 'admin')
         .send({ email, password: leftover });
       assert.equal(denied.status, 401);
       assert.equal(denied.body.errors[0].code, 'INVALID_CREDENTIALS');
@@ -521,7 +521,7 @@ describe('auth', { concurrency: false }, () => {
 
       const login = await request(localApp)
         .post('/api/v1/auth/login')
-        .set('X-Kunk-App', 'admin')
+        .set('X-Dharma-App', 'admin')
         .send({ email, password: 'NewPass123!' });
       assert.equal(login.status, 200, JSON.stringify(login.body));
     } finally {
@@ -552,21 +552,21 @@ describe('auth', { concurrency: false }, () => {
       for (let i = 0; i < 3; i++) {
         const okLogin = await request(app)
           .post('/api/v1/auth/login')
-          .set('X-Kunk-App', 'admin')
+          .set('X-Dharma-App', 'admin')
           .send(creds);
         assert.equal(okLogin.status, 200, JSON.stringify(okLogin.body));
       }
       for (let i = 0; i < 5; i++) {
         const res = await request(app)
           .post('/api/v1/auth/login')
-          .set('X-Kunk-App', 'admin')
+          .set('X-Dharma-App', 'admin')
           .send({ email, password: 'wrong-password' });
         assert.equal(res.status, 401, JSON.stringify(res.body));
         assert.equal(res.body.errors[0].code, 'INVALID_CREDENTIALS');
       }
       const limited = await request(app)
         .post('/api/v1/auth/login')
-        .set('X-Kunk-App', 'admin')
+        .set('X-Dharma-App', 'admin')
         .send({ email, password: 'wrong-password' });
       assert.equal(limited.status, 429);
       assert.equal(limited.body.errors[0].code, 'RATE_LIMITED');

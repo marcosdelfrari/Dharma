@@ -44,8 +44,8 @@ const KEY_DESCRIPTIONS = {
   VITE_ASSOCIATION_LOGO_RECTANGULAR: 'Logo completa (3:1) da associação',
   VITE_ASSOCIATION_LOGO_FORMAT: 'Formato legado (fallback de migração)',
   VITE_ASSOCIATION_LOGO_PLACEMENTS: 'Tipo e largura da logo por app (login/menu)',
-  VITE_KUNK_LOGO: 'URL do logo (sidebar / login). Preferir /api/v1/files/{id}/download após upload.',
-  VITE_KUNK_TITLE: 'Título exibido na sidebar do Kunk',
+  VITE_DHARMA_LOGO: 'URL do logo (sidebar / login). Preferir /api/v1/files/{id}/download após upload.',
+  VITE_DHARMA_TITLE: 'Título exibido na sidebar do Dharma',
 };
 
 const DEFAULT_ROLE_PAGES = {
@@ -56,7 +56,7 @@ const DEFAULT_ROLE_PAGES = {
   Profissional: ['relatorios-servicos'],
 };
 
-const DEMO_SAMPLE_PENDING_SYSTEM = 'kunk';
+const DEMO_SAMPLE_PENDING_SYSTEM = 'dharma';
 const DEMO_SAMPLE_PENDING_KEY = 'demo_sample_pending';
 
 function onlyDigits(value) {
@@ -309,10 +309,10 @@ async function upsertConfig(client, { system, key, value, description }) {
 async function ensureRolePages(client) {
   const value = JSON.stringify(DEFAULT_ROLE_PAGES);
   await upsertConfig(client, {
-    system: 'kunk',
+    system: 'dharma',
     key: 'role_pages',
     value,
-    description: 'Páginas por role no app Kunk (* = todas)',
+    description: 'Páginas por role no app Dharma (* = todas)',
   });
 }
 
@@ -411,22 +411,22 @@ async function runInstall(payload = {}) {
             value: '',
             description: KEY_DESCRIPTIONS.VITE_ASSOCIATION_LOGO_PLACEMENTS,
           });
-          // Mesma URL nos apps que leem system=kunk (Kunk, cadastro, doc-sign login).
+          // Mesma URL nos apps que leem system=dharma (Dharma, cadastro, doc-sign login).
           await upsertConfig(client, {
-            system: 'kunk',
-            key: 'VITE_KUNK_LOGO',
+            system: 'dharma',
+            key: 'VITE_DHARMA_LOGO',
             value: logoUrl,
-            description: KEY_DESCRIPTIONS.VITE_KUNK_LOGO,
+            description: KEY_DESCRIPTIONS.VITE_DHARMA_LOGO,
           });
         }
 
         const associationTitle = String(association.associationName || '').trim();
         if (associationTitle) {
           await upsertConfig(client, {
-            system: 'kunk',
-            key: 'VITE_KUNK_TITLE',
+            system: 'dharma',
+            key: 'VITE_DHARMA_TITLE',
             value: associationTitle,
-            description: KEY_DESCRIPTIONS.VITE_KUNK_TITLE,
+            description: KEY_DESCRIPTIONS.VITE_DHARMA_TITLE,
           });
         }
 

@@ -61,7 +61,7 @@ describe('domain/files', () => {
     const upload = await request(app)
       .post('/api/v1/files')
       .set('Cookie', `${cookie}; ${staleAssociate}`)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .attach('file', TINY_PDF, { filename: 'comprovante.pdf', contentType: 'application/pdf' });
     assert.equal(upload.status, 201, JSON.stringify(upload.body));
     assert.ok(upload.body.data?.id);

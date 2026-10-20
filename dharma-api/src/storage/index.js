@@ -42,7 +42,7 @@ function objectKeyForFile({ id, filename, keyPrefix }) {
   const now = new Date();
   const yyyy = String(now.getUTCFullYear());
   const mm = String(now.getUTCMonth() + 1).padStart(2, '0');
-  const prefix = keyPrefix || 'kunk/';
+  const prefix = keyPrefix || 'dharma/';
   if (prefix === '' || prefix === 'local/') {
     return `${id}_${safeName}`;
   }

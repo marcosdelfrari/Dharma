@@ -9,7 +9,7 @@ const PROBE_TIMEOUT_MS = 4000;
 const DOCKER_PROBE_BASE = {
   api: 'http://127.0.0.1',
   admin: 'http://admin:4256',
-  kunk: 'http://kunk:4257',
+  dharma: 'http://dharma:4257',
   registration: 'http://registration:4255',
   'doc-sign': 'http://doc-sign:4258',
 };
@@ -51,11 +51,11 @@ function serviceCatalog(req) {
       probeBases: [env.publicUrls.admin, DOCKER_PROBE_BASE.admin],
     },
     {
-      id: 'kunk',
-      label: 'Kunk',
-      url: env.publicUrls.kunk,
+      id: 'dharma',
+      label: 'Dharma',
+      url: env.publicUrls.dharma,
       healthPath: '/health',
-      probeBases: [env.publicUrls.kunk, DOCKER_PROBE_BASE.kunk],
+      probeBases: [env.publicUrls.dharma, DOCKER_PROBE_BASE.dharma],
     },
     {
       id: 'registration',

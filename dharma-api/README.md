@@ -8,10 +8,23 @@ Documentação do contrato: [https://kunksoucannabis.ong.br/](https://kunksoucan
 
 ```bash
 cp .env.example .env
-# Defina PG_URL (ou PGHOST/PG*) para o Postgres do schema alvo
+# Postgres: DATABASE_URL (Prisma Postgres) ou PG_URL / PGHOST+PG*
 npm install
+npm run db:generate   # após alterar prisma/schema.prisma
 npm run dev
 ```
+
+### Prisma (schema + client)
+
+O banco remoto (ex. `db.prisma.io`) usa `DATABASE_URL` no `.env` (também aceitos `PG_URL`, `POSTGRES_URL`, `PRISMA_DATABASE_URL`).
+
+```bash
+npm run db:pull      # introspect → prisma/schema.prisma
+npm run db:generate  # @prisma/client
+npm run db:studio    # UI local
+```
+
+A API continua usando SQL nativo (`pg`); o client Prisma fica em `src/db/prisma.js` para código novo ou scripts.
 
 Base URL local (npm): `http://localhost:8056/api/v1` 
 Base URL Docker: `http://localhost:4250/api/v1`

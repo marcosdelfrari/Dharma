@@ -223,7 +223,7 @@ async function buildAuthorizeUrl(state) {
 }
 
 function meUserAgent() {
-  return process.env.MELHOR_ENVIO_USER_AGENT || 'Kunk (contato@associacao)';
+  return process.env.MELHOR_ENVIO_USER_AGENT || 'Dharma (contato@associacao)';
 }
 
 function meHeaders(extra = {}) {

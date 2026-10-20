@@ -29,7 +29,9 @@ Abra [http://localhost:3000](http://localhost:3000).
 |-----|---------|-----------|
 | `DHARMA_API_ORIGIN` | `http://localhost:8056` | Origem da API (sem `/api/v1`) |
 
-O Next faz rewrite de `/api/v1/*` → essa origem. O header de sessão da API permanece `X-Kunk-App: kunk` (contrato do backend).
+O Postgres (Prisma Postgres ou local) fica no `.env` da **dharma-api** (`DATABASE_URL`, etc.), não no Next.
+
+O Next faz rewrite de `/api/v1/*` → essa origem. O header de sessão da API é `X-Dharma-App: dharma`.
 
 ## Telas
 

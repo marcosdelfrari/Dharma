@@ -9,7 +9,7 @@ const router = Router();
 
 router.use(authenticate);
 
-/** Status para o app Kunk (operador autenticado). */
+/** Status para o app Dharma (operador autenticado). */
 router.get('/status', async (req, res, next) => {
   try {
     const status = await cacheAdminService.getStatus();

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "description": "Sample data massivo para teste de carga do Kunk OSS",
+  "description": "Sample data massivo para teste de carga do Dharma",
   "profiles": {
     "smoke": {
       "description": "Validação rápida do script (~segundos)",

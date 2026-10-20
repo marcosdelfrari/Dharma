@@ -20,7 +20,7 @@ describe('webVitalsService helpers', () => {
       name: 'lcp',
       value: 2500,
       rating: 'good',
-      app: 'kunk',
+      app: 'dharma',
       url: 'https://x.test/a',
     });
     assert.equal(row.name, 'LCP');

@@ -189,8 +189,8 @@ describe('admin/webhooks', () => {
     assert.ok(received.length > beforeRetry);
 
     const last = received[received.length - 1];
-    const ts = last.headers['x-kunk-timestamp'];
-    const sig = last.headers['x-kunk-signature'];
+    const ts = last.headers['x-dharma-timestamp'];
+    const sig = last.headers['x-dharma-signature'];
     assert.ok(verifySignature(secret, last.body, ts, sig));
   });
 

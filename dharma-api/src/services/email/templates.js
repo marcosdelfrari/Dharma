@@ -9,7 +9,7 @@ function escapeHtml(value) {
 }
 
 function wrapHtml({ title, bodyHtml, associationName }) {
-  const brand = escapeHtml(associationName || 'Kunk');
+  const brand = escapeHtml(associationName || 'Dharma');
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head><meta charset="utf-8"><title>${escapeHtml(title)}</title></head>

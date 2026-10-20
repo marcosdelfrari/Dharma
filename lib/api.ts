@@ -26,7 +26,7 @@ export type ApiEnvelope<T> = {
   errors: Array<{ code: string; message: string; details?: unknown }> | null;
 };
 
-const APP = "kunk";
+const APP = "dharma";
 const BASE = "/api/v1";
 
 function withQuery(path: string, query = "") {
@@ -40,7 +40,7 @@ async function request<T>(
   body?: unknown,
 ): Promise<ApiEnvelope<T>> {
   const headers: Record<string, string> = {
-    "X-Kunk-App": APP,
+    "X-Dharma-App": APP,
   };
   let payload: BodyInit | undefined;
   if (body !== undefined && !(body instanceof FormData)) {
@@ -101,7 +101,7 @@ export const api = {
   me: () =>
     request<{ user: OperatorUser; role_pages?: unknown }>("GET", "/auth/me"),
 
-  forgotOperatorPassword: (email: string, app = "kunk") =>
+  forgotOperatorPassword: (email: string, app = "dharma") =>
     request<{ ok?: boolean }>("POST", "/auth/forgot-password", { email, app }),
   resetOperatorPassword: (token: string, password: string) =>
     request<{ ok?: boolean }>("POST", "/auth/reset-password", { token, password }),

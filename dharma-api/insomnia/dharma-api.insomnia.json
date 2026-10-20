@@ -1071,7 +1071,7 @@
       "url": "{{ _.base_url }}/users",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"associate_name\": \"Insomnia\",\n  \"associate_last_name\": \"Teste\",\n  \"email\": \"insomnia.user@demo.kunk.local\",\n  \"status\": \"active\"\n}"
+        "text": "{\n  \"associate_name\": \"Insomnia\",\n  \"associate_last_name\": \"Teste\",\n  \"email\": \"insomnia.user@demo.dharma.local\",\n  \"status\": \"active\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -1280,7 +1280,7 @@
       "url": "{{ _.base_url }}/orders/{{ _.order_id }}/payment",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"payment_link\": \"https://pay.demo.kunk/local\",\n  \"payment_code\": \"PIX-DEMO\",\n  \"payment_method\": \"pix\"\n}"
+        "text": "{\n  \"payment_link\": \"https://pay.demo.dharma/local\",\n  \"payment_code\": \"PIX-DEMO\",\n  \"payment_method\": \"pix\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -1496,7 +1496,7 @@
       "url": "{{ _.base_url }}/reception",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Contato\",\n  \"last_name\": \"Insomnia\",\n  \"email\": \"contato@demo.kunk.local\",\n  \"phone\": \"+5511999990000\"\n}"
+        "text": "{\n  \"name\": \"Contato\",\n  \"last_name\": \"Insomnia\",\n  \"email\": \"contato@demo.dharma.local\",\n  \"phone\": \"+5511999990000\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -1844,7 +1844,7 @@
       "url": "{{ _.base_url }}/system-users",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Novo\",\n  \"last_name\": \"Operador\",\n  \"email\": \"novo.op@demo.kunk.local\",\n  \"password\": \"DemoAdmin123!\",\n  \"permissions\": \"[\\\"Acolhimento\\\"]\",\n  \"status\": \"active\"\n}"
+        "text": "{\n  \"name\": \"Novo\",\n  \"last_name\": \"Operador\",\n  \"email\": \"novo.op@demo.dharma.local\",\n  \"password\": \"DemoAdmin123!\",\n  \"permissions\": \"[\\\"Acolhimento\\\"]\",\n  \"status\": \"active\"\n}"
       },
       "parameters": [],
       "headers": [

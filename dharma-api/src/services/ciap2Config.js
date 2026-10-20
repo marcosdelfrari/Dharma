@@ -38,7 +38,7 @@ async function setEnabled(enabled) {
       value_type: 'boolean',
       is_sensitive: false,
       allow_hardcoded: false,
-      description: 'Módulo CIAP-2 habilitado no Kunk e no cadastramento',
+      description: 'Módulo CIAP-2 habilitado no Dharma e no cadastramento',
     });
   }
   return { module: 'ciap2', enabled: Boolean(enabled) };

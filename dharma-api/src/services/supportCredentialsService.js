@@ -11,7 +11,7 @@ const authRepository = require('../repositories/authRepository');
 const SUPPORT_INTERNAL_CODE = 'support';
 const DEFAULT_SUPPORT_EMAIL = 'support@example.com';
 const DEFAULT_SUPPORT_NAME = 'Suporte';
-const DEFAULT_SUPPORT_LAST_NAME = 'Kunk';
+const DEFAULT_SUPPORT_LAST_NAME = 'Dharma';
 
 function adminLoginUrl() {
   const { env } = require('../config/env');

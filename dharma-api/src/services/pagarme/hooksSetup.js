@@ -13,7 +13,7 @@ const SETUP_KEY = 'modules.pagarme.webhooks_setup';
 const VALIDATED_KEY = 'modules.pagarme.webhooks_validated';
 const RECEIPT_KEY = 'modules.pagarme.webhooks_validation_receipt';
 const TEST_PAYMENT_KEY = 'modules.pagarme.webhook_test_payment';
-const VALIDATION_ORDER_PREFIX = 'KUNK_WH_';
+const VALIDATION_ORDER_PREFIX = 'DHARMA_WH_';
 const DASHBOARD_HINT =
   'Obrigatório: no painel da Pagar.me o webhook precisa de autenticação HTTP Basic (usuário e senha iguais aos desta tela). Sem isso a API responde 401 e o pagamento não é confirmado. Conta → Configurações → Webhooks → Criar webhook; cole as URLs abaixo; ative HTTP Basic — não deixe o webhook anônimo. Eventos: order.created (obrigatório) e order.paid. Depois abra o link do passo 2, gere o boleto sem pagá-lo e clique em Validar (o order.created pode levar até 1 minuto).';
 
@@ -310,9 +310,9 @@ function classifyProbeFailure(res) {
 async function probeWebhookEndpoint(url, user, pass, { label = 'public' } = {}) {
   const auth = Buffer.from(`${user}:${pass}`, 'utf8').toString('base64');
   const body = {
-    id: 'hook_kunk_validate',
+    id: 'hook_dharma_validate',
     type: 'order.paid',
-    data: { code: '__kunk_webhook_validate__', status: 'paid' },
+    data: { code: '__dharma_webhook_validate__', status: 'paid' },
   };
   try {
     const res = await fetch(url, {
@@ -426,7 +426,7 @@ async function readValidationReceipt() {
 }
 
 /**
- * Chamado nos handlers públicos: se o code/order for do teste KUNK_WH_*, grava recibo.
+ * Chamado nos handlers públicos: se o code/order for do teste DHARMA_WH_*, grava recibo.
  * meta.auth_ok=false registra chegada com Basic Auth inválida (diagnóstico).
  */
 async function captureValidationEvent(hook, meta = {}) {
@@ -506,7 +506,7 @@ async function createTestPaymentLink() {
   const amount = 1500;
   const body = {
     type: 'order',
-    name: 'Teste webhook Kunk',
+    name: 'Teste webhook Dharma',
     order_code: code,
     max_paid_sessions: 1,
     expires_in: 120,
@@ -514,13 +514,13 @@ async function createTestPaymentLink() {
       accepted_payment_methods: ['boleto'],
       boleto_settings: {
         due_in: 5,
-        instructions: 'Teste webhook Kunk — não pagar',
+        instructions: 'Teste webhook Dharma — não pagar',
       },
     },
     cart_settings: {
       items: [
         {
-          name: 'Teste validação webhook boleto Kunk',
+          name: 'Teste validação webhook boleto Dharma',
           description: 'Gere o boleto para validar o webhook; não efetue o pagamento.',
           amount,
           default_quantity: 1,

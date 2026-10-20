@@ -102,7 +102,7 @@ async function login(email, password, app) {
   const { normalizeOperatorApp } = require('../constants/authCookies');
   const appKey = normalizeOperatorApp(app);
   if (!appKey) {
-    throw new AppError(400, 'VALIDATION_ERROR', 'app inválido (kunk|admin|doc-sign)');
+    throw new AppError(400, 'VALIDATION_ERROR', 'app inválido (dharma|admin|doc-sign)');
   }
 
   const user = await findByEmail(email);
@@ -235,7 +235,7 @@ async function createApiToken({ email, label: labelIn, scopes = ['*'] }) {
     throw new AppError(400, err.code || 'VALIDATION_ERROR', err.message);
   }
   await ensureApiTokenPrefixColumn();
-  const plaintext = `kunk_live_${crypto.randomBytes(24).toString('hex')}`;
+  const plaintext = `dharma_live_${crypto.randomBytes(24).toString('hex')}`;
   const tokenPrefix = apiTokenLookupPrefix(plaintext);
   const hash = await bcrypt.hash(plaintext, SALT_ROUNDS);
   const label = String(labelIn || email || 'api-token').trim().slice(0, 255) || 'api-token';
@@ -334,16 +334,16 @@ function assertOperatorPassword(password) {
   }
 }
 
-const OPERATOR_RESET_APPS = new Set(['kunk', 'admin', 'doc-sign']);
+const OPERATOR_RESET_APPS = new Set(['dharma', 'admin', 'doc-sign']);
 
-async function forgotPassword(email, app = 'kunk') {
+async function forgotPassword(email, app = 'dharma') {
   const normalized = String(email || '').trim().toLowerCase();
   if (!normalized) {
     throw new AppError(400, 'VALIDATION_ERROR', 'email é obrigatório');
   }
-  const appKey = String(app || 'kunk').toLowerCase();
+  const appKey = String(app || 'dharma').toLowerCase();
   if (!OPERATOR_RESET_APPS.has(appKey)) {
-    throw new AppError(400, 'VALIDATION_ERROR', 'app inválido (kunk|admin|doc-sign)');
+    throw new AppError(400, 'VALIDATION_ERROR', 'app inválido (dharma|admin|doc-sign)');
   }
 
   const user = await findByEmail(normalized);

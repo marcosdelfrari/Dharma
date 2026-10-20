@@ -4,7 +4,7 @@ Checklist orientado a sprints. Itens **feitos neste ciclo** estão marcados com 
 
 ## Sprint A — Fundação operacional (paridade mínima)
 
-- [x] Config runtime (`/config/public` kunk + registration → CSS `--dharma-*`)
+- [x] Config runtime (`/config/public` dharma + registration → CSS `--dharma-*`)
 - [x] `role_pages` no menu (`/auth/me`)
 - [x] Landing por papel (Produção, Acolhimento, Profissional)
 - [x] `/cadastro?token=` convite de operador/profissional
@@ -46,9 +46,9 @@ Checklist orientado a sprints. Itens **feitos neste ciclo** estão marcados com 
 
 ## Sprint E — Packages / DX
 
-- [ ] `@kunk/api-client` tipado no monorepo ou client gerado
+- [ ] `@dharma/api-client` tipado no monorepo ou client gerado
 - [ ] Toast, error boundary, cache de listagens
-- [ ] `@kunk/forms` ou formulários compartilhados
+- [ ] `@dharma/forms` ou formulários compartilhados
 - [ ] E2E críticos (login, pedido, convite)
 
 ## Como priorizar

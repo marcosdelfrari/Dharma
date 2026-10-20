@@ -30,11 +30,11 @@ describe('modules/setup-authz', () => {
   });
 
   function asAdmin(method, path) {
-    return request(app)[method](path).set('Cookie', adminCookie).set('X-Kunk-App', 'admin');
+    return request(app)[method](path).set('Cookie', adminCookie).set('X-Dharma-App', 'admin');
   }
 
   function asAcolhimento(method, path) {
-    return request(app)[method](path).set('Cookie', operatorCookie).set('X-Kunk-App', 'kunk');
+    return request(app)[method](path).set('Cookie', operatorCookie).set('X-Dharma-App', 'dharma');
   }
 
   function asLimitedBearer(method, path) {

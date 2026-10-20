@@ -14,7 +14,8 @@ const mukta = Mukta({
 
 export const metadata: Metadata = {
   title: "Dharma",
-  description: "Painel operacional Dharma — gestão associativa",
+  description:
+    "Painel operacional para acolhimento, loja, profissionais e relatórios — gestão associativa com método.",
   icons: {
     icon: [{ url: "/dharma.webp", type: "image/webp" }],
     apple: [{ url: "/dharma.webp", type: "image/webp" }],

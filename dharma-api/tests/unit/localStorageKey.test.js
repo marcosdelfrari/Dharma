@@ -14,7 +14,7 @@ describe('local storage resolveKey', () => {
   let driver;
 
   before(async () => {
-    root = await fsp.mkdtemp(path.join(os.tmpdir(), 'kunk-storage-'));
+    root = await fsp.mkdtemp(path.join(os.tmpdir(), 'dharma-storage-'));
     driver = createLocalDriver({ rootPath: root });
     await driver.put({ key: 'ok.txt', buffer: Buffer.from('inside') });
   });

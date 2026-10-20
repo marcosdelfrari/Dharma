@@ -19,7 +19,7 @@ describe('admin meta', () => {
     const res = await request(app)
       .get('/api/v1/admin/schema')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(res.status, 200, JSON.stringify(res.body));
     assert.ok(Array.isArray(res.body.data.collections));
     assert.ok(res.body.data.collections.some((c) => c.name === 'users'));
@@ -38,7 +38,7 @@ describe('admin meta', () => {
     const res = await request(app)
       .get('/api/v1/admin/roles')
       .set('Cookie', cookie)
-      .set('X-Kunk-App', 'admin');
+      .set('X-Dharma-App', 'admin');
     assert.equal(res.status, 200, JSON.stringify(res.body));
     assert.ok(Array.isArray(res.body.data));
     assert.ok(res.body.data.some((r) => r.id === 'Administrador'));

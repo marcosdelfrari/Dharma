@@ -24,7 +24,7 @@ describe('email templates', () => {
 
   it('builds invite and contract templates', () => {
     const invite = templates.systemInvite({
-      inviteUrl: 'https://kunk/cadastro?token=x',
+      inviteUrl: 'https://dharma/cadastro?token=x',
       recipientName: 'Ana',
     });
     assert.match(invite.html, /Ana/);

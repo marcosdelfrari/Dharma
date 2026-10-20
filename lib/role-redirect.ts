@@ -9,7 +9,7 @@ export function isProfessionalOnly(roles: string[] = []) {
   );
 }
 
-/** Landing pós-login (paridade com apps/kunk roleRedirect). */
+/** Landing pós-login (paridade com apps/dharma roleRedirect). */
 export function roleHomePath(roles: string[] = []) {
   if (isProfessionalOnly(roles)) {
     return PATHS.professionalServicesReport;

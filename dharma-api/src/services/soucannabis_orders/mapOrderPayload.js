@@ -54,7 +54,7 @@ async function toRemoteCreatePayload(order, { userRow = null, externalPaymentInf
     items: mapItems(order.items),
     total: Number(order.total || 0),
     status: awaitingApproval,
-    // Não enviar `user` com nome — no Kunk legado `Orders.user` é FK integer.
+    // Não enviar `user` com nome — no Dharma legado `Orders.user` é FK integer.
     // A SC resolve o associado via `user_code` (outbound users desta instalação).
     user_code: order.user_code || null,
     name_associate: fullName,

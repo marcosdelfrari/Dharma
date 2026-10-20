@@ -124,7 +124,7 @@ function normalizeDeliveryType(value) {
  * @param {object} [opts]
  * @param {boolean} [opts.allowClear] Quando true, `null` (ou string vazia) explícito em campos
  *   anuláveis vira limpeza (grava null) em vez de ser descartado. Usado no webhook de sync manual
- *   para propagar remoções feitas no Kunk legado.
+ *   para propagar remoções feitas no Dharma legado.
  */
 function bodyToLocalOutboundPatch(body = {}, existing = {}, opts = {}) {
   const allowClear = opts.allowClear === true;

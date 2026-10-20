@@ -22,7 +22,7 @@ describe('config admin', () => {
   it('lists systems and configs for Administrador', async () => {
     await query(
       `INSERT INTO system_configs (system, key, value, value_type, is_sensitive, allow_hardcoded, hardcoded_default, description)
-       VALUES ('registration', 'VITE_ASSOCIATION_NAME', 'Test Assoc', 'string', false, true, 'Kunk', 'Nome')
+       VALUES ('registration', 'VITE_ASSOCIATION_NAME', 'Test Assoc', 'string', false, true, 'Dharma', 'Nome')
        ON CONFLICT (system, key) DO UPDATE SET value = EXCLUDED.value`
     );
 

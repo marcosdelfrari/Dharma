@@ -18,7 +18,7 @@ describe('domain/professionals-scope', () => {
     app = admin.app;
     adminCookie = admin.cookie;
     assert.ok(adminCookie, 'admin cookie ausente');
-    assert.match(adminCookie, /^kunk_oss_session_admin=/);
+    assert.match(adminCookie, /^dharma_oss_session_admin=/);
 
     const stamp = Date.now();
     const ownCode = uuidv4();
@@ -27,7 +27,7 @@ describe('domain/professionals-scope', () => {
     const createdOwn = await request(app)
       .post('/api/v1/items/professionals')
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({
         name: 'Portal',
         last_name: 'Own',
@@ -42,7 +42,7 @@ describe('domain/professionals-scope', () => {
     const createdOther = await request(app)
       .post('/api/v1/items/professionals')
       .set('Cookie', adminCookie)
-      .set('X-Kunk-App', 'admin')
+      .set('X-Dharma-App', 'admin')
       .send({
         name: 'Portal',
         last_name: 'Other',
@@ -61,13 +61,13 @@ describe('domain/professionals-scope', () => {
       name: 'Portal',
       last_name: 'User',
       internal_code: ownCode,
-      app: 'kunk',
+      app: 'dharma',
     });
     portalCookie = portal.cookie;
   });
 
   function asPortal(method, path) {
-    return request(app)[method](path).set('Cookie', portalCookie).set('X-Kunk-App', 'kunk');
+    return request(app)[method](path).set('Cookie', portalCookie).set('X-Dharma-App', 'dharma');
   }
 
   it('GET lista só o próprio cadastro', async () => {
