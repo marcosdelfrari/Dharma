@@ -109,7 +109,9 @@ export function LandingHero() {
               animate="show"
               variants={{
                 hidden: {},
-                show: { transition: { staggerChildren: 0.06, delayChildren: 0.04 } },
+                show: {
+                  transition: { staggerChildren: 0.06, delayChildren: 0.04 },
+                },
               }}
             >
               {links.map((link) => (
@@ -156,13 +158,19 @@ export function LandingHero() {
           Gestão de acolhimento, associados, atendimentos e pedidos para
           associações que buscam clareza e controle no dia a dia.
         </motion.p>
-        <motion.div className="mt-6 flex flex-wrap items-center gap-6" variants={fadeUp}>
+        <motion.div
+          className="mt-6 flex flex-wrap items-center gap-6"
+          variants={fadeUp}
+        >
           {["Acolhimento", "Pedidos & Frete", "Atendimentos"].map((label) => (
             <span
               key={label}
               className="inline-flex items-center gap-2 text-[11px] text-white/90"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-dharma-lime" aria-hidden />
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-dharma-lime"
+                aria-hidden
+              />
               {label}
             </span>
           ))}

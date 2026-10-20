@@ -106,7 +106,12 @@ export function Reveal({
         hidden: variants.hidden,
         show: {
           ...showProps,
-          transition: { duration: 0.55, ease: easeOut, ...baseTransition, delay },
+          transition: {
+            duration: 0.55,
+            ease: easeOut,
+            ...baseTransition,
+            delay,
+          },
         },
       }}
       initial="hidden"
@@ -164,7 +169,9 @@ export function RevealItem({
       className={className}
       variants={fadeUp}
       whileHover={
-        reduced || !hoverLift ? undefined : { y: -4, transition: { duration: 0.22, ease: easeOut } }
+        reduced || !hoverLift
+          ? undefined
+          : { y: -4, transition: { duration: 0.22, ease: easeOut } }
       }
     >
       {children}

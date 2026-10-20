@@ -1,15 +1,25 @@
 'use strict';
 
+const serverless = require('serverless-http');
 const { prepareApp } = require('../src/bootstrap');
 
-let app;
+let handlerPromise;
+
+async function getHandler() {
+  if (!handlerPromise) {
+    handlerPromise = prepareApp().then((app) =>
+      serverless(app, {
+        binary: ['image/*', 'application/pdf', 'application/octet-stream'],
+      }),
+    );
+  }
+  return handlerPromise;
+}
 
 module.exports = async (req, res) => {
   try {
-    if (!app) {
-      app = await prepareApp();
-    }
-    app(req, res);
+    const handler = await getHandler();
+    return handler(req, res);
   } catch (err) {
     console.error('[dharma-api] serverless init failed:', err);
     res.statusCode = 500;

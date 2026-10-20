@@ -92,7 +92,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (loading) return;
-    const isPublic = PUBLIC_PATHS.has(pathname) || pathname.startsWith("/cadastro");
+    const isPublic =
+      PUBLIC_PATHS.has(pathname) || pathname.startsWith("/cadastro");
     if (!user && pathname.startsWith("/app")) {
       router.replace("/login");
       return;
@@ -105,7 +106,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       router.replace(roleHomePath(parsePermissions(user)));
       return;
     }
-    if (user && isProfessionalOnly(parsePermissions(user)) && pathname.startsWith("/app")) {
+    if (
+      user &&
+      isProfessionalOnly(parsePermissions(user)) &&
+      pathname.startsWith("/app")
+    ) {
       router.replace(PATHS.professionalServicesReport);
       return;
     }
@@ -150,7 +155,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       logout,
       refresh,
     }),
-    [user, loading, error, permissions, rolePages, isStaff, login, logout, refresh],
+    [
+      user,
+      loading,
+      error,
+      permissions,
+      rolePages,
+      isStaff,
+      login,
+      logout,
+      refresh,
+    ],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
