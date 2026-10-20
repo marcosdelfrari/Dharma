@@ -181,16 +181,16 @@ const DharmaConfigContext = createContext<ConfigState>({
   toggleTheme: () => undefined,
 });
 
+function readInitialThemeMode(): ThemeMode {
+  if (typeof window === "undefined") return "dark";
+  return readStoredTheme(normalizeTheme(DEFAULTS.defaultTheme, "dark"));
+}
+
 export function DharmaConfigProvider({ children }: { children: ReactNode }) {
   const [config, setConfig] = useState<DharmaAppearance>(DEFAULTS);
   const [configReady, setConfigReady] = useState(false);
   const [configErrors, setConfigErrors] = useState<unknown[]>([]);
-  const [themeMode, setThemeModeState] = useState<ThemeMode>("dark");
-
-  useEffect(() => {
-    const fallback = normalizeTheme(DEFAULTS.defaultTheme);
-    setThemeModeState(readStoredTheme(fallback));
-  }, []);
+  const [themeMode, setThemeModeState] = useState<ThemeMode>(readInitialThemeMode);
 
   useEffect(() => {
     let cancelled = false;
@@ -242,7 +242,8 @@ export function DharmaConfigProvider({ children }: { children: ReactNode }) {
     } catch {
       // ignore quota / private mode
     }
-  }, []);
+    applyDharmaAppearanceVars(config, mode);
+  }, [config]);
 
   const toggleTheme = useCallback(() => {
     setThemeModeState((prev) => {
@@ -252,9 +253,10 @@ export function DharmaConfigProvider({ children }: { children: ReactNode }) {
       } catch {
         // ignore
       }
+      applyDharmaAppearanceVars(config, next);
       return next;
     });
-  }, []);
+  }, [config]);
 
   useEffect(() => {
     if (!configReady) {

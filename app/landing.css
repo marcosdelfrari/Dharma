@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-:root {
+/**
+ * Tokens só dentro da landing — não usar :root aqui.
+ * Variáveis com os mesmos nomes do painel (--surface, --border…) em :root
+ * sobrescreviam o tema claro depois de visitar a home.
+ */
+.landing-root {
   --background: #0c0c0c;
   --foreground: #ededed;
   --muted: #888888;
@@ -15,6 +20,12 @@
   --negative: #f87171;
   --dharma-lime: #c3d800;
   --dharma-teal: #5a9aa6;
+
+  min-height: 100dvh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mukta), "Mukta", sans-serif;
+  overflow-x: clip;
 }
 
 @theme inline {
@@ -34,16 +45,6 @@
   --color-dharma-teal: var(--dharma-teal);
   --font-sans: var(--font-mukta), "Mukta", sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
-}
-
-.landing-root {
-  --bg: var(--background);
-  --text: var(--foreground);
-  min-height: 100dvh;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-mukta), "Mukta", sans-serif;
-  overflow-x: clip;
 }
 
 .landing-root * {
